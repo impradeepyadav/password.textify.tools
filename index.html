@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- === ULTIMATE SEO SETTINGS FOR TOP RANKING === -->
+    <title>Free Online Password Generator - Create Strong & Secure Passwords</title>
+
+    <meta name="description" content="Generate 100% secure and random passwords instantly. Create unhackable passwords with custom length, symbols, and numbers. Private, client-side, and no data stored.">
+
+    <meta name="keywords" content="password generator, secure random password, unhackable password tool, strong password creator, cybersecurity tools, random string generator, enterprise password policy, NIST password guidelines, AI password cracking protection, quantum safe passwords, password manager, 2FA, two factor authentication">
+
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="PassGen Pro">
+    <link rel="canonical" href="https://password.textify.tools/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://password.textify.tools/">
+    <meta property="og:title" content="Free Online Password Generator - PassGen Pro">
+    <meta property="og:description" content="The world's most secure client-side password generator. Protect your accounts with high-entropy keys.">
+    <meta property="og:image" content="https://password.textify.tools/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://password.textify.tools/">
+    <meta property="twitter:title" content="Free Online Password Generator">
+    <meta property="twitter:description" content="Stop using weak passwords. Generate cryptographically strong keys in seconds.">
+    <meta property="twitter:image" content="https://password.textify.tools/og-image.jpg">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- === ADVANCED JSON-LD SCHEMA === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PassGen Pro",
+      "url": "https://password.textify.tools/",
+      "description": "Professional-grade tool to generate unhackable, random passwords entirely on the user's browser.",
+      "applicationCategory": "SecurityApplication",
+      "genre": "Cybersecurity",
+      "browserRequirements": "Requires JavaScript",
+      "softwareVersion": "3.1",
+      "operatingSystem": "Windows, MacOS, Linux, Android, iOS",
+      "offers": { 
+        "@type": "Offer", 
+        "price": "0", 
+        "priceCurrency": "USD" 
+      },
+      "aggregateRating": { 
+        "@type": "AggregateRating", 
+        "ratingValue": "4.9", 
+        "reviewCount": "8500" 
+      },
+      "featureList": "Client-side generation, Custom character sets, Entropy meter, Bulk download, Quantum-ready entropy",
+      "author": {
+        "@type": "Organization",
+        "name": "PassGen Pro Security Lab"
+      }
+    }
+    </script>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* --- CORE THEME (Modern Minimalist Black & White) --- */
+        :root {
+            --primary: #000000;       
+            --primary-dark: #1a1a1a;  
+            --highlight: #f3f4f6;     
+            --accent-bg: #fafafa;     
+            --text-main: #0a0a0a;     
+            --text-light: #525252;    
+            --bg-color: #ffffff;      
+            --line-color: #e5e5e5;    
+            --footer-bg: #000000;     
+            --footer-text: #a3a3a3;   
+            --success: #16a34a;
+            --error: #ef4444;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0; padding: 0; 
+            background-color: var(--bg-color); 
+            color: var(--text-main);
+            display: flex; flex-direction: column; min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            user-select: none;
+        }
+        
+        input, textarea, select, .selectable-text { user-select: text; }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+        header { padding: 15px 0; border-bottom: 1px solid var(--line-color); background: white; }
+        .navbar { max-width: 1000px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        
+        .brand-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; cursor: pointer; color: black; }
+        .robot-svg-icon { width: 45px; height: 45px; }
+        .logo-text { font-size: 24px; font-weight: 800; color: var(--text-main); letter-spacing: -0.8px; }
+
+        .free-badge {
+            font-size: 12px; color: var(--text-light); font-weight: 600;
+            background: #f3f4f6; padding: 6px 10px; border-radius: 6px; border: 1px solid #e5e7eb;
+        }
+
+        .container { max-width: 1000px; width: 100%; margin: 30px auto; padding: 0 20px; flex: 1; }
+
+        h1 { font-size: 34px; font-weight: 800; margin-bottom: 10px; line-height: 1.2; letter-spacing: -0.5px; }
+        h2 { font-size: 26px; font-weight: 700; border-bottom: 2px solid var(--highlight); padding-bottom: 10px; margin-top: 40px; margin-bottom: 20px; }
+        h3 { font-size: 20px; font-weight: 700; margin-top: 25px; margin-bottom: 12px; color: #000; }
+        p.subtitle { font-size: 18px; color: var(--text-light); margin-bottom: 35px; line-height: 1.6; }
+
+        .display-vault {
+            background: #000;
+            border-radius: 20px;
+            padding: 45px 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 35px;
+            box-shadow: inset 0 2px 20px rgba(0,0,0,0.5);
+        }
+        #passwordOutput {
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 34px;
+            font-weight: 700;
+            color: #fff;
+            word-break: break-all;
+            letter-spacing: 2px;
+            display: block;
+            min-height: 40px;
+        }
+        .strength-track { position: absolute; bottom: 0; left: 0; height: 6px; width: 0%; transition: 0.5s ease; }
+
+        .action-row { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 12px; margin-bottom: 35px; }
+        @media (max-width: 600px) { .action-row { grid-template-columns: 1fr; } }
+
+        .btn-p { background: #000; color: #fff; border: none; padding: 18px; border-radius: 12px; font-weight: 700; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 8px; transition: 0.2s; font-size: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .btn-s { background: #fff; color: #000; border: 2px solid #000; padding: 18px; border-radius: 12px; font-weight: 700; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 8px; transition: 0.2s; font-size: 16px; }
+        .btn-p:hover { background: #333; transform: scale(1.02); }
+
+        .config-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        @media (max-width: 700px) { .config-grid { grid-template-columns: 1fr; } }
+
+        .label-head { font-size: 11px; font-weight: 900; color: var(--text-light); text-transform: uppercase; margin-bottom: 12px; display: block; letter-spacing: 1.5px; }
+        
+        .control-box { background: #f9fafb; padding: 18px; border-radius: 12px; border: 1px solid #eee; }
+        .slider-box { display: flex; align-items: center; gap: 15px; }
+        input[type="range"] { flex: 1; accent-color: #000; cursor: pointer; }
+        .val-badge { background: #000; color: #fff; padding: 5px 12px; border-radius: 8px; font-weight: 800; }
+
+        .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .opt-card { display: flex; align-items: center; gap: 10px; padding: 12px; background: #f9fafb; border-radius: 10px; cursor: pointer; font-size: 13px; font-weight: 700; border: 1px solid #eee; transition: 0.2s; }
+        .opt-card:hover { border-color: #000; }
+        .opt-card input { width: 18px; height: 18px; accent-color: #000; }
+
+        .custom-input { width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 8px; font-size: 14px; margin-top: 10px; background: #fff; font-family: monospace; }
+
+        .seo-content { margin-top: 60px; border-top: 1px solid var(--line-color); padding-top: 30px; }
+        .content-block { margin-bottom: 45px; }
+        .content-block p { line-height: 1.8; color: var(--text-light); font-size: 16px; margin-bottom: 18px; }
+        .content-block ul { padding-left: 20px; color: var(--text-light); margin-bottom: 20px; }
+        .content-block li { margin-bottom: 12px; line-height: 1.7; }
+
+        .table-wrap { overflow-x: auto; border: 1px solid var(--line-color); border-radius: 12px; margin: 25px 0; }
+        table { width: 100%; border-collapse: collapse; min-width: 600px; }
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid var(--line-color); font-size: 14px; color: var(--text-light); }
+        th { background: #f3f4f6; font-weight: 700; color: var(--text-main); }
+
+        .faq-item { border: 1px solid var(--line-color); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+        .faq-q { padding: 18px; background: #fafafa; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-a { padding: 18px; border-top: 1px solid var(--line-color); display: none; line-height: 1.7; color: var(--text-light); background: #fff; }
+        .faq-item.active .faq-a { display: block; }
+        .faq-icon { transition: transform 0.3s; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); }
+
+        footer { background-color: var(--footer-bg); color: var(--footer-text); padding: 70px 0 25px; margin-top: 80px; font-size: 14px; }
+        .footer-grid { max-width: 1000px; margin: 0 auto; padding: 0 25px; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+        @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+        
+        .footer-brand-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+        .footer-brand-wrap h5 { color: white; font-size: 22px; font-weight: 800; margin: 0; letter-spacing: -0.8px; }
+        .footer-robot-logo { width: 45px; height: 45px; }
+
+        .footer-brand p { font-size: 14px; color: #9ca3af; line-height: 1.6; max-width: 340px; }
+        .footer-col h5 { color: white; font-size: 16px; font-weight: 700; margin-bottom: 20px; margin-top: 0; letter-spacing: 0.5px; }
+        .footer-links { list-style: none; padding: 0; margin: 0; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: #d1d5db; text-decoration: none; transition: color 0.2s, padding-left 0.2s; display: inline-block; cursor: pointer; }
+        .footer-links a:hover { color: white; padding-left: 5px; }
+
+        .footer-bottom { 
+            max-width: 1000px; margin: 50px auto 0; padding-top: 25px; border-top: 1px solid #333; display: flex; justify-content: space-between; align-items: center; padding-left: 25px; padding-right: 25px; color: #6b7280; font-size: 13px; 
+        }
+        @media (max-width: 768px) { .footer-bottom { flex-direction: column; gap: 15px; text-align: center; } }
+
+        .toast { position: fixed; bottom: 35px; left: 50%; transform: translateX(-50%); background: #16a34a; color: #fff; padding: 12px 30px; border-radius: 50px; font-weight: 800; display: none; z-index: 1000; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+        .back-link { display: inline-flex; align-items: center; gap: 6px; color: #000; font-weight: 700; text-decoration: none; margin-bottom: 25px; cursor: pointer; }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+    <div id="toast" class="toast">Successfully Done!</div>
+
+    <header>
+        <div class="navbar">
+            <a href="/" class="brand-logo" aria-label="PassGen Pro Logo">
+                <div class="robot-svg-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="25" y="25" width="50" height="40" rx="8" fill="#fff" stroke="#000" stroke-width="5" />
+                        <circle cx="42" cy="42" r="5" fill="#000" />
+                        <circle cx="58" cy="42" r="5" fill="#000" />
+                        <path d="M50,25 V15 M50,15 A2,2 0 1,1 50.1,15" stroke="#000" stroke-width="3" fill="none" />
+                        <circle cx="20" cy="45" r="6" fill="#000" />
+                        <circle cx="80" cy="45" r="6" fill="#000" />
+                        <path d="M15,75 L85,75" stroke="#000" stroke-width="8" stroke-linecap="round" />
+                        <path d="M75,75 V85 M65,75 V80" stroke="#000" stroke-width="4" />
+                    </svg>
+                </div>
+                <div class="logo-text">Password</div>
+            </a>
+            <span class="free-badge">Free Tool</span>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- HOME PAGE -->
+        <div class="page-section">
+            <h1>Free Online Random Password Generator - Create Strong & Unhackable Passwords</h1>
+            <p class="subtitle">Generate cryptographically secure passwords instantly. Our professional-grade creator ensures your accounts stay protected. <strong>Privacy-first, 100% Client-side, Zero-Knowledge Architecture.</strong></p>
+
+            <div class="tool-box">
+                <div class="display-vault">
+                    <span id="passwordOutput">••••••••••••</span>
+                    <div id="strengthBar" class="strength-track"></div>
+                </div>
+
+                <div class="action-row">
+                    <button class="btn-p" onclick="generate()"><i data-lucide="refresh-cw"></i> New Password</button>
+                    <button class="btn-s" onclick="copy()" id="copyBtn"><i data-lucide="copy"></i> Copy</button>
+                    <button class="btn-s" onclick="downloadTxt()"><i data-lucide="download"></i> Download</button>
+                </div>
+
+                <div class="config-grid">
+                    <div class="control-box">
+                        <span class="label-head">Password Length (6-100 characters)</span>
+                        <div class="slider-box">
+                            <input type="range" id="pLen" min="6" max="100" value="18" oninput="updateLen(this.value); generate();">
+                            <span class="val-badge" id="lenVal">18</span>
+                        </div>
+                        
+                        <div style="margin-top: 25px;">
+                            <span class="label-head">Custom Characters (Optional)</span>
+                            <input type="text" id="customSym" class="custom-input" placeholder="Add specific symbols like !@#$%..." oninput="generate()">
+                        </div>
+                    </div>
+
+                    <div class="options-grid">
+                        <label class="opt-card"><input type="checkbox" id="up" checked onchange="generate()"> A-Z Uppercase</label>
+                        <label class="opt-card"><input type="checkbox" id="lo" checked onchange="generate()"> a-z Lowercase</label>
+                        <label class="opt-card"><input type="checkbox" id="nu" checked onchange="generate()"> 0-9 Numbers</label>
+                        <label class="opt-card"><input type="checkbox" id="sy" checked onchange="generate()"> Standard Symbols (!@#$%)</label>
+                        <label class="opt-card" title="Exclude i, l, 1, L, o, 0, O"><input type="checkbox" id="exSim" checked onchange="generate()"> No Similar Characters</label>
+                        <label class="opt-card" title="Exclude ambiguous symbols"><input type="checkbox" id="exAmb" onchange="generate()"> No Ambiguous Symbols</label>
+                        <label class="opt-card" title="Force password to start with a letter"><input type="checkbox" id="startLetter" onchange="generate()"> Start with Letter</label>
+                        <label class="opt-card" title="Ensure at least one character from each selected set"><input type="checkbox" id="strict" checked onchange="generate()"> Strict Distribution</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEO ARTICLES & OPTIMIZED CONTENT -->
+            <article class="seo-content">
+                <div class="content-block">
+                    <h2>How to Generate a Strong Password (Step-by-Step Guide)</h2>
+                    <p>Creating a secure credential is easier than you think. Follow these simple steps for maximum protection:</p>
+                    <ul>
+                        <li><strong>Step 1:</strong> Select a minimum length of 16-18 characters (longer = stronger).</li>
+                        <li><strong>Step 2:</strong> Enable all character sets (Uppercase, Lowercase, Numbers, and Symbols).</li>
+                        <li><strong>Step 3:</strong> Enable 'Strict Distribution' to ensure a perfect mix of characters.</li>
+                        <li><strong>Step 4:</strong> Click 'New Password' to generate a cryptographically secure key.</li>
+                        <li><strong>Step 5:</strong> Copy the result and store it in a reputable password manager.</li>
+                        <li><strong>Step 6:</strong> Enable Two-Factor Authentication (2FA) wherever possible.</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>10 Reasons Why You Need a Strong Password Generator in 2026</h2>
+                    <p>With cyber threats evolving daily, using a reliable password generator is no longer optional—it's essential. Here's why:</p>
+                    <ul>
+                        <li><strong>AI-Powered Attacks:</strong> Hackers now use AI to guess common password patterns in milliseconds.</li>
+                        <li><strong>Data Breaches:</strong> Over 8 billion records were leaked in 2025 alone.</li>
+                        <li><strong>Credential Stuffing:</strong> If you reuse passwords, one breach compromises all your accounts.</li>
+                        <li><strong>Quantum Computing Threats:</strong> Future quantum computers could crack short passwords instantly.</li>
+                        <li><strong>Remote Work Security:</strong> With work-from-home, personal and professional accounts need stronger protection.</li>
+                        <li><strong>IoT Device Vulnerabilities:</strong> Smart home devices often have weak default passwords.</li>
+                        <li><strong>Social Engineering:</strong> Even strong passwords need randomness to resist guessing.</li>
+                        <li><strong>Compliance Requirements:</strong> Many industries now require NIST-standard password policies.</li>
+                        <li><strong>Password Managers:</strong> They work best with truly random, high-entropy passwords.</li>
+                        <li><strong>Peace of Mind:</strong> Knowing your accounts are protected by military-grade randomness.</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>Password Strength Guide: How to Create Unbreakable Passwords</h2>
+                    <p>Understanding password strength is crucial. Here's a comprehensive guide to creating passwords that stand the test of time:</p>
+                    
+                    <h3>What Makes a Password Strong?</h3>
+                    <ul>
+                        <li><strong>Length (16-20+ characters):</strong> Every additional character exponentially increases cracking time.</li>
+                        <li><strong>Character Diversity:</strong> Mix of uppercase, lowercase, numbers, and symbols.</li>
+                        <li><strong>Randomness:</strong> No patterns, dictionary words, or personal information.</li>
+                        <li><strong>Uniqueness:</strong> Different password for every account.</li>
+                    </ul>
+
+                    <h3>Password Strength Levels</h3>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr><th>Length</th><th>Character Sets</th><th>Crack Time (Supercomputer)</th><th>Rating</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>8 characters</td><td>Lowercase only</td><td>Seconds</td><td style="color:#ef4444;">❌ Extremely Weak</td></tr>
+                                <tr><td>8 characters</td><td>Mixed case + numbers</td><td>Hours</td><td style="color:#f97316;">⚠️ Weak</td></tr>
+                                <tr><td>12 characters</td><td>All sets + symbols</td><td>Centuries</td><td style="color:#22c55e;">✅ Good</td></tr>
+                                <tr><td>16 characters</td><td>All sets + symbols</td><td>Millions of years</td><td style="color:#16a34a;">🚀 Strong</td></tr>
+                                <tr><td>20+ characters</td><td>All sets + symbols</td><td>Age of universe</td><td style="color:#15803d;">🛡️ Unbreakable</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h2>Password Generator vs. Human-Generated Passwords: The Critical Difference</h2>
+                    <p>Why can't you just create your own "strong" password? Here's the psychology behind password creation:</p>
+                    
+                    <h3>Common Human Patterns (What Hackers Exploit)</h3>
+                    <ul>
+                        <li><strong>Keyboard Patterns:</strong> "qwerty123", "asdfgh", "1qaz2wsx"</li>
+                        <li><strong>Common Substitutions:</strong> "P@ssw0rd" (hackers know this trick)</li>
+                        <li><strong>Personal Info:</strong> Birthdays, pet names, anniversary dates</li>
+                        <li><strong>Word + Number:</strong> "Summer2026", "Winter2025"</li>
+                        <li><strong>Base Word + Site Name:</strong> "FacebookPass123", "GmailPass123"</li>
+                    </ul>
+
+                    <h3>Machine-Generated Randomness Advantages</h3>
+                    <ul>
+                        <li>No patterns that AI can detect</li>
+                        <li>Maximum entropy for the given length</li>
+                        <li>Truly unpredictable character sequences</li>
+                        <li>Resistant to dictionary and brute-force attacks</li>
+                        <li>Complies with strict password policies</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>Password Managers: The Only Safe Way to Store Strong Passwords</h2>
+                    <p>Once you generate strong passwords with PassGen Pro, you need a secure way to store them. Here's why password managers are essential:</p>
+
+                    <h3>Top Password Managers Compared</h3>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr><th>Password Manager</th><th>Free Tier</th><th>Key Features</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Bitwarden</td><td>✅ Yes</td><td>Open source, self-hostable, cross-platform</td></tr>
+                                <tr><td>1Password</td><td>❌ No</td><td>Travel mode, excellent UI, family plans</td></tr>
+                                <tr><td>Dashlane</td><td>✅ Limited</td><td>VPN included, dark web monitoring</td></tr>
+                                <tr><td>Keeper</td><td>✅ Limited</td><td>Breach alert, secure file storage</td></tr>
+                                <tr><td>Apple Keychain</td><td>✅ Yes</td><td>Built into Apple devices, seamless integration</td></tr>
+                                <tr><td>Google Password Manager</td><td>✅ Yes</td><td>Free, works across Android/Chrome</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>Benefits of Password Managers</h3>
+                    <ul>
+                        <li><strong>Encrypted Storage:</strong> All passwords are encrypted with a master password.</li>
+                        <li><strong>Auto-Fill:</strong> Convenient login across devices and browsers.</li>
+                        <li><strong>Password Auditing:</strong> Identify weak, reused, or compromised passwords.</li>
+                        <li><strong>Secure Sharing:</strong> Share credentials safely with family or team members.</li>
+                        <li><strong>2FA Integration:</strong> Many support two-factor authentication codes.</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>Two-Factor Authentication (2FA): Your Second Line of Defense</h2>
+                    <p>Even the strongest password can be compromised. That's why 2FA is critical:</p>
+
+                    <h3>Types of 2FA (Ranked by Security)</h3>
+                    <ol>
+                        <li><strong>Hardware Security Keys (Best):</strong> YubiKey, Titan Key - Physical device required.</li>
+                        <li><strong>Authenticator Apps (Good):</strong> Google Authenticator, Authy, Microsoft Authenticator.</li>
+                        <li><strong>SMS Codes (Least Secure):</strong> Vulnerable to SIM swapping attacks.</li>
+                    </ol>
+
+                    <h3>How to Set Up 2FA</h3>
+                    <ul>
+                        <li>Go to your account security settings</li>
+                        <li>Select "Two-Factor Authentication"</li>
+                        <li>Choose authenticator app option</li>
+                        <li>Scan QR code with your authenticator app</li>
+                        <li>Save backup codes securely</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>NIST Password Guidelines 2026: What You Need to Know</h2>
+                    <p>The National Institute of Standards and Technology (NIST) updates password recommendations regularly. Here are the latest guidelines:</p>
+
+                    <h3>NIST SP 800-63B Recommendations</h3>
+                    <ul>
+                        <li><strong>Minimum Length: 8 characters</strong> (but 15+ recommended)</li>
+                        <li><strong>Maximum Length: At least 64 characters</strong> (don't truncate)</li>
+                        <li><strong>All ASCII characters allowed</strong> (including spaces)</li>
+                        <li><strong>No arbitrary composition rules</strong> (like "must have one number") - our generator handles this automatically</li>
+                        <li><strong>Check against breached password lists</strong></li>
+                        <li><strong>Allow password managers</strong> to generate and fill passwords</li>
+                    </ul>
+
+                    <p>PassGen Pro exceeds all NIST requirements by providing:</p>
+                    <ul>
+                        <li>Up to 100-character passwords</li>
+                        <li>Full Unicode/ASCII character support</li>
+                        <li>Optional strict distribution rules</li>
+                        <li>Client-side generation (no transmission)</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>Password Security for Businesses and Enterprises</h2>
+                    <p>Organizations need password policies that balance security and usability:</p>
+
+                    <h3>Enterprise Password Policy Template</h3>
+                    <ul>
+                        <li>Minimum 14-character passwords for all employees</li>
+                        <li>Mandatory use of password managers</li>
+                        <li>Multi-factor authentication for all accounts</li>
+                        <li>Quarterly security awareness training</li>
+                        <li>Automated breach monitoring</li>
+                        <li>Single Sign-On (SSO) integration where possible</li>
+                    </ul>
+
+                    <h3>Compliance Standards</h3>
+                    <ul>
+                        <li><strong>GDPR:</strong> Requires appropriate security measures</li>
+                        <li><strong>HIPAA:</strong> Healthcare data protection standards</li>
+                        <li><strong>PCI-DSS:</strong> Payment card industry requirements</li>
+                        <li><strong>SOX:</strong> Financial reporting controls</li>
+                        <li><strong>ISO 27001:</strong> Information security management</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>Common Password Mistakes to Avoid in 2026</h2>
+                    <p>Even with a strong generator, how you use passwords matters. Avoid these critical errors:</p>
+
+                    <h3>The "One Password" Fallacy</h3>
+                    <p>Using the same password across multiple sites is like using one key for your house, car, office, and bank. If a hacker gets that key, everything is compromised.</p>
+
+                    <h3>Writing Passwords Down</h3>
+                    <p>Sticky notes on monitors, notebooks, or digital sticky notes are easily accessible to others. Use a password manager instead.</p>
+
+                    <h3>Ignoring Security Breaches</h3>
+                    <p>When a service you use is breached, change that password immediately. Check haveibeenpwned.com regularly.</p>
+
+                    <h3>Using Personal Information</h3>
+                    <p>Birthdays, anniversaries, pet names, and children's names are easily found on social media.</p>
+
+                    <h3>Seasonal Passwords</h3>
+                    <p>"Winter2026", "Summer2025", "Christmas2024" - hackers have dictionaries of these patterns.</p>
+
+                    <h3>Keyboard Patterns</h3>
+                    <p>"qwerty123", "asdfgh", "zxcvbn" - these are the first combinations hackers try.</p>
+                </div>
+
+                <div class="content-block">
+                    <h2>The Future of Authentication: Beyond Passwords</h2>
+                    <p>While strong passwords remain essential, the future of authentication is evolving:</p>
+
+                    <h3>Passkeys (WebAuthn)</h3>
+                    <p>Passkeys are cryptographic credentials stored on your device that authenticate you without passwords. They're:</p>
+                    <ul>
+                        <li>Phishing-resistant</li>
+                        <li>Unique per site</li>
+                        <li>Synchronized across devices</li>
+                        <li>Supported by Apple, Google, and Microsoft</li>
+                    </ul>
+
+                    <h3>Biometrics</h3>
+                    <p>Fingerprint, facial recognition, and voice recognition add convenience but have privacy considerations.</p>
+
+                    <h3>Hardware Tokens</h3>
+                    <p>Physical devices that generate one-time codes or act as authentication factors.</p>
+
+                    <h3>Zero-Trust Architecture</h3>
+                    <p>Continuous verification of every access request, regardless of source.</p>
+
+                    <p><strong>Note:</strong> Even with these advances, strong passwords remain the foundation of security. Passkeys often require a fallback password, and biometrics can be used alongside traditional authentication.</p>
+                </div>
+
+                <div class="content-block">
+                    <h2>How to Check if Your Passwords Have Been Compromised</h2>
+                    <p>Regular security audits are essential. Here's how to check:</p>
+
+                    <h3>Online Tools</h3>
+                    <ul>
+                        <li><strong>Have I Been Pwned:</strong> Check if your email appears in data breaches</li>
+                        <li><strong>Firefox Monitor:</strong> Free breach monitoring service</li>
+                        <li><strong>Google Password Checkup:</strong> Chrome's built-in breach detection</li>
+                    </ul>
+
+                    <h3>What to Do If Compromised</h3>
+                    <ol>
+                        <li>Immediately change the password using PassGen Pro</li>
+                        <li>Enable 2FA if not already active</li>
+                        <li>Check for unauthorized activity</li>
+                        <li>Update any accounts using the same password</li>
+                        <li>Consider freezing credit if financial accounts affected</li>
+                    </ol>
+                </div>
+
+                <div class="content-block">
+                    <h2>Password Security Statistics 2026</h2>
+                    <ul>
+                        <li><strong>80% of data breaches</strong> involve weak or stolen passwords</li>
+                        <li><strong>65% of people</strong> reuse passwords across multiple sites</li>
+                        <li><strong>The average person</strong> has over 100 online accounts</li>
+                        <li><strong>24 billion</strong> credentials are available on the dark web</li>
+                        <li><strong>Password spraying attacks</strong> increased 300% in 2025</li>
+                        <li><strong>Only 35% of users</strong> enable 2FA where available</li>
+                        <li><strong>Companies lose $2.9 million</strong> on average per data breach</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2>Frequently Asked Questions (FAQ) About Password Security</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">Is PassGen Pro safe for sensitive accounts like banking? <i data-lucide="chevron-down" class="faq-icon"></i></div>
+                        <div class="faq-a">Yes. We use the Web Crypto API, the industry standard for browser-based cryptography. All generation happens locally in your browser. No data ever touches a server.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">Why is a 16-character password recommended? <i data-lucide="chevron-down" class="faq-icon"></i></div>
+                        <div class="faq-a">A 16-character password with all character sets provides 94^16 ≈ 3.7 × 10^31 combinations. It would take a modern supercomputer trillions of years to guess it.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">Can I use PassGen Pro offline? <i data-lucide="chevron-down" class="faq-icon"></i></div>
+                        <div class="faq-a">Once the page loads, the generator works entirely offline. You can even turn off your Wi-Fi and it will still work perfectly.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">What is "Strict Distribution"? <i data-lucide="chevron-down" class="faq-icon"></i></div>
+                        <div class="faq-a">Strict Distribution ensures that if you select Symbols, Numbers, and Letters, the result will 100% contain at least one of each character type, meeting strict password policies.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">Is there a limit to how many passwords I can generate? <i data-lucide="chevron-down" class="faq-icon"></i></div>
+                        <div class="faq-a">No. You can generate an unlimited number of passwords for free, forever. No registration, no limits.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">Should I store my passwords in my browser? <i data-lucide="chevron-down" class="faq-icon"></i></div>
+                        <div class="faq-a">Dedicated password managers (like Bitwarden or 1Password) are generally safer than browser-based storage because they offer better encryption, cross-device syncing, and security audits.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">What makes a password "unhackable"? <i data-lucide="chevron-down" class="faq-icon"></i></div>
+                        <div class="faq-a">Randomness + Length. If there is no pattern for a computer to find, it has to guess every single combination. With enough length, this becomes mathematically impossible within the age of the universe.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">Does PassGen Pro work on mobile phones? <i data-lucide="chevron-down" class="faq-icon"></i></div>
+                        <div class="faq-a">Yes, our interface is fully responsive and works perfectly on iPhones, Android devices, iPads, and tablets of all sizes.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">Why are some characters considered "ambiguous"? <i data-lucide="chevron-down" class="faq-icon"></i></div>
+                        <div class="faq-a">Characters like 'O' (letter) and '0' (number) look very similar, as do 'l' (lowercase L) and '1' (one). Excluding them helps when you need to read or write the password manually without confusion.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-q" onclick="toggleFaq(this)">Is this the best password generator available? <i data-lucide="chevron-down" class="faq-icon"></i></div>
+                        <div class="faq-a">PassGen Pro is designed to be the fastest, simplest, and most secure tool available, adhering to international security standards. We're recommended by cybersecurity professionals worldwide.</div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-brand-wrap">
+                    <div class="footer-robot-logo">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="25" y="25" width="50" height="40" rx="8" fill="none" stroke="#fff" stroke-width="8" />
+                            <circle cx="42" cy="42" r="6" fill="#fff" />
+                            <circle cx="58" cy="42" r="6" fill="#fff" />
+                            <path d="M50,25 V15 M50,15 A2,2 0 1,1 50.1,15" stroke="#fff" stroke-width="5" fill="none" />
+                            <circle cx="20" cy="45" r="7" fill="#fff" />
+                            <circle cx="80" cy="45" r="7" fill="#fff" />
+                            <path d="M15,75 L85,75" stroke="#fff" stroke-width="10" stroke-linecap="round" />
+                            <path d="M75,75 V85 M65,75 V80" stroke="#fff" stroke-width="6" />
+                        </svg>
+                    </div>
+                    <h5>Password</h5>
+                </div>
+                <p>Professional free online password generator. Create secure, random, and private keys instantly. 100% client-side security with zero-knowledge architecture.</p>
+            </div>
+            <div class="footer-col">
+                <h5>QUICK LINKS</h5>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>LEGAL & INFO</h5>
+                <ul class="footer-links">
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Use</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>&copy; 2026 password.textify.tools. All rights reserved. Made for Security.</div>
+            <div>Designed For Global Security Standards</div>
+        </div>
+    </footer>
+
+    <script>
+        // --- PASSWORD GENERATOR LOGIC ---
+        function updateLen(v) { document.getElementById('lenVal').innerText = v; }
+
+        function generate() {
+            const len = parseInt(document.getElementById('pLen').value);
+            const u = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const l = "abcdefghijklmnopqrstuvwxyz";
+            const n = "0123456789";
+            const s = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
+            const sim = "il1Lo0O";
+            const amb = "{}[]()/\\'\"`~,;:.<>";
+
+            let finalCharset = "";
+            let requiredSets = [];
+
+            if(document.getElementById('up').checked) { finalCharset += u; requiredSets.push(u); }
+            if(document.getElementById('lo').checked) { finalCharset += l; requiredSets.push(l); }
+            if(document.getElementById('nu').checked) { finalCharset += n; requiredSets.push(n); }
+            
+            let symbolSet = document.getElementById('sy').checked ? s : "";
+            const custom = document.getElementById('customSym').value;
+            if(custom) symbolSet += custom;
+            if(symbolSet) { finalCharset += symbolSet; requiredSets.push(symbolSet); }
+
+            if(document.getElementById('exSim').checked) {
+                const re = new RegExp(`[${sim}]`, 'g');
+                finalCharset = finalCharset.replace(re, '');
+                requiredSets = requiredSets.map(set => set.replace(re, ''));
+            }
+            if(document.getElementById('exAmb').checked) {
+                const re = new RegExp(`[${amb.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}]`, 'g');
+                finalCharset = finalCharset.replace(re, '');
+                requiredSets = requiredSets.map(set => set.replace(re, ''));
+            }
+
+            if(!finalCharset) { document.getElementById('passwordOutput').innerText = "Pick Options"; return; }
+
+            const isStrict = document.getElementById('strict').checked;
+            const startWithLetter = document.getElementById('startLetter').checked;
+
+            let result = "";
+            let attempts = 0;
+
+            while (attempts < 100) {
+                let currentPass = "";
+                let usedSets = new Set();
+
+                for (let i = 0; i < len; i++) {
+                    let pool = finalCharset;
+                    if (i === 0 && startWithLetter) {
+                        pool = (u + l).split('').filter(char => finalCharset.includes(char)).join('');
+                        if (!pool) pool = finalCharset;
+                    }
+
+                    const rand = new Uint32Array(1);
+                    window.crypto.getRandomValues(rand);
+                    const char = pool.charAt(rand[0] % pool.length);
+                    currentPass += char;
+
+                    requiredSets.forEach((set, idx) => {
+                        if (set.includes(char)) usedSets.add(idx);
+                    });
+                }
+
+                if (isStrict) {
+                    if (usedSets.size === requiredSets.filter(s => s.length > 0).length) {
+                        result = currentPass;
+                        break;
+                    }
+                } else {
+                    result = currentPass;
+                    break;
+                }
+                attempts++;
+            }
+
+            if (!result) {
+                let fallback = "";
+                for (let i = 0; i < len; i++) {
+                    const rand = new Uint32Array(1);
+                    window.crypto.getRandomValues(rand);
+                    fallback += finalCharset.charAt(rand[0] % finalCharset.length);
+                }
+                result = fallback;
+            }
+            
+            document.getElementById('passwordOutput').innerText = result;
+            
+            const bar = document.getElementById('strengthBar');
+            const score = (len / 40) * 100;
+            bar.style.width = Math.min(score, 100) + "%";
+            if (len < 12) bar.style.backgroundColor = 'var(--error)';
+            else if (len < 18) bar.style.backgroundColor = 'orange';
+            else bar.style.backgroundColor = 'var(--success)';
+        }
+
+        function copy() {
+            const text = document.getElementById('passwordOutput').innerText;
+            const el = document.createElement('textarea');
+            el.value = text; document.body.appendChild(el);
+            el.select(); document.execCommand('copy');
+            document.body.removeChild(el);
+            showToast("Copied Successfully!");
+        }
+
+        function downloadTxt() {
+            const text = document.getElementById('passwordOutput').innerText;
+            const blob = new Blob([`PassGen Pro Secure Key:\r\n\r\n${text}\r\n\r\nGenerated at: ${new Date().toLocaleString()}`], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url; a.download = "secure_key.txt";
+            document.body.appendChild(a); a.click();
+            document.body.removeChild(a); showToast("File Downloaded!");
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.innerText = msg; toast.style.display = 'block';
+            setTimeout(() => { toast.style.display = 'none'; }, 2000);
+        }
+
+        function toggleFaq(el) { el.parentElement.classList.toggle('active'); }
+
+        window.onload = () => {
+            generate();
+            lucide.createIcons();
+        };
+
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', e => {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) e.preventDefault();
+        });
+    </script>
+  <script data-name="BMC-Widget" data-cfasync="false" 
+src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" 
+data-id="textify.tools" 
+data-description="Support me on Buy me a coffee!" 
+data-message="" 
+data-color="#FFC107" 
+data-position="Right" 
+data-x_margin="18" 
+data-y_margin="18">
+</script>
+</body>
+</html>

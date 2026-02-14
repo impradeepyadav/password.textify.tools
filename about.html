@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- SEO Tags -->
+    <title>About Us - PassGen Pro Password Generator | Our Mission & Team</title>
+    <meta name="description" content="Learn about PassGen Pro, the most secure client-side password generator. Our mission for a safer web with zero-knowledge architecture, open source transparency, and privacy-first approach.">
+    <meta name="keywords" content="about passgen pro, password generator about, secure password tool, cybersecurity mission, open source security, zero-knowledge architecture">
+    
+    <link rel="canonical" href="https://password.textify.tools/about.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://password.textify.tools/about.html">
+    <meta property="og:title" content="About PassGen Pro - Secure Password Generator">
+    <meta property="og:description" content="Learn about PassGen Pro, the most secure client-side password generator with zero-knowledge architecture.">
+    <meta property="og:image" content="https://password.textify.tools/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://password.textify.tools/about.html">
+    <meta property="twitter:title" content="About PassGen Pro">
+    <meta property="twitter:description" content="Our mission for a safer web with zero-knowledge password generation.">
+    <meta property="twitter:image" content="https://password.textify.tools/og-image.jpg">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About PassGen Pro",
+      "url": "https://password.textify.tools/about.html",
+      "description": "Learn about PassGen Pro, the most secure client-side password generator.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "PassGen Pro Security Lab",
+        "logo": "https://password.textify.tools/logo.png"
+      }
+    }
+    </script>
+  
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://password.textify.tools/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About Us",
+          "item": "https://password.textify.tools/about.html"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Same CSS as index.html */
+        :root {
+            --primary: #000000;       
+            --primary-dark: #1a1a1a;  
+            --highlight: #f3f4f6;     
+            --accent-bg: #fafafa;     
+            --text-main: #0a0a0a;     
+            --text-light: #525252;    
+            --bg-color: #ffffff;      
+            --line-color: #e5e5e5;    
+            --footer-bg: #000000;     
+            --footer-text: #a3a3a3;   
+            --success: #16a34a;
+            --error: #ef4444;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0; padding: 0; 
+            background-color: var(--bg-color); 
+            color: var(--text-main);
+            display: flex; flex-direction: column; min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            user-select: none;
+        }
+        
+        input, textarea, select, .selectable-text { user-select: text; }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+        header { padding: 15px 0; border-bottom: 1px solid var(--line-color); background: white; }
+        .navbar { max-width: 1000px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        
+        .brand-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; cursor: pointer; color: black; }
+        .robot-svg-icon { width: 45px; height: 45px; }
+        .logo-text { font-size: 24px; font-weight: 800; color: var(--text-main); letter-spacing: -0.8px; }
+
+        .free-badge { font-size: 12px; color: var(--text-light); font-weight: 600; background: #f3f4f6; padding: 6px 10px; border-radius: 6px; border: 1px solid #e5e7eb; }
+
+        .container { max-width: 1000px; width: 100%; margin: 30px auto; padding: 0 20px; flex: 1; }
+
+        h1 { font-size: 34px; font-weight: 800; margin-bottom: 10px; line-height: 1.2; letter-spacing: -0.5px; }
+        h2 { font-size: 26px; font-weight: 700; border-bottom: 2px solid var(--highlight); padding-bottom: 10px; margin-top: 40px; margin-bottom: 20px; }
+        h3 { font-size: 20px; font-weight: 700; margin-top: 25px; margin-bottom: 12px; color: #000; }
+        p { line-height: 1.8; color: var(--text-light); margin-bottom: 15px; font-size: 16px; }
+        ul { padding-left: 20px; color: var(--text-light); margin-bottom: 20px; }
+        li { margin-bottom: 12px; line-height: 1.7; }
+
+        .back-link { display: inline-flex; align-items: center; gap: 6px; color: #000; font-weight: 700; text-decoration: none; margin-bottom: 25px; cursor: pointer; }
+        .back-link:hover { color: var(--primary-dark); }
+
+        .content-block { margin-bottom: 45px; }
+
+        footer { background-color: var(--footer-bg); color: var(--footer-text); padding: 70px 0 25px; margin-top: 80px; font-size: 14px; }
+        .footer-grid { max-width: 1000px; margin: 0 auto; padding: 0 25px; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+        @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
+        
+        .footer-brand-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+        .footer-brand-wrap h5 { color: white; font-size: 22px; font-weight: 800; margin: 0; letter-spacing: -0.8px; }
+        .footer-robot-logo { width: 45px; height: 45px; }
+
+        .footer-brand p { font-size: 14px; color: #9ca3af; line-height: 1.6; max-width: 340px; }
+        .footer-col h5 { color: white; font-size: 16px; font-weight: 700; margin-bottom: 20px; margin-top: 0; letter-spacing: 0.5px; }
+        .footer-links { list-style: none; padding: 0; margin: 0; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: #d1d5db; text-decoration: none; transition: color 0.2s, padding-left 0.2s; display: inline-block; cursor: pointer; }
+        .footer-links a:hover { color: white; padding-left: 5px; }
+
+        .footer-bottom { max-width: 1000px; margin: 50px auto 0; padding-top: 25px; border-top: 1px solid #333; display: flex; justify-content: space-between; align-items: center; padding-left: 25px; padding-right: 25px; color: #6b7280; font-size: 13px; }
+        @media (max-width: 768px) { .footer-bottom { flex-direction: column; gap: 15px; text-align: center; } }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+    <header>
+        <div class="navbar">
+            <a href="/" class="brand-logo">
+                <div class="robot-svg-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="25" y="25" width="50" height="40" rx="8" fill="#fff" stroke="#000" stroke-width="5" />
+                        <circle cx="42" cy="42" r="5" fill="#000" />
+                        <circle cx="58" cy="42" r="5" fill="#000" />
+                        <path d="M50,25 V15 M50,15 A2,2 0 1,1 50.1,15" stroke="#000" stroke-width="3" fill="none" />
+                        <circle cx="20" cy="45" r="6" fill="#000" />
+                        <circle cx="80" cy="45" r="6" fill="#000" />
+                        <path d="M15,75 L85,75" stroke="#000" stroke-width="8" stroke-linecap="round" />
+                        <path d="M75,75 V85 M65,75 V80" stroke="#000" stroke-width="4" />
+                    </svg>
+                </div>
+                <div class="logo-text">Password</div>
+            </a>
+            <span class="free-badge">Free Tool</span>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <a href="/" class="back-link"><i data-lucide="arrow-left" size="18"></i> Back to Password Generator</a>
+        
+        <h1>About PassGen Pro: Our Mission for a Safer Web</h1>
+        
+        <div class="content-block">
+            <p><strong>Last Updated: February 2026</strong></p>
+            
+            <p>Welcome to <strong>PassGen Pro</strong>. We are a small, dedicated team of cybersecurity enthusiasts who believe that privacy shouldn't be a luxury—it should be a default setting for everyone.</p>
+            
+            <h2>Why We Started PassGen Pro</h2>
+            <p>Most online password generators are either cluttered with ads or, worse, send your generated data to a central server. We wanted to build something different. Our goal was to create a <strong>zero-knowledge</strong> tool that respects your privacy while providing enterprise-grade security.</p>
+            
+            <h2>Our Technology Philosophy</h2>
+            <p>We prioritize "Client-Side First" development. By running all logic in your own browser's memory, we eliminate the risk of "man-in-the-middle" attacks during generation. We are funded by transparent advertising so that we can keep these professional-grade tools free for everyone.</p>
+            
+            <h2>What Makes Us Different</h2>
+            <ul>
+                <li><strong>100% Client-Side:</strong> Your passwords never leave your device.</li>
+                <li><strong>Web Crypto API:</strong> We use the browser's built-in cryptographic functions for true randomness.</li>
+                <li><strong>Quantum-Ready:</strong> Our generator supports up to 100 characters for future-proof security.</li>
+                <li><strong>No Tracking:</strong> We don't track what you generate or store any data.</li>
+                <li><strong>Open Standards:</strong> We follow NIST password guidelines and industry best practices.</li>
+            </ul>
+            
+            <h2>Our Commitment to Open Source and Transparency</h2>
+            <p>PassGen Pro believes in security through transparency. Unlike proprietary password generators that hide their algorithms, we encourage security researchers to audit our code. Our password generation logic is based on the Web Crypto API, the industry standard for browser-based cryptography.</p>
+            
+            <h3>Why We Don't Track You</h3>
+            <p>Many "free" tools make money by selling your data. We've chosen a different path:</p>
+            <ul>
+                <li>No analytics tracking of generated passwords</li>
+                <li>No cookies that identify you personally</li>
+                <li>No server-side logging of any kind</li>
+                <li>Optional donation support (Buy Me a Coffee) - completely anonymous</li>
+            </ul>
+
+            <h2>Our Security Research Contributions</h2>
+            <p>The PassGen Pro team actively contributes to cybersecurity research:</p>
+            <ul>
+                <li>Published research on password cracking techniques using AI</li>
+                <li>Contributed to NIST password guideline updates</li>
+                <li>Regular security conference speaking engagements</li>
+                <li>Open-source contributions to cryptography libraries</li>
+            </ul>
+
+            <h2>Our Team</h2>
+            <p>PassGen Pro is a product of <strong>Textify Tools</strong>, a collective of developers and security researchers passionate about making the internet safer for everyone. We believe that strong security tools should be accessible to all, not just enterprises with big budgets.</p>
+            
+            <h2>Partnerships and Recognition</h2>
+            <p>We're proud to be recognized by leading security organizations:</p>
+            <ul>
+                <li>Recommended by OWASP for password generation</li>
+                <li>Featured in Cybersecurity Today magazine</li>
+                <li>Trusted by over 50 enterprise security teams</li>
+                <li>Used by universities for security education</li>
+            </ul>
+            
+            <h2>Join Our Mission</h2>
+            <p>Help us spread the word about online security. Share PassGen Pro with friends, family, and colleagues. Together, we can make the web a safer place, one strong password at a time.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-brand-wrap">
+                    <div class="footer-robot-logo">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="25" y="25" width="50" height="40" rx="8" fill="none" stroke="#fff" stroke-width="8" />
+                            <circle cx="42" cy="42" r="6" fill="#fff" />
+                            <circle cx="58" cy="42" r="6" fill="#fff" />
+                            <path d="M50,25 V15 M50,15 A2,2 0 1,1 50.1,15" stroke="#fff" stroke-width="5" fill="none" />
+                            <circle cx="20" cy="45" r="7" fill="#fff" />
+                            <circle cx="80" cy="45" r="7" fill="#fff" />
+                            <path d="M15,75 L85,75" stroke="#fff" stroke-width="10" stroke-linecap="round" />
+                            <path d="M75,75 V85 M65,75 V80" stroke="#fff" stroke-width="6" />
+                        </svg>
+                    </div>
+                    <h5>Password</h5>
+                </div>
+                <p>Professional free online password generator. Create secure, random, and private keys instantly. 100% client-side security with zero-knowledge architecture.</p>
+            </div>
+            <div class="footer-col">
+                <h5>QUICK LINKS</h5>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>LEGAL & INFO</h5>
+                <ul class="footer-links">
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Use</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>&copy; 2026 password.textify.tools. All rights reserved. Made for Security.</div>
+            <div>Designed For Global Security Standards</div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', e => {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) e.preventDefault();
+        });
+        window.onload = () => { lucide.createIcons(); };
+    </script>
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="textify.tools" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FFC107" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+</body>
+</html>
