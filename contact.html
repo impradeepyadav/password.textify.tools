@@ -1,37 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<html lang="en" itemscope itemtype="https://schema.org/ContactPage">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <meta name="theme-color" content="#000000">
     
     <!-- SEO Tags -->
-    <title>Contact Us - Free Password Generator Support</title>
+    <title>Contact Us - Free Password Generator Support | PassGen Pro</title>
     <meta name="description" content="Contact PassGen Pro support team for help with password generation, security questions, bug reports, or feature requests. We typically respond within 24-48 hours.">
     <meta name="keywords" content="contact passgen pro, password generator support, security tool help, bug report, feature request, customer support">
-    
-    <link rel="canonical" href="https://password.textify.tools/contact.html" />
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="PassGen Pro">
+    <link rel="canonical" href="https://password.pandacybercafe.in/contact.html" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://password.textify.tools/contact.html">
+    <meta property="og:url" content="https://password.pandacybercafe.in/contact.html">
     <meta property="og:title" content="Contact PassGen Pro Support">
     <meta property="og:description" content="Contact PassGen Pro support team for help with password generation and security questions.">
-    <meta property="og:image" content="https://password.textify.tools/og-image.jpg">
+    <meta property="og:site_name" content="PassGen Pro">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://password.textify.tools/contact.html">
+    <meta property="twitter:url" content="https://password.pandacybercafe.in/contact.html">
     <meta property="twitter:title" content="Contact PassGen Pro Support">
     <meta property="twitter:description" content="Get help with password generation, bug reports, and feature requests.">
-    <meta property="twitter:image" content="https://password.textify.tools/og-image.jpg">
 
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23000000'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='white' font-weight='bold'%3EP%3C/text%3E%3C/svg%3E">
 
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -39,7 +35,7 @@
       "@context": "https://schema.org",
       "@type": "ContactPage",
       "name": "Contact PassGen Pro Support",
-      "url": "https://password.textify.tools/contact.html",
+      "url": "https://password.pandacybercafe.in/contact.html",
       "description": "Contact PassGen Pro support team for help with password generation.",
       "publisher": {
         "@type": "Organization",
@@ -47,7 +43,7 @@
       }
     }
     </script>
-  
+    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -57,109 +53,379 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://password.textify.tools/"
+          "item": "https://password.pandacybercafe.in/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Contact Us",
-          "item": "https://password.textify.tools/contact.html"
+          "item": "https://password.pandacybercafe.in/contact.html"
         }
       ]
     }
     </script>
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        /* Same CSS as about.html */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
         :root {
-            --primary: #000000;       
-            --primary-dark: #1a1a1a;  
-            --highlight: #f3f4f6;     
-            --accent-bg: #fafafa;     
-            --text-main: #0a0a0a;     
-            --text-light: #525252;    
-            --bg-color: #ffffff;      
-            --line-color: #e5e5e5;    
-            --footer-bg: #000000;     
-            --footer-text: #a3a3a3;   
+            --primary: #000000;
+            --primary-dark: #1a1a1a;
+            --text-main: #0a0a0a;
+            --text-light: #525252;
+            --bg-color: #ffffff;
+            --line-color: #e5e7eb;
+            --footer-bg: #0f172a;
+            --footer-text: #94a3b8;
             --success: #16a34a;
             --error: #ef4444;
         }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            margin: 0; padding: 0; 
-            background-color: var(--bg-color); 
+            background-color: var(--bg-color);
             color: var(--text-main);
-            display: flex; flex-direction: column; min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
             -webkit-font-smoothing: antialiased;
-            user-select: none;
         }
-        
-        input, textarea, select, .selectable-text { user-select: text; }
-        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
-        header { padding: 15px 0; border-bottom: 1px solid var(--line-color); background: white; }
-        .navbar { max-width: 1000px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
-        
-        .brand-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; cursor: pointer; color: black; }
-        .robot-svg-icon { width: 45px; height: 45px; }
-        .logo-text { font-size: 24px; font-weight: 800; color: var(--text-main); letter-spacing: -0.8px; }
+        input, textarea, select, button {
+            font-family: inherit;
+        }
 
-        .free-badge { font-size: 12px; color: var(--text-light); font-weight: 600; background: #f3f4f6; padding: 6px 10px; border-radius: 6px; border: 1px solid #e5e7eb; }
+        /* Header */
+        header {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--line-color);
+            background: white;
+        }
 
-        .container { max-width: 1000px; width: 100%; margin: 30px auto; padding: 0 20px; flex: 1; }
+        .navbar {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-        h1 { font-size: 34px; font-weight: 800; margin-bottom: 10px; line-height: 1.2; letter-spacing: -0.5px; }
-        h2 { font-size: 26px; font-weight: 700; border-bottom: 2px solid var(--highlight); padding-bottom: 10px; margin-top: 40px; margin-bottom: 20px; }
-        h3 { font-size: 20px; font-weight: 700; margin-top: 25px; margin-bottom: 12px; color: #000; }
-        p { line-height: 1.8; color: var(--text-light); margin-bottom: 15px; font-size: 16px; }
-        ul { padding-left: 20px; color: var(--text-light); margin-bottom: 20px; }
-        li { margin-bottom: 12px; line-height: 1.7; }
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: black;
+        }
 
-        .back-link { display: inline-flex; align-items: center; gap: 6px; color: #000; font-weight: 700; text-decoration: none; margin-bottom: 25px; cursor: pointer; }
-        .back-link:hover { color: var(--primary-dark); }
+        .robot-svg-icon {
+            width: 45px;
+            height: 45px;
+        }
 
-        .content-block { margin-bottom: 45px; }
-        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text-main);
+            letter-spacing: -0.8px;
+        }
+
+        .free-badge {
+            font-size: 12px;
+            color: var(--text-light);
+            font-weight: 600;
+            background: #f3f4f6;
+            padding: 6px 12px;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            margin: 30px auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 38px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        h2 {
+            font-size: 26px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--line-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            color: #000;
+        }
+
+        p {
+            line-height: 1.7;
+            color: var(--text-light);
+            margin-bottom: 18px;
+            font-size: 16px;
+        }
+
+        ul, ol {
+            padding-left: 22px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #000;
+            font-weight: 600;
+            text-decoration: none;
+            margin-bottom: 30px;
+            padding: 8px 0;
+            transition: 0.2s;
+        }
+
+        .back-link:hover {
+            color: #333;
+            gap: 10px;
+        }
+
+        .content-block {
+            margin-bottom: 45px;
+        }
+
         .contact-card {
             background: #f9fafb;
             border: 1px solid var(--line-color);
-            border-radius: 12px;
+            border-radius: 16px;
             padding: 30px;
             margin: 30px 0;
         }
-        .contact-item { display: flex; align-items: center; gap: 20px; margin-bottom: 25px; }
-        .contact-icon { width: 50px; height: 50px; background: #000; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-        .contact-details h4 { margin: 0 0 5px 0; font-size: 18px; }
-        .contact-details p { margin: 0; font-size: 16px; color: var(--text-main); }
 
-        .faq-q { padding: 18px; background: #fafafa; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border: 1px solid var(--line-color); border-radius: 10px; margin-bottom: 5px; }
-        .faq-q:hover { background: #f0f0f0; }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+            padding: 5px 0;
+        }
 
-        footer { background-color: var(--footer-bg); color: var(--footer-text); padding: 70px 0 25px; margin-top: 80px; font-size: 14px; }
-        .footer-grid { max-width: 1000px; margin: 0 auto; padding: 0 25px; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
-        @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 40px; } }
-        
-        .footer-brand-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
-        .footer-brand-wrap h5 { color: white; font-size: 22px; font-weight: 800; margin: 0; letter-spacing: -0.8px; }
-        .footer-robot-logo { width: 45px; height: 45px; }
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: #000;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
 
-        .footer-brand p { font-size: 14px; color: #9ca3af; line-height: 1.6; max-width: 340px; }
-        .footer-col h5 { color: white; font-size: 16px; font-weight: 700; margin-bottom: 20px; margin-top: 0; letter-spacing: 0.5px; }
-        .footer-links { list-style: none; padding: 0; margin: 0; }
-        .footer-links li { margin-bottom: 12px; }
-        .footer-links a { color: #d1d5db; text-decoration: none; transition: color 0.2s, padding-left 0.2s; display: inline-block; cursor: pointer; }
-        .footer-links a:hover { color: white; padding-left: 5px; }
+        .contact-details h4 {
+            margin: 0 0 5px 0;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
 
-        .footer-bottom { max-width: 1000px; margin: 50px auto 0; padding-top: 25px; border-top: 1px solid #333; display: flex; justify-content: space-between; align-items: center; padding-left: 25px; padding-right: 25px; color: #6b7280; font-size: 13px; }
-        @media (max-width: 768px) { .footer-bottom { flex-direction: column; gap: 15px; text-align: center; } }
+        .contact-details p {
+            margin: 0;
+            font-size: 16px;
+            color: var(--text-main);
+        }
+
+        .contact-details a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        .faq-item {
+            border: 1px solid var(--line-color);
+            border-radius: 10px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 16px 20px;
+            background: #fafafa;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 16px 20px;
+            border-top: 1px solid var(--line-color);
+            display: none;
+            line-height: 1.6;
+            color: var(--text-light);
+            background: #fff;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            transition: transform 0.2s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 60px 0 25px;
+            margin-top: 70px;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 25px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        .footer-col h5 {
+            color: white;
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .footer-brand p {
+            font-size: 13px;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-top: 12px;
+            max-width: 300px;
+        }
+
+        .footer-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .footer-robot-svg {
+            width: 38px;
+            height: 38px;
+        }
+
+        .footer-logo-text {
+            font-size: 20px;
+            font-weight: 800;
+            color: white;
+            letter-spacing: -0.5px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: 0.2s;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 3px;
+        }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 25px;
+            padding-right: 25px;
+            color: #64748b;
+            font-size: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 22px;
+            }
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 12px;
+            }
+            .contact-icon {
+                margin: 0 auto;
+            }
+        }
     </style>
 </head>
-<body oncontextmenu="return false;">
+<body>
 
     <header>
         <div class="navbar">
@@ -178,13 +444,15 @@
                 </div>
                 <div class="logo-text">Password</div>
             </a>
-            <span class="free-badge">Free Tool</span>
+            <span class="free-badge">Free Tool | Secure</span>
         </div>
     </header>
 
     <main class="container">
         
-        <a href="/" class="back-link"><i data-lucide="arrow-left" size="18"></i> Back to Tool</a>
+        <a href="/" class="back-link">
+            <i data-lucide="arrow-left" size="18"></i> Back to Password Generator
+        </a>
         
         <h1>Contact PassGen Pro Support</h1>
         
@@ -192,7 +460,7 @@
             <p>We value your feedback, suggestions, and security inquiries. Our team is here to help you with any questions about password generation, security best practices, or technical issues.</p>
             
             <div class="contact-card">
-                <h2 style="margin-top: 0; border-bottom: none;">Get in Touch</h2>
+                <h2 style="margin-top: 0; border-bottom: none; font-size: 24px;">Get in Touch</h2>
                 
                 <div class="contact-item">
                     <div class="contact-icon">
@@ -200,7 +468,7 @@
                     </div>
                     <div class="contact-details">
                         <h4>Email Support</h4>
-                        <p><strong><a href="mailto:support@passgen.pro" style="color: #000; text-decoration: none;">support@passgen.pro</a></strong></p>
+                        <p><a href="mailto:support@passgen.pro">support@passgen.pro</a></p>
                     </div>
                 </div>
                 
@@ -235,68 +503,67 @@
                 </div>
             </div>
 
-            <div class="content-block" style="margin-top: 50px;">
+            <div class="content-block">
                 <h2>Frequently Asked Support Questions</h2>
                 
-                <div class="faq-q" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">
-                    Q: The generator isn't working in my browser. What should I do?
-                    <i data-lucide="chevron-down" class="faq-icon"></i>
-                </div>
-                <div style="display: none; padding: 18px; background: #fff; border: 1px solid var(--line-color); border-top: none; border-radius: 0 0 10px 10px;">
-                    A: Try updating your browser to the latest version. We officially support Chrome, Firefox, Safari, and Edge. If the problem persists, clear your browser cache or try incognito mode.
-                </div>
-
-                <div class="faq-q" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">
-                    Q: Are the passwords really random and secure?
-                    <i data-lucide="chevron-down" class="faq-icon"></i>
-                </div>
-                <div style="display: none; padding: 18px; background: #fff; border: 1px solid var(--line-color); border-top: none; border-radius: 0 0 10px 10px;">
-                    A: Yes! We use the Web Crypto API, which provides cryptographically secure random numbers. This is the same standard used by banks and governments for secure encryption.
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        The generator isn't working in my browser. What should I do?
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Try updating your browser to the latest version. We officially support Chrome, Firefox, Safari, and Edge. If the problem persists, clear your browser cache or try incognito mode.
+                    </div>
                 </div>
 
-                <div class="faq-q" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">
-                    Q: Can I use PassGen Pro offline?
-                    <i data-lucide="chevron-down" class="faq-icon"></i>
-                </div>
-                <div style="display: none; padding: 18px; background: #fff; border: 1px solid var(--line-color); border-top: none; border-radius: 0 0 10px 10px;">
-                    A: Absolutely! Once the page loads, you can disconnect from the internet and it still works perfectly. All generation happens locally in your browser.
-                </div>
-
-                <div class="faq-q" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">
-                    Q: I lost a password I generated. Can you recover it?
-                    <i data-lucide="chevron-down" class="faq-icon"></i>
-                </div>
-                <div style="display: none; padding: 18px; background: #fff; border: 1px solid var(--line-color); border-top: none; border-radius: 0 0 10px 10px;">
-                    A: <strong>No, we cannot recover any passwords.</strong> Since we operate on a zero-knowledge architecture and don't store anything, we have no way to retrieve passwords. Please save your passwords in a password manager immediately after generation.
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Are the passwords really random and secure?
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes. We use the Web Crypto API, which provides cryptographically secure random numbers. This is the same standard used by banks and governments for secure encryption.
+                    </div>
                 </div>
 
-                <div class="faq-q" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">
-                    Q: How do I request a new feature?
-                    <i data-lucide="chevron-down" class="faq-icon"></i>
-                </div>
-                <div style="display: none; padding: 18px; background: #fff; border: 1px solid var(--line-color); border-top: none; border-radius: 0 0 10px 10px;">
-                    A: Email us at support@passgen.pro with "FEATURE REQUEST" in the subject line. Popular requests include:
-                    <ul style="margin-top: 10px;">
-                        <li>Bulk password generation (multiple at once)</li>
-                        <li>Password strength meter API</li>
-                        <li>Mobile app versions (iOS/Android)</li>
-                        <li>Enterprise SSO integration</li>
-                        <li>Password history tracking (encrypted locally)</li>
-                    </ul>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Can I use PassGen Pro offline?
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely. Once the page loads, you can disconnect from the internet and it still works perfectly. All generation happens locally in your browser.
+                    </div>
                 </div>
 
-                <div class="faq-q" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">
-                    Q: How do I report a bug?
-                    <i data-lucide="chevron-down" class="faq-icon"></i>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        I lost a password I generated. Can you recover it?
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        No, we cannot recover any passwords. Since we operate on a zero-knowledge architecture and don't store anything, we have no way to retrieve passwords. Please save your passwords in a password manager immediately after generation.
+                    </div>
                 </div>
-                <div style="display: none; padding: 18px; background: #fff; border: 1px solid var(--line-color); border-top: none; border-radius: 0 0 10px 10px;">
-                    A: Please email us at support@passgen.pro with:
-                    <ul style="margin-top: 10px;">
-                        <li>Your browser type and version</li>
-                        <li>Operating system</li>
-                        <li>Steps to reproduce the issue</li>
-                        <li>Screenshots (if applicable)</li>
-                    </ul>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        How do I request a new feature?
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Email us at support@passgen.pro with "FEATURE REQUEST" in the subject line. Popular requests include bulk password generation, password strength API, mobile apps, and password history tracking.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        How do I report a bug?
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Please email us at support@passgen.pro with your browser type and version, operating system, steps to reproduce the issue, and screenshots if applicable.
+                    </div>
                 </div>
             </div>
 
@@ -313,7 +580,7 @@
             </div>
 
             <div class="content-block">
-                <h2>Partnership & Business Inquiries</h2>
+                <h2>Partnership and Business Inquiries</h2>
                 <p>For partnership opportunities, enterprise licensing, or media inquiries, please contact:</p>
                 <p><strong>business@passgen.pro</strong></p>
             </div>
@@ -322,26 +589,26 @@
 
     <footer>
         <div class="footer-grid">
-            <div class="footer-brand">
-                <div class="footer-brand-wrap">
-                    <div class="footer-robot-logo">
+            <div class="footer-col footer-brand">
+                <a href="/" class="footer-logo">
+                    <div class="footer-robot-svg">
                         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="25" y="25" width="50" height="40" rx="8" fill="none" stroke="#fff" stroke-width="8" />
-                            <circle cx="42" cy="42" r="6" fill="#fff" />
-                            <circle cx="58" cy="42" r="6" fill="#fff" />
-                            <path d="M50,25 V15 M50,15 A2,2 0 1,1 50.1,15" stroke="#fff" stroke-width="5" fill="none" />
-                            <circle cx="20" cy="45" r="7" fill="#fff" />
-                            <circle cx="80" cy="45" r="7" fill="#fff" />
-                            <path d="M15,75 L85,75" stroke="#fff" stroke-width="10" stroke-linecap="round" />
-                            <path d="M75,75 V85 M65,75 V80" stroke="#fff" stroke-width="6" />
+                            <rect x="25" y="25" width="50" height="40" rx="8" fill="none" stroke="#fff" stroke-width="6" />
+                            <circle cx="42" cy="42" r="5" fill="#fff" />
+                            <circle cx="58" cy="42" r="5" fill="#fff" />
+                            <path d="M50,25 V15 M50,15 A2,2 0 1,1 50.1,15" stroke="#fff" stroke-width="4" fill="none" />
+                            <circle cx="20" cy="45" r="6" fill="#fff" />
+                            <circle cx="80" cy="45" r="6" fill="#fff" />
+                            <path d="M15,75 L85,75" stroke="#fff" stroke-width="9" stroke-linecap="round" />
+                            <path d="M75,75 V85 M65,75 V80" stroke="#fff" stroke-width="5" />
                         </svg>
                     </div>
-                    <h5>Password</h5>
-                </div>
+                    <div class="footer-logo-text">Password</div>
+                </a>
                 <p>Professional free online password generator. Create secure, random, and private keys instantly. 100% client-side security with zero-knowledge architecture.</p>
             </div>
             <div class="footer-col">
-                <h5>QUICK LINKS</h5>
+                <h5>Quick Links</h5>
                 <ul class="footer-links">
                     <li><a href="/">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
@@ -349,27 +616,55 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h5>LEGAL & INFO</h5>
+                <h5>Tools</h5>
                 <ul class="footer-links">
-                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="password-generator.html">Password Generator</a></li>
+                    <li><a href="strong-password.html">Strong Password Checker</a></li>
+                    <li><a href="entropy-calculator.html">Entropy Calculator</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Resources</h5>
+                <ul class="footer-links">
+                    <li><a href="security-guide.html">Security Guide</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Legal</h5>
+                <ul class="footer-links">
                     <li><a href="privacy.html">Privacy Policy</a></li>
                     <li><a href="terms.html">Terms of Use</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <div>&copy; 2026 password.textify.tools. All rights reserved. Made for Security.</div>
-            <div>Designed For Global Security Standards</div>
+            <div>&copy; 2026 PassGen Pro. All rights reserved.</div>
+            <div>Client-side password generator | Zero data storage</div>
         </div>
     </footer>
 
     <script>
+        // Disable right-click and developer tools shortcuts
         document.addEventListener('contextmenu', e => e.preventDefault());
         document.addEventListener('keydown', e => {
-            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) e.preventDefault();
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+                e.preventDefault();
+            }
         });
-        window.onload = () => { lucide.createIcons(); };
+        
+        function toggleFaq(element) {
+            element.parentElement.classList.toggle('active');
+        }
+        
+        // Initialize Lucide icons
+        window.onload = () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        };
     </script>
-    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="textify.tools" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FFC107" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 </body>
 </html>
