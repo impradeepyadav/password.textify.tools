@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/WebApplication">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- SEO Tags -->
+    <title>Password Entropy Calculator | Check Password Strength & Security | PassGen Pro</title>
+    <meta name="description" content="Free online password entropy calculator to measure your password strength. Calculate bits of entropy, crack time, and get security recommendations. Protect your accounts from brute force attacks.">
+    <meta name="keywords" content="password entropy calculator, password strength checker, entropy calculator, password security meter, brute force protection, password bits calculator, NIST password guidelines, strong password checker">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="PassGen Pro">
+    <link rel="canonical" href="https://password.pandacybercafe.in/entropy-calculator.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://password.pandacybercafe.in/entropy-calculator.html">
+    <meta property="og:title" content="Password Entropy Calculator | Check Password Strength">
+    <meta property="og:description" content="Calculate password entropy and check how secure your password is against brute force attacks. Free online password strength meter with entropy analysis.">
+    <meta property="og:site_name" content="PassGen Pro">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://password.pandacybercafe.in/entropy-calculator.html">
+    <meta property="twitter:title" content="Password Entropy Calculator">
+    <meta property="twitter:description" content="Check your password strength with entropy calculation and crack time estimation.">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23000000'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='white' font-weight='bold'%3EP%3C/text%3E%3C/svg%3E">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Password Entropy Calculator",
+      "url": "https://password.pandacybercafe.in/entropy-calculator.html",
+      "description": "Calculate password entropy and strength against brute force attacks.",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "All",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is password entropy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Password entropy measures password strength in bits. It represents how unpredictable a password is. Higher entropy means more combinations and stronger protection against brute force attacks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is password entropy calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Entropy is calculated using the formula: Entropy = log₂(character set size) × password length. Character set size depends on which character types are used in your password."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good entropy score for passwords?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For most accounts, aim for 80+ bits of entropy. For banking and email, 100+ bits is recommended. 128+ bits provides military-grade security that is unbreakable with current technology."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root {
+            --primary: #000000;
+            --primary-dark: #1a1a1a;
+            --text-main: #0a0a0a;
+            --text-light: #525252;
+            --bg-color: #ffffff;
+            --line-color: #e5e7eb;
+            --footer-bg: #0f172a;
+            --footer-text: #94a3b8;
+            --success: #16a34a;
+            --error: #ef4444;
+            --warning: #f59e0b;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        input, textarea, select, button {
+            font-family: inherit;
+        }
+
+        /* Header */
+        header {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--line-color);
+            background: white;
+        }
+
+        .navbar {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .robot-svg-icon {
+            width: 45px;
+            height: 45px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text-main);
+            letter-spacing: -0.8px;
+        }
+
+        .free-badge {
+            font-size: 12px;
+            color: var(--text-light);
+            font-weight: 600;
+            background: #f3f4f6;
+            padding: 6px 12px;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            margin: 30px auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 38px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--line-color);
+            padding-bottom: 10px;
+            margin-top: 45px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        p {
+            line-height: 1.7;
+            color: var(--text-light);
+            margin-bottom: 18px;
+            font-size: 16px;
+        }
+
+        p.subtitle {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 35px;
+            line-height: 1.6;
+        }
+
+        ul, ol {
+            padding-left: 22px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #000;
+            font-weight: 600;
+            text-decoration: none;
+            margin-bottom: 25px;
+            padding: 8px 0;
+            transition: 0.2s;
+        }
+
+        .back-link:hover {
+            color: #333;
+            gap: 10px;
+        }
+
+        /* Tool Card */
+        .tool-card {
+            background: #f9fafb;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid var(--line-color);
+        }
+
+        .password-input-area {
+            margin-bottom: 30px;
+        }
+
+        .password-input-area label {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        #passwordInput {
+            width: 100%;
+            padding: 18px;
+            font-size: 18px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            border: 2px solid var(--line-color);
+            border-radius: 12px;
+            background: white;
+            transition: 0.2s;
+        }
+
+        #passwordInput:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        /* Results Section */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .result-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid var(--line-color);
+        }
+
+        .result-label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-light);
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .result-value {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .result-unit {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+
+        .strength-meter {
+            margin: 20px 0;
+        }
+
+        .meter-bar {
+            height: 10px;
+            background: var(--line-color);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .meter-fill {
+            height: 100%;
+            width: 0%;
+            border-radius: 10px;
+            transition: 0.3s ease;
+        }
+
+        .strength-text {
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        .crack-time {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid var(--line-color);
+        }
+
+        .crack-time h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .crack-value {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        /* Character Set Info */
+        .charset-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .charset-badge {
+            background: white;
+            border: 1px solid var(--line-color);
+            border-radius: 30px;
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .charset-badge.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #f8fafc;
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 800;
+            color: #000;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-top: 8px;
+        }
+
+        .entropy-table {
+            overflow-x: auto;
+            margin: 25px 0;
+            border: 1px solid var(--line-color);
+            border-radius: 12px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--line-color);
+            font-size: 14px;
+        }
+
+        th {
+            background: #f8fafc;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        td {
+            color: var(--text-light);
+        }
+
+        /* FAQ */
+        .faq-item {
+            border: 1px solid var(--line-color);
+            border-radius: 10px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 16px 20px;
+            background: #fafafa;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 16px 20px;
+            border-top: 1px solid var(--line-color);
+            display: none;
+            line-height: 1.6;
+            color: var(--text-light);
+            background: #fff;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            transition: transform 0.2s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 60px 0 25px;
+            margin-top: 70px;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 25px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        .footer-col h5 {
+            color: white;
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .footer-brand p {
+            font-size: 13px;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-top: 12px;
+            max-width: 300px;
+        }
+
+        .footer-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .footer-robot-svg {
+            width: 38px;
+            height: 38px;
+        }
+
+        .footer-logo-text {
+            font-size: 20px;
+            font-weight: 800;
+            color: white;
+            letter-spacing: -0.5px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: 0.2s;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 3px;
+        }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 25px;
+            padding-right: 25px;
+            color: #64748b;
+            font-size: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+            .result-value {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <a href="/" class="brand-logo">
+                <div class="robot-svg-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="25" y="25" width="50" height="40" rx="8" fill="#fff" stroke="#000" stroke-width="5" />
+                        <circle cx="42" cy="42" r="5" fill="#000" />
+                        <circle cx="58" cy="42" r="5" fill="#000" />
+                        <path d="M50,25 V15 M50,15 A2,2 0 1,1 50.1,15" stroke="#000" stroke-width="3" fill="none" />
+                        <circle cx="20" cy="45" r="6" fill="#000" />
+                        <circle cx="80" cy="45" r="6" fill="#000" />
+                        <path d="M15,75 L85,75" stroke="#000" stroke-width="8" stroke-linecap="round" />
+                        <path d="M75,75 V85 M65,75 V80" stroke="#000" stroke-width="4" />
+                    </svg>
+                </div>
+                <div class="logo-text">Password</div>
+            </a>
+            <span class="free-badge">Free Tool | Secure</span>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <a href="/" class="back-link">
+            <i data-lucide="arrow-left" size="18"></i> Back to Password Generator
+        </a>
+        
+        <h1>Password Entropy Calculator: Measure Your Password Strength</h1>
+        <p class="subtitle">Calculate the entropy of your password to understand how secure it is against brute force attacks. Entropy is measured in bits - the higher the number, the stronger your password protection.</p>
+
+        <div class="tool-card">
+            <div class="password-input-area">
+                <label>Enter Password to Analyze</label>
+                <input type="text" id="passwordInput" placeholder="Type or paste your password here..." oninput="calculateEntropy()">
+            </div>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-label">Entropy</div>
+                    <div class="result-value"><span id="entropyBits">0</span> <span class="result-unit">bits</span></div>
+                    <div style="font-size: 13px; color: var(--text-light); margin-top: 5px;">Higher = Stronger</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-label">Password Length</div>
+                    <div class="result-value"><span id="passwordLength">0</span> <span class="result-unit">characters</span></div>
+                </div>
+                <div class="result-card">
+                    <div class="result-label">Character Set Size</div>
+                    <div class="result-value"><span id="charSetSize">0</span> <span class="result-unit">possible chars</span></div>
+                </div>
+                <div class="result-card">
+                    <div class="result-label">Total Combinations</div>
+                    <div class="result-value"><span id="totalCombinations">0</span></div>
+                    <div style="font-size: 12px; color: var(--text-light); word-break: break-all;">possible passwords</div>
+                </div>
+            </div>
+
+            <div class="strength-meter">
+                <div class="meter-bar">
+                    <div id="strengthFill" class="meter-fill"></div>
+                </div>
+                <div id="strengthText" class="strength-text">Very Weak</div>
+            </div>
+
+            <div class="crack-time">
+                <h4>Estimated Crack Time (Brute Force)</h4>
+                <div id="crackTimeDisplay" class="crack-value">Less than a second</div>
+                <div style="font-size: 12px; color: var(--text-light); margin-top: 8px;">Based on 1 trillion guesses per second (modern GPU cluster)</div>
+            </div>
+
+            <div class="charset-info">
+                <span class="charset-badge" id="lowercaseBadge">a-z (26)</span>
+                <span class="charset-badge" id="uppercaseBadge">A-Z (26)</span>
+                <span class="charset-badge" id="numbersBadge">0-9 (10)</span>
+                <span class="charset-badge" id="symbolsBadge">Symbols (32)</span>
+                <span class="charset-badge" id="otherBadge">Space/Other</span>
+            </div>
+        </div>
+
+        <!-- Enhanced SEO Content -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">81%</div>
+                <div class="stat-label">Data breaches involve weak passwords</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">128+</div>
+                <div class="stat-label">Bits needed for military-grade security</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">1 Trillion</div>
+                <div class="stat-label">Guesses per second (modern GPU)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">94^20</div>
+                <div class="stat-label">Combinations for 20-char password</div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <strong>What is Password Entropy?</strong><br>
+            Password entropy is a measure of how unpredictable a password is. It represents the number of guesses required to crack your password through brute force. Each additional bit of entropy doubles the number of possible combinations, making the password exponentially harder to crack. A password with 128 bits of entropy is considered cryptographically secure and unbreakable with current technology.
+        </div>
+
+        <h2>How Password Entropy Is Calculated</h2>
+        <p>Entropy is calculated using the formula: <strong>Entropy (bits) = log₂(character set size) × password length</strong></p>
+        <p>The character set size depends on which character types are present in your password:</p>
+        <ul>
+            <li><strong>Lowercase letters (a-z):</strong> 26 characters → 4.7 bits per character</li>
+            <li><strong>Uppercase letters (A-Z):</strong> 26 characters → 4.7 bits per character</li>
+            <li><strong>Numbers (0-9):</strong> 10 characters → 3.32 bits per character</li>
+            <li><strong>Special symbols (!@#$%^&* etc.):</strong> 32 characters → 5 bits per character</li>
+            <li><strong>Full ASCII printable set:</strong> 94 characters → 6.55 bits per character</li>
+        </ul>
+        <p>For example, a 16-character password using all character types (94 possibilities per character) has: <strong>log₂(94) × 16 ≈ 6.55 × 16 = 104.8 bits of entropy</strong></p>
+
+        <h2>Entropy Strength Levels and Recommendations</h2>
+        <div class="entropy-table">
+            <table>
+                <thead>
+                    <tr><th>Entropy (bits)</th><th>Strength Level</th><th>Crack Time (1T guesses/sec)</th><th>Recommendation</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>0 - 35 bits</td><td style="color: #ef4444;">Very Weak</td><td>Instantly - seconds</td><td>Change immediately. Too short or uses common words.</td></tr>
+                    <tr><td>36 - 59 bits</td><td style="color: #f97316;">Weak</td><td>Hours - Days</td><td>Vulnerable to brute force. Add more characters.</td></tr>
+                    <tr><td>60 - 79 bits</td><td style="color: #eab308;">Moderate</td><td>Months - Years</td><td>Acceptable for low-risk accounts only.</td></tr>
+                    <tr><td>80 - 99 bits</td><td style="color: #22c55e;">Strong</td><td>Thousands of years</td><td>Good for most accounts. Consider for email.</td></tr>
+                    <tr><td>100 - 127 bits</td><td style="color: #16a34a;">Very Strong</td><td>Millions of years</td><td>Excellent for banking and sensitive accounts.</td></tr>
+                    <tr><td>128+ bits</td><td style="color: #15803d;">Cryptographically Secure</td><td>Age of universe</td><td>Military-grade. Unbreakable with current tech.</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>NIST Password Guidelines 2026</h2>
+        <p>The National Institute of Standards and Technology provides updated recommendations for password security:</p>
+        <ul>
+            <li><strong>Minimum Length:</strong> 8 characters, but 15+ is strongly recommended</li>
+            <li><strong>Maximum Length:</strong> Support at least 64 characters (no truncation)</li>
+            <li><strong>Character Types:</strong> Allow all printable ASCII characters including spaces</li>
+            <li><strong>No Composition Rules:</strong> Avoid arbitrary requirements like "must include one special character"</li>
+            <li><strong>Breached Password Checking:</strong> Block commonly used or compromised passwords</li>
+            <li><strong>Password Managers:</strong> Encourage use of password managers with built-in generators</li>
+        </ul>
+        <p>Our entropy calculator follows these NIST guidelines to accurately assess password strength based on length and character diversity.</p>
+
+        <h2>Common Password Patterns to Avoid</h2>
+        <ul>
+            <li><strong>Keyboard patterns:</strong> "qwerty123", "asdfgh", "1qaz2wsx" - extremely low entropy</li>
+            <li><strong>Dictionary words:</strong> Any word in the dictionary reduces entropy significantly</li>
+            <li><strong>Personal information:</strong> Birthdays, pet names, anniversaries are easily guessed</li>
+            <li><strong>Common substitutions:</strong> "P@ssw0rd" - hackers know these tricks</li>
+            <li><strong>Repeated patterns:</strong> "abcabcabc", "111111" - predictable and weak</li>
+            <li><strong>Seasonal passwords:</strong> "Winter2026", "Summer2025" - common patterns</li>
+        </ul>
+
+        <h2>Password Entropy Comparison by Length</h2>
+        <div class="entropy-table">
+            <table>
+                <thead>
+                    <tr><th>Password Length</th><th>Lowercase Only (26)</th><th>Mixed Case (52)</th><th>Alphanumeric (62)</th><th>Full ASCII (94)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>8 chars</td><td>38 bits (Weak)</td><td>46 bits (Weak)</td><td>48 bits (Weak)</td><td>52 bits (Weak)</td></tr>
+                    <tr><td>10 chars</td><td>47 bits (Weak)</td><td>57 bits (Weak)</td><td>60 bits (Moderate)</td><td>66 bits (Moderate)</td></tr>
+                    <tr><td>12 chars</td><td>56 bits (Weak)</td><td>68 bits (Moderate)</td><td>72 bits (Moderate)</td><td>79 bits (Moderate)</td></tr>
+                    <tr><td>14 chars</td><td>66 bits (Moderate)</td><td>80 bits (Strong)</td><td>84 bits (Strong)</td><td>92 bits (Strong)</td></tr>
+                    <tr><td>16 chars</td><td>75 bits (Moderate)</td><td>91 bits (Strong)</td><td>96 bits (Strong)</td><td>105 bits (Very Strong)</td></tr>
+                    <tr><td>18 chars</td><td>85 bits (Strong)</td><td>103 bits (Very Strong)</td><td>108 bits (Very Strong)</td><td>118 bits (Very Strong)</td></tr>
+                    <tr><td>20 chars</td><td>94 bits (Strong)</td><td>114 bits (Very Strong)</td><td>119 bits (Very Strong)</td><td>131 bits (Secure)</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Why Password Entropy Matters for Your Security</h2>
+        <p>In 2026, cyber threats are more sophisticated than ever. AI-powered password cracking tools can attempt billions of guesses per second. Password entropy is the mathematical measure that determines how long your password would survive such an attack:</p>
+        <ul>
+            <li><strong>40-bit entropy:</strong> Can be cracked in seconds with modern GPUs</li>
+            <li><strong>60-bit entropy:</strong> Vulnerable within days using cloud computing resources</li>
+            <li><strong>80-bit entropy:</strong> Would take thousands of years with current technology</li>
+            <li><strong>100+ bit entropy:</strong> Mathematically impossible to crack before the heat death of the universe</li>
+        </ul>
+
+        <h2>Frequently Asked Questions About Password Entropy</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                What is a good entropy score for a password?
+                <i data-lucide="chevron-down" class="faq-icon"></i>
+            </div>
+            <div class="faq-answer">For most online accounts, aim for 80+ bits of entropy. For email and banking accounts, 100+ bits is recommended. For highly sensitive accounts like password managers or cryptocurrency wallets, 128+ bits provides military-grade security. Our calculator shows green (Strong) for 80+ bits and dark green (Very Strong) for 100+ bits.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                How many bits of entropy does a 16-character random password have?
+                <i data-lucide="chevron-down" class="faq-icon"></i>
+            </div>
+            <div class="faq-answer">A 16-character random password using all character types (uppercase, lowercase, numbers, symbols) has approximately 105 bits of entropy (log₂(94) × 16 ≈ 6.55 × 16). This would take millions of years to crack at 1 trillion guesses per second.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                Does adding symbols increase entropy significantly?
+                <i data-lucide="chevron-down" class="faq-icon"></i>
+            </div>
+            <div class="faq-answer">Adding symbols increases the character set from 62 (letters + numbers) to 94 characters. This adds about 0.6 bits per character. While helpful, increasing password length is more effective. For example, adding 2 characters adds about 13 bits of entropy, which is more than adding symbols to a shorter password.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                What is the entropy of a 4-word passphrase?
+                <i data-lucide="chevron-down" class="faq-icon"></i>
+            </div>
+            <div class="faq-answer">A 4-word passphrase from a dictionary of 7,776 common words (like Diceware) has approximately 52 bits of entropy (log₂(7776) × 4 ≈ 13 × 4). A 6-word passphrase provides about 78 bits, and an 8-word passphrase provides about 104 bits. This is why long passphrases are recommended over short complex passwords.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                Can quantum computers break passwords with high entropy?
+                <i data-lucide="chevron-down" class="faq-icon"></i>
+            </div>
+            <div class="faq-answer">Quantum computers using Grover's algorithm could theoretically reduce the effective entropy by half. A password with 128 bits of classical entropy would have about 64 bits of quantum resistance. This is why our entropy calculator shows 128+ bits as the target for future-proof security against quantum attacks.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                How does password entropy relate to brute force attacks?
+                <i data-lucide="chevron-down" class="faq-icon"></i>
+            </div>
+            <div class="faq-answer">In a brute force attack, the attacker tries every possible combination. The number of combinations equals character set size raised to the power of password length. Entropy (bits) is the logarithm of this number. Each additional bit doubles the number of combinations, making the attack take twice as long. A password with 80 bits of entropy would take about 1,000 years to crack at 1 trillion guesses per second.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                Is a longer password always better than a complex one?
+                <i data-lucide="chevron-down" class="faq-icon"></i>
+            </div>
+            <div class="faq-answer">Yes. Length has an exponential effect on entropy while complexity has a linear effect. A 20-character lowercase password has about 94 bits of entropy, while a 12-character password with all character types has only 78 bits. This is why NIST recommends focusing on length rather than arbitrary complexity rules.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                How accurate is this entropy calculator?
+                <i data-lucide="chevron-down" class="faq-icon"></i>
+            </div>
+            <div class="faq-answer">Our calculator provides mathematically accurate entropy calculations based on character set size and length. However, real-world password strength also depends on whether the password appears in breach databases or follows predictable patterns. We recommend using our companion password generator to create truly random passwords with maximum entropy.</div>
+        </div>
+
+        <h2>Conclusion: Take Control of Your Password Security</h2>
+        <p>Understanding password entropy is the first step toward better security. Use our entropy calculator to audit your existing passwords and identify weaknesses. For maximum protection, combine high-entropy passwords (100+ bits) with two-factor authentication and a reputable password manager. Your digital security is in your hands—make every bit count.</p>
+        
+        <div class="info-box">
+            <strong>Security Checklist:</strong><br><br>
+            ✓ Use passwords with 80+ bits of entropy for most accounts<br>
+            ✓ Use 100+ bits for email, banking, and social media<br>
+            ✓ Enable two-factor authentication (2FA) everywhere possible<br>
+            ✓ Store passwords in an encrypted password manager<br>
+            ✓ Never reuse passwords across different sites<br>
+            ✓ Regularly audit your passwords using this entropy calculator
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col footer-brand">
+                <a href="/" class="footer-logo">
+                    <div class="footer-robot-svg">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="25" y="25" width="50" height="40" rx="8" fill="none" stroke="#fff" stroke-width="6" />
+                            <circle cx="42" cy="42" r="5" fill="#fff" />
+                            <circle cx="58" cy="42" r="5" fill="#fff" />
+                            <path d="M50,25 V15 M50,15 A2,2 0 1,1 50.1,15" stroke="#fff" stroke-width="4" fill="none" />
+                            <circle cx="20" cy="45" r="6" fill="#fff" />
+                            <circle cx="80" cy="45" r="6" fill="#fff" />
+                            <path d="M15,75 L85,75" stroke="#fff" stroke-width="9" stroke-linecap="round" />
+                            <path d="M75,75 V85 M65,75 V80" stroke="#fff" stroke-width="5" />
+                        </svg>
+                    </div>
+                    <div class="footer-logo-text">Password</div>
+                </a>
+                <p>Professional free online password generator and entropy calculator. Create secure, random passwords and check their strength instantly. 100% client-side security.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Quick Links</h5>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Tools</h5>
+                <ul class="footer-links">
+                    <li><a href="password-generator.html">Password Generator</a></li>
+                    <li><a href="entropy-calculator.html">Entropy Calculator</a></li>
+                    <li><a href="strong-password.html">Strong Password Checker</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Resources</h5>
+                <ul class="footer-links">
+                    <li><a href="security-guide.html">Security Guide</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Legal</h5>
+                <ul class="footer-links">
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Use</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>&copy; 2026 PassGen Pro. All rights reserved.</div>
+            <div>Password entropy calculator | Security analysis tool</div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(element) {
+            element.parentElement.classList.toggle('active');
+        }
+
+        function calculateEntropy() {
+            const password = document.getElementById('passwordInput').value;
+            const length = password.length;
+            document.getElementById('passwordLength').innerText = length;
+
+            if (length === 0) {
+                document.getElementById('entropyBits').innerText = '0';
+                document.getElementById('charSetSize').innerText = '0';
+                document.getElementById('totalCombinations').innerHTML = '0';
+                document.getElementById('strengthFill').style.width = '0%';
+                document.getElementById('strengthText').innerHTML = 'Enter a password';
+                document.getElementById('crackTimeDisplay').innerHTML = 'Enter a password to analyze';
+                document.querySelectorAll('.charset-badge').forEach(badge => badge.classList.remove('active'));
+                return;
+            }
+
+            // Detect character sets
+            const hasLowercase = /[a-z]/.test(password);
+            const hasUppercase = /[A-Z]/.test(password);
+            const hasNumbers = /[0-9]/.test(password);
+            const hasSymbols = /[^a-zA-Z0-9\s]/.test(password);
+            const hasSpace = /\s/.test(password);
+            
+            // Update badges
+            document.getElementById('lowercaseBadge').classList.toggle('active', hasLowercase);
+            document.getElementById('uppercaseBadge').classList.toggle('active', hasUppercase);
+            document.getElementById('numbersBadge').classList.toggle('active', hasNumbers);
+            document.getElementById('symbolsBadge').classList.toggle('active', hasSymbols);
+            document.getElementById('otherBadge').classList.toggle('active', hasSpace);
+            
+            // Calculate character set size
+            let charsetSize = 0;
+            if (hasLowercase) charsetSize += 26;
+            if (hasUppercase) charsetSize += 26;
+            if (hasNumbers) charsetSize += 10;
+            if (hasSymbols) charsetSize += 32;
+            if (hasSpace) charsetSize += 1;
+            
+            document.getElementById('charSetSize').innerText = charsetSize;
+            
+            if (charsetSize === 0) {
+                document.getElementById('entropyBits').innerText = '0';
+                document.getElementById('totalCombinations').innerHTML = '0';
+                return;
+            }
+            
+            // Calculate entropy
+            const entropy = Math.log2(Math.pow(charsetSize, length));
+            const formattedEntropy = entropy.toFixed(2);
+            document.getElementById('entropyBits').innerText = formattedEntropy;
+            
+            // Calculate total combinations
+            const combinations = Math.pow(charsetSize, length);
+            if (combinations > 1e30) {
+                document.getElementById('totalCombinations').innerHTML = '~' + combinations.toExponential(2);
+            } else {
+                document.getElementById('totalCombinations').innerHTML = combinations.toLocaleString();
+            }
+            
+            // Update strength meter
+            const fillPercent = Math.min((entropy / 128) * 100, 100);
+            document.getElementById('strengthFill').style.width = fillPercent + '%';
+            
+            let strengthText = '';
+            let strengthColor = '';
+            if (entropy < 36) {
+                strengthText = 'Very Weak';
+                strengthColor = '#ef4444';
+            } else if (entropy < 60) {
+                strengthText = 'Weak';
+                strengthColor = '#f97316';
+            } else if (entropy < 80) {
+                strengthText = 'Moderate';
+                strengthColor = '#eab308';
+            } else if (entropy < 100) {
+                strengthText = 'Strong';
+                strengthColor = '#22c55e';
+            } else if (entropy < 128) {
+                strengthText = 'Very Strong';
+                strengthColor = '#16a34a';
+            } else {
+                strengthText = 'Cryptographically Secure';
+                strengthColor = '#15803d';
+            }
+            
+            document.getElementById('strengthText').innerHTML = strengthText;
+            document.getElementById('strengthText').style.color = strengthColor;
+            document.getElementById('strengthFill').style.backgroundColor = strengthColor;
+            
+            // Calculate crack time (1 trillion guesses per second = 1e12)
+            const guessesPerSecond = 1e12;
+            const secondsToCrack = combinations / guessesPerSecond;
+            
+            let crackTimeString = '';
+            if (secondsToCrack < 1) {
+                crackTimeString = 'Less than a second';
+            } else if (secondsToCrack < 60) {
+                crackTimeString = Math.floor(secondsToCrack) + ' seconds';
+            } else if (secondsToCrack < 3600) {
+                crackTimeString = Math.floor(secondsToCrack / 60) + ' minutes';
+            } else if (secondsToCrack < 86400) {
+                crackTimeString = Math.floor(secondsToCrack / 3600) + ' hours';
+            } else if (secondsToCrack < 31536000) {
+                crackTimeString = Math.floor(secondsToCrack / 86400) + ' days';
+            } else if (secondsToCrack < 3.1536e15) {
+                crackTimeString = Math.floor(secondsToCrack / 31536000) + ' years';
+            } else if (secondsToCrack < 3.1536e18) {
+                crackTimeString = Math.floor(secondsToCrack / 3.1536e15) + ' thousand years';
+            } else if (secondsToCrack < 3.1536e21) {
+                crackTimeString = Math.floor(secondsToCrack / 3.1536e18) + ' million years';
+            } else if (secondsToCrack < 3.1536e24) {
+                crackTimeString = Math.floor(secondsToCrack / 3.1536e21) + ' billion years';
+            } else {
+                crackTimeString = 'More than age of universe';
+            }
+            
+            document.getElementById('crackTimeDisplay').innerHTML = crackTimeString;
+        }
+
+        window.onload = () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        };
+        
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', e => {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
