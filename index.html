@@ -6,23 +6,25 @@
     <meta name="theme-color" content="#000000">
     <meta name="google-site-verification" content="F2ZIvw0Aaosc7RtXKz9PonDZj5f1NQ21Vo1rRSpYhnU" />
     
-    <title>Free Online Password Generator</title>
-    <meta name="description" content="Generate secure and random passwords instantly. Create strong passwords with custom length, symbols, and numbers. Private client-side tool with no data storage.">
+    <title>Free Online Password Generator | Create Strong Secure Passwords</title>
+    <meta name="description" content="Free Online Password Generator - Generate cryptographically secure random passwords instantly. Strong password creator with custom length, symbols, numbers. 100% client-side, no data storage.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="author" content="PassGen Pro">
+    <meta name="author" content="Free Online Password Generator">
+    <meta name="keywords" content="free online password generator, strong password, random password, secure password, password creator">
     <link rel="canonical" href="https://password.pandacybercafe.in/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://password.pandacybercafe.in/">
-    <meta property="og:title" content="Free Online Password Generator">
-    <meta property="og:description" content="Generate cryptographically secure passwords instantly. Client-side tool with zero data storage.">
+    <meta property="og:title" content="Free Online Password Generator | Create Strong Secure Passwords">
+    <meta property="og:description" content="Free Online Password Generator - Generate cryptographically secure passwords instantly. Client-side tool with zero data storage.">
     <meta property="og:site_name" content="Free Online Password Generator">
+    <meta property="og:image" content="https://password.pandacybercafe.in/og-password.jpg">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Free Online Password Generator">
-    <meta property="twitter:description" content="Generate strong, random passwords instantly. 100% client-side and private.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Online Password Generator">
+    <meta name="twitter:description" content="Free Online Password Generator - Generate strong, random passwords instantly. 100% client-side and private.">
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -37,10 +39,11 @@
       "@type": "WebApplication",
       "name": "Free Online Password Generator",
       "url": "https://password.pandacybercafe.in/",
-      "description": "Professional-grade tool to generate random passwords entirely on the user's browser.",
+      "description": "Free Online Password Generator - Professional-grade tool to generate random passwords entirely on the user's browser.",
       "applicationCategory": "SecurityApplication",
+      "operatingSystem": "All",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "featureList": "Client-side generation, Custom character sets, Strict distribution, Copy & download"
+      "featureList": "Client-side generation, Custom character sets, Strict distribution, Copy & download, Cryptographically secure"
     }
     </script>
 
@@ -61,8 +64,8 @@
             --text-light: #525252;
             --bg-color: #ffffff;
             --line-color: #e5e7eb;
-            --footer-bg: #0f172a;
-            --footer-text: #94a3b8;
+            --footer-bg: #000000;
+            --footer-text: #9ca3af;
             --success: #16a34a;
             --error: #ef4444;
             --warning: #f59e0b;
@@ -112,10 +115,18 @@
         }
 
         .logo-text {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 800;
             color: var(--text-main);
-            letter-spacing: -0.8px;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            font-size: 14px;
+            font-weight: 500;
+            color: #525252;
+            display: inline-block;
+            margin-left: 5px;
         }
 
         .free-badge {
@@ -491,13 +502,14 @@
             transform: rotate(180deg);
         }
 
-        /* Footer */
+        /* Footer - BLACK THEME */
         footer {
-            background-color: var(--footer-bg);
-            color: var(--footer-text);
+            background-color: #000000;
+            color: #9ca3af;
             padding: 60px 0 25px;
             margin-top: 70px;
             font-size: 14px;
+            border-top: 1px solid #1f1f1f;
         }
 
         .footer-grid {
@@ -510,7 +522,7 @@
         }
 
         .footer-col h5 {
-            color: white;
+            color: #ffffff;
             font-size: 15px;
             font-weight: 700;
             margin-bottom: 18px;
@@ -518,7 +530,7 @@
 
         .footer-brand p {
             font-size: 13px;
-            color: #94a3b8;
+            color: #9ca3af;
             line-height: 1.6;
             margin-top: 12px;
             max-width: 300px;
@@ -537,10 +549,17 @@
         }
 
         .footer-logo-text {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 800;
             color: white;
             letter-spacing: -0.5px;
+        }
+
+        .footer-logo-text span {
+            font-size: 11px;
+            font-weight: 400;
+            color: #9ca3af;
+            display: block;
         }
 
         .footer-links {
@@ -554,14 +573,14 @@
         }
 
         .footer-links a {
-            color: #cbd5e1;
+            color: #9ca3af;
             text-decoration: none;
             transition: 0.2s;
             display: inline-block;
         }
 
         .footer-links a:hover {
-            color: white;
+            color: #ffffff;
             padding-left: 3px;
         }
 
@@ -569,13 +588,13 @@
             max-width: 1100px;
             margin: 40px auto 0;
             padding-top: 20px;
-            border-top: 1px solid #334155;
+            border-top: 1px solid #1f1f1f;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding-left: 25px;
             padding-right: 25px;
-            color: #64748b;
+            color: #6b7280;
             font-size: 12px;
         }
 
@@ -594,6 +613,9 @@
             }
             h2 {
                 font-size: 22px;
+            }
+            .logo-text {
+                font-size: 16px;
             }
         }
 
@@ -632,15 +654,15 @@
                         <path d="M75,75 V85 M65,75 V80" stroke="#000" stroke-width="4" />
                     </svg>
                 </div>
-                <div class="logo-text">Password</div>
+                <div class="logo-text">Free Online Password Generator</div>
             </a>
-            <span class="free-badge">Free Tool</span>
+            <span class="free-badge">100% Free</span>
         </div>
     </header>
 
     <main class="container">
-        <h1>Free Online Password Generator | Create Strong & Secure Passwords</h1>
-        <p class="subtitle">Generate cryptographically secure random passwords instantly. Perfect for email, banking, social media, and all online accounts. Client-side only - no data ever leaves your device.</p>
+        <h1>Free Online Password Generator | Create Strong & Secure Passwords Instantly</h1>
+        <p class="subtitle"><strong>Free Online Password Generator</strong> - Generate cryptographically secure random passwords instantly. Perfect for email, banking, social media, and all online accounts. Client-side only - no data ever leaves your device.</p>
 
         <div class="password-vault">
             <span id="passwordOutput">················</span>
@@ -687,17 +709,17 @@
             </div>
         </div>
 
-        <!-- SEO Content -->
+        <!-- SEO Content Block (Rich) -->
         <div class="seo-content">
             <div class="content-block">
-                <h2>Password Security Statistics</h2>
+                <h2>Why Choose Free Online Password Generator?</h2>
                 <div class="stats-grid">
                     <div class="stat-card"><div class="stat-number">81%</div><div class="stat-label">Data breaches involve weak passwords</div></div>
                     <div class="stat-card"><div class="stat-number">65%</div><div class="stat-label">People reuse passwords across accounts</div></div>
                     <div class="stat-card"><div class="stat-number">24B+</div><div class="stat-label">Credentials available on dark web</div></div>
                     <div class="stat-card"><div class="stat-number">3 sec</div><div class="stat-label">Time to crack 8-character password</div></div>
                 </div>
-                <p>Using a strong random password generator is essential for protecting your digital identity. Weak passwords remain the primary cause of account compromises worldwide.</p>
+                <p><strong>Free Online Password Generator</strong> helps you create strong, unique passwords that protect your digital identity. Weak passwords remain the primary cause of account compromises worldwide. Our tool ensures maximum security with client-side generation.</p>
             </div>
 
             <div class="content-block">
@@ -717,7 +739,7 @@
             </div>
 
             <div class="content-block">
-                <h2>How to Create a Strong Password</h2>
+                <h2>How to Create a Strong Password with Free Online Password Generator</h2>
                 <ul>
                     <li><strong>Use sufficient length:</strong> Minimum 16 characters for strong security</li>
                     <li><strong>Mix character types:</strong> Include uppercase, lowercase, numbers, and symbols</li>
@@ -727,7 +749,7 @@
                     <li><strong>Use a password manager:</strong> Store generated passwords securely</li>
                 </ul>
                 <div class="tip-box">
-                    <strong>Security Tip:</strong> A 16-character password with all character types provides 94^16 possible combinations - mathematically impossible to crack with current technology.
+                    <strong>Security Tip:</strong> A 16-character password with all character types provides 94^16 possible combinations - mathematically impossible to crack with current technology. <strong>Free Online Password Generator</strong> ensures maximum entropy.
                 </div>
             </div>
 
@@ -741,56 +763,25 @@
                     <li>Check passwords against breached password lists</li>
                     <li>Encourage use of password managers with built-in generators</li>
                 </ul>
-                <p>PassGen Pro exceeds all NIST requirements with support for up to 100 characters and cryptographically secure random generation.</p>
+                <p><strong>Free Online Password Generator</strong> exceeds all NIST requirements with support for up to 100 characters and cryptographically secure random generation.</p>
             </div>
 
             <div class="content-block">
-                <h2>Best Password Managers</h2>
-                <div class="comparison-table">
-                    <table>
-                        <thead><tr><th>Password Manager</th><th>Free Tier</th><th>Platforms</th><th>Key Feature</th></tr></thead>
-                        <tbody>
-                            <tr><td>Bitwarden</td><td>Yes</td><td>All platforms</td><td>Open source, self-hostable</td></tr>
-                            <tr><td>1Password</td><td>Trial</td><td>All platforms</td><td>Travel mode, watchtower</td></tr>
-                            <tr><td>Dashlane</td><td>Limited</td><td>All platforms</td><td>VPN, dark web monitoring</td></tr>
-                            <tr><td>Keeper</td><td>Limited</td><td>All platforms</td><td>Breach watch, secure storage</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div class="content-block">
-                <h2>Common Password Mistakes to Avoid</h2>
-                <ul>
-                    <li>Using personal information like birthdays or pet names</li>
-                    <li>Reusing the same password across multiple sites</li>
-                    <li>Using keyboard patterns like qwerty123 or asdfgh</li>
-                    <li>Common substitutions like P@ssw0rd</li>
-                    <li>Short passwords under 12 characters</li>
-                    <li>Writing passwords on sticky notes</li>
-                    <li>Not using two-factor authentication</li>
-                </ul>
-            </div>
-
-            <div class="content-block">
-                <h2>Frequently Asked Questions</h2>
-                
+                <h2>Frequently Asked Questions about Free Online Password Generator</h2>
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        Is this password generator safe?
+                        Is Free Online Password Generator safe?
                         <i data-lucide="chevron-down" class="faq-icon"></i>
                     </div>
-                    <div class="faq-answer">Yes. PassGen Pro runs entirely in your browser using the Web Crypto API. No passwords are ever sent to any server. All generation happens locally on your device.</div>
+                    <div class="faq-answer">Yes. Free Online Password Generator runs entirely in your browser using the Web Crypto API. No passwords are ever sent to any server. All generation happens locally on your device. We don't store, track, or share any data.</div>
                 </div>
-
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
                         What password length should I use?
                         <i data-lucide="chevron-down" class="faq-icon"></i>
                     </div>
-                    <div class="faq-answer">For most accounts, 16-20 characters is recommended. Email and banking accounts should use 20+ characters. Use the maximum length allowed by each service.</div>
+                    <div class="faq-answer">For most accounts, 16-20 characters is recommended. Email and banking accounts should use 20+ characters. Use the maximum length allowed by each service. Free Online Password Generator supports up to 100 characters.</div>
                 </div>
-
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
                         What is strict distribution?
@@ -798,29 +789,19 @@
                     </div>
                     <div class="faq-answer">Strict distribution ensures the password contains at least one character from each selected character set. This meets strict password policies that require mixed character types.</div>
                 </div>
-
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
                         Can I use this tool offline?
                         <i data-lucide="chevron-down" class="faq-icon"></i>
                     </div>
-                    <div class="faq-answer">Yes. Once the page loads, the generator works completely offline. You can disconnect from the internet and still generate passwords.</div>
+                    <div class="faq-answer">Yes. Once the page loads, Free Online Password Generator works completely offline. You can disconnect from the internet and still generate secure passwords.</div>
                 </div>
-
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        Why avoid similar characters?
+                        Is Free Online Password Generator really free?
                         <i data-lucide="chevron-down" class="faq-icon"></i>
                     </div>
-                    <div class="faq-answer">Similar characters like O and 0 or l and 1 can be confusing when reading or typing passwords manually. Excluding them makes passwords easier to communicate.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        How does entropy affect password strength?
-                        <i data-lucide="chevron-down" class="faq-icon"></i>
-                    </div>
-                    <div class="faq-answer">Entropy measures randomness in bits. Each additional bit doubles the guesses needed. A 16-character random password has over 100 bits of entropy, making brute-force attacks impossible.</div>
+                    <div class="faq-answer">Absolutely! Free Online Password Generator is 100% free with no hidden costs, no subscriptions, and no premium tiers. We believe everyone deserves strong password security.</div>
                 </div>
             </div>
         </div>
@@ -842,15 +823,15 @@
                             <path d="M75,75 V85 M65,75 V80" stroke="#fff" stroke-width="5" />
                         </svg>
                     </div>
-                    <div class="footer-logo-text">Password</div>
+                    <div class="footer-logo-text">Free Online Password Generator</div>
                 </a>
-                <p>Free online password generator with client-side security. Create strong, random, and secure passwords instantly. No data storage, no tracking.</p>
+                <p>The most trusted free online password generator. Create strong, random, and secure passwords instantly. Client-side security, zero data storage, complete privacy.</p>
             </div>
             <div class="footer-col">
                 <h5>Quick Links</h5>
                 <ul class="footer-links">
                     <li><a href="/">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -858,7 +839,7 @@
                 <h5>Tools</h5>
                 <ul class="footer-links">
                     <li><a href="password-generator.html">Password Generator</a></li>
-                    <li><a href="password-checker.html">Password Checker</a></li>
+                    <li><a href="password-checker.html">Password Strength Checker</a></li>
                     <li><a href="entropy-calculator.html">Entropy Calculator</a></li>
                 </ul>
             </div>
@@ -881,12 +862,11 @@
         </div>
         <div class="footer-bottom">
             <div>&copy; 2026 Free Online Password Generator. All rights reserved.</div>
-            <div>Security You Can Trust</div>
+            <div>🔐 Secure • Free • Private</div>
         </div>
     </footer>
 
     <script>
-        // Password Generator Logic
         function updateLength(val) {
             document.getElementById('lengthValue').innerText = val;
         }
@@ -946,12 +926,10 @@
                         pool = (uppercase + lowercase).split('').filter(c => charset.includes(c)).join('');
                         if (!pool) pool = charset;
                     }
-
                     const randomArray = new Uint32Array(1);
                     window.crypto.getRandomValues(randomArray);
                     const char = pool.charAt(randomArray[0] % pool.length);
                     password += char;
-
                     requiredSets.forEach((set, idx) => {
                         if (set && set.includes(char)) usedSets.add(idx);
                     });
@@ -979,7 +957,6 @@
             }
 
             document.getElementById('passwordOutput').innerText = result;
-            
             const bar = document.getElementById('strengthBar');
             const strength = Math.min((length / 20) * 100, 100);
             bar.style.width = strength + "%";
@@ -991,16 +968,14 @@
         function copyPassword() {
             const password = document.getElementById('passwordOutput').innerText;
             if (password && password !== "Select at least one option") {
-                navigator.clipboard.writeText(password).then(() => {
-                    showToast("Password copied!");
-                }).catch(() => {
+                navigator.clipboard.writeText(password).then(() => showToast("✓ Password copied!")).catch(() => {
                     const textarea = document.createElement('textarea');
                     textarea.value = password;
                     document.body.appendChild(textarea);
                     textarea.select();
                     document.execCommand('copy');
                     document.body.removeChild(textarea);
-                    showToast("Password copied!");
+                    showToast("✓ Password copied!");
                 });
             }
         }
@@ -1009,7 +984,7 @@
             const password = document.getElementById('passwordOutput').innerText;
             if (password && password !== "Select at least one option") {
                 const date = new Date().toLocaleString();
-                const content = `PassGen Pro Generated Password\n\nDate: ${date}\nPassword: ${password}\nLength: ${password.length} characters\n\nStore this password securely. Never share it with anyone.`;
+                const content = `Free Online Password Generator\n\nDate: ${date}\nPassword: ${password}\nLength: ${password.length} characters\n\nStore this password securely. Never share it with anyone.\n\nGenerated by Free Online Password Generator`;
                 const blob = new Blob([content], { type: 'text/plain' });
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
@@ -1019,7 +994,7 @@
                 a.click();
                 document.body.removeChild(a);
                 URL.revokeObjectURL(url);
-                showToast("Password saved!");
+                showToast("✓ Password saved!");
             }
         }
 
@@ -1027,9 +1002,7 @@
             const toast = document.getElementById('toast');
             toast.textContent = message;
             toast.style.display = 'block';
-            setTimeout(() => {
-                toast.style.display = 'none';
-            }, 2000);
+            setTimeout(() => toast.style.display = 'none', 2000);
         }
 
         function toggleFaq(element) {
