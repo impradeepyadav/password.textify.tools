@@ -2,28 +2,29 @@
 <html lang="en" itemscope itemtype="https://schema.org/WebPage">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <!-- Enhanced viewport for perfect mobile & desktop scaling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, shrink-to-fit=no, viewport-fit=cover">
     <meta name="theme-color" content="#000000">
     
-    <!-- SEO Tags -->
-    <title>Disclaimer - Free Online Password Generator</title>
-    <meta name="description" content="Read Free Online Password Generator's disclaimer. Our password generator is provided 'as is' without warranties. Users are responsible for their own security. Understand the risks and limitations.">
-    <meta name="keywords" content="disclaimer, free online password generator disclaimer, password generator disclaimer, security disclaimer, terms disclaimer">
+    <!-- SEO Tags (Updated to Password Generator) -->
+    <title>Disclaimer - Password Generator</title>
+    <meta name="description" content="Read Password Generator's disclaimer. Our password generator is provided 'as is' without warranties. Users are responsible for their own security. Understand the risks and limitations.">
+    <meta name="keywords" content="disclaimer, password generator disclaimer, security disclaimer, terms disclaimer">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="Free Online Password Generator">
+    <meta name="author" content="Password Generator">
     <link rel="canonical" href="https://password.pandacybercafe.in/disclaimer.html" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://password.pandacybercafe.in/disclaimer.html">
-    <meta property="og:title" content="Disclaimer - Free Online Password Generator">
-    <meta property="og:description" content="Read Free Online Password Generator's disclaimer. Tool provided 'as is' without warranties.">
-    <meta property="og:site_name" content="Free Online Password Generator">
+    <meta property="og:title" content="Disclaimer - Password Generator">
+    <meta property="og:description" content="Read Password Generator's disclaimer. Tool provided 'as is' without warranties.">
+    <meta property="og:site_name" content="Password Generator">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://password.pandacybercafe.in/disclaimer.html">
-    <meta property="twitter:title" content="Disclaimer - Free Online Password Generator">
+    <meta property="twitter:title" content="Disclaimer - Password Generator">
     <meta property="twitter:description" content="Read our disclaimer about tool usage and limitations.">
 
     <!-- Favicons - Correct URLs -->
@@ -33,17 +34,17 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <!-- Schema Markup -->
+    <!-- Schema Markup (Updated) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "Disclaimer",
       "url": "https://password.pandacybercafe.in/disclaimer.html",
-      "description": "Free Online Password Generator disclaimer - Tool provided 'as is' without warranties.",
+      "description": "Password Generator disclaimer - Tool provided 'as is' without warranties.",
       "publisher": {
         "@type": "Organization",
-        "name": "Free Online Password Generator"
+        "name": "Password Generator"
       }
     }
     </script>
@@ -93,6 +94,11 @@
             --warning: #f59e0b;
         }
 
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background-color: var(--bg-color);
@@ -112,10 +118,11 @@
             padding: 15px 0;
             border-bottom: 1px solid var(--line-color);
             background: white;
+            width: 100%;
         }
 
         .navbar {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
             display: flex;
@@ -155,7 +162,7 @@
 
         /* Main Container */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             width: 100%;
             margin: 30px auto;
             padding: 0 20px;
@@ -163,15 +170,16 @@
         }
 
         h1 {
-            font-size: 38px;
+            font-size: clamp(28px, 5vw, 38px);
             font-weight: 800;
             margin-bottom: 20px;
             line-height: 1.2;
             letter-spacing: -0.5px;
+            word-break: break-word;
         }
 
         h2 {
-            font-size: 26px;
+            font-size: clamp(22px, 4vw, 28px);
             font-weight: 700;
             border-bottom: 2px solid var(--line-color);
             padding-bottom: 10px;
@@ -180,7 +188,7 @@
         }
 
         h3 {
-            font-size: 20px;
+            font-size: clamp(18px, 3vw, 22px);
             font-weight: 700;
             margin-top: 25px;
             margin-bottom: 12px;
@@ -191,7 +199,7 @@
             line-height: 1.7;
             color: var(--text-light);
             margin-bottom: 18px;
-            font-size: 16px;
+            font-size: clamp(15px, 2.5vw, 16px);
         }
 
         ul, ol {
@@ -242,10 +250,11 @@
             margin-top: 70px;
             font-size: 14px;
             border-top: 1px solid #1f1f1f;
+            width: 100%;
         }
 
         .footer-grid {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 25px;
             display: grid;
@@ -310,7 +319,7 @@
         }
 
         .footer-bottom {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 40px auto 0;
             padding-top: 20px;
             border-top: 1px solid #1f1f1f;
@@ -321,26 +330,45 @@
             padding-right: 25px;
             color: #6b7280;
             font-size: 12px;
+            flex-wrap: wrap;
         }
 
-        @media (max-width: 768px) {
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
             .footer-grid {
                 grid-template-columns: 1fr;
-                gap: 35px;
+                gap: 25px;
             }
             .footer-bottom {
                 flex-direction: column;
                 gap: 12px;
                 text-align: center;
             }
-            h1 {
-                font-size: 28px;
+            .navbar {
+                flex-wrap: wrap;
+                gap: 10px;
             }
-            h2 {
-                font-size: 22px;
+            .brand-logo {
+                flex-wrap: wrap;
             }
             .logo-text {
-                font-size: 16px;
+                font-size: 18px;
+            }
+            .disclaimer-note {
+                padding: 16px 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
             }
         }
     </style>
@@ -362,7 +390,7 @@
                         <path d="M75,75 V85 M65,75 V80" stroke="#000" stroke-width="4" />
                     </svg>
                 </div>
-                <div class="logo-text">Free Online Password Generator</div>
+                <div class="logo-text">Password Generator</div>
             </a>
             <span class="free-badge">Free Tool | Secure</span>
         </div>
@@ -380,14 +408,14 @@
             <p><strong>Last Updated: March 2026</strong></p>
             
             <div class="disclaimer-note">
-                <strong>Important Notice:</strong> Free Online Password Generator is provided "as is" without any warranties. You are solely responsible for the security of your passwords and accounts. Please read this disclaimer carefully.
+                <strong>Important Notice:</strong> Password Generator is provided "as is" without any warranties. You are solely responsible for the security of your passwords and accounts. Please read this disclaimer carefully.
             </div>
             
             <h2>1. General Information</h2>
-            <p>The information provided by Free Online Password Generator on https://password.pandacybercafe.in/ is for general informational and utility purposes only. All content on this website is provided in good faith; however, we make no representations or warranties of any kind, express or implied, regarding the accuracy, adequacy, reliability, availability, or completeness of any information or output generated using this tool.</p>
+            <p>The information provided by Password Generator on https://password.pandacybercafe.in/ is for general informational and utility purposes only. All content on this website is provided in good faith; however, we make no representations or warranties of any kind, express or implied, regarding the accuracy, adequacy, reliability, availability, or completeness of any information or output generated using this tool.</p>
             
             <h2>2. Tool Usage and Responsibility</h2>
-            <p>Free Online Password Generator is an online password generation tool designed to help users create secure, random passwords. While we use industry-standard cryptographic methods (Web Crypto API), the final security of your accounts depends on many factors, including:</p>
+            <p>Password Generator is an online password generation tool designed to help users create secure, random passwords. While we use industry-standard cryptographic methods (Web Crypto API), the final security of your accounts depends on many factors, including:</p>
             <ul>
                 <li>How you store your passwords (use a password manager)</li>
                 <li>The security of the websites and services you use</li>
@@ -399,7 +427,7 @@
             <p><strong>The responsibility to protect your accounts rests solely with you.</strong> We are not responsible for any security breaches, account compromises, or data losses resulting from the use of this tool.</p>
             
             <h2>3. No Guarantee of Absolute Security</h2>
-            <p>In the world of technology, "100% Secure" does not exist. While our passwords are statistically strong today, future advancements may pose new risks. Free Online Password Generator does not guarantee that passwords generated through the tool will be unhackable under all circumstances or against all future technologies.</p>
+            <p>In the world of technology, "100% Secure" does not exist. While our passwords are statistically strong today, future advancements may pose new risks. Password Generator does not guarantee that passwords generated through the tool will be unhackable under all circumstances or against all future technologies.</p>
             
             <h2>4. Security Disclaimer: Understanding Risks</h2>
             <p>No security tool can guarantee 100% protection. Please understand these known limitations:</p>
@@ -426,16 +454,16 @@
             </ul>
             
             <h2>5. Trademark and Affiliation Notice</h2>
-            <p>The name "Free Online Password Generator" and the tool are used on this platform in a purely descriptive capacity. Free Online Password Generator is an independent entity and is not affiliated, associated, authorized, endorsed by, or in any way officially connected with any other company, website, or brand operating under similar names. All third-party trademarks, service marks, and logos are the property of their respective owners and are used for identification purposes only.</p>
+            <p>The name "Password Generator" and the tool are used on this platform in a purely descriptive capacity. Password Generator is an independent entity and is not affiliated, associated, authorized, endorsed by, or in any way officially connected with any other company, website, or brand operating under similar names. All third-party trademarks, service marks, and logos are the property of their respective owners and are used for identification purposes only.</p>
             
             <h2>6. External Links Disclaimer</h2>
-            <p>This website may contain links to external websites or third-party content for informational purposes. Free Online Password Generator does not control, monitor, or guarantee the accuracy, relevance, reliability, or availability of any information found on external sites. Accessing third-party links is done at the user's own risk.</p>
+            <p>This website may contain links to external websites or third-party content for informational purposes. Password Generator does not control, monitor, or guarantee the accuracy, relevance, reliability, or availability of any information found on external sites. Accessing third-party links is done at the user's own risk.</p>
             
             <h2>7. Professional Advice Disclaimer</h2>
-            <p>The content and functionality provided on Free Online Password Generator do not constitute professional, legal, or security advice. The tool is intended for general use only and should not be relied upon as a substitute for guidance from qualified security professionals. For enterprise security requirements, consult with a certified information security professional.</p>
+            <p>The content and functionality provided on Password Generator do not constitute professional, legal, or security advice. The tool is intended for general use only and should not be relied upon as a substitute for guidance from qualified security professionals. For enterprise security requirements, consult with a certified information security professional.</p>
             
             <h2>8. Limitation of Liability</h2>
-            <p>To the fullest extent permitted by applicable law, Free Online Password Generator and its operators shall not be liable for any direct, indirect, incidental, consequential, or special damages arising out of or in connection with the use of, or inability to use, this website or its tools, including but not limited to:</p>
+            <p>To the fullest extent permitted by applicable law, Password Generator and its operators shall not be liable for any direct, indirect, incidental, consequential, or special damages arising out of or in connection with the use of, or inability to use, this website or its tools, including but not limited to:</p>
             <ul>
                 <li>Account compromises or hacks</li>
                 <li>Data breaches or data loss</li>
@@ -448,7 +476,7 @@
             <p>We may update this Disclaimer from time to time to reflect changes in our practices or legal requirements. Any changes will be posted on this page with an updated effective date. Your continued use of the Service after such changes constitutes your acceptance of the revised Disclaimer.</p>
             
             <h2>10. Acceptance of Terms</h2>
-            <p>By using Free Online Password Generator, you hereby acknowledge that you have read, understood, and agreed to be bound by the terms of this Disclaimer. If you do not agree with any part of this disclaimer, please discontinue use of the website immediately.</p>
+            <p>By using Password Generator, you hereby acknowledge that you have read, understood, and agreed to be bound by the terms of this Disclaimer. If you do not agree with any part of this disclaimer, please discontinue use of the website immediately.</p>
         </div>
     </main>
 
@@ -468,7 +496,7 @@
                             <path d="M75,75 V85 M65,75 V80" stroke="#fff" stroke-width="5" />
                         </svg>
                     </div>
-                    <div class="footer-logo-text">Free Online Password Generator</div>
+                    <div class="footer-logo-text">Password Generator</div>
                 </a>
                 <p>Professional free online password generator. Create secure, random, and private keys instantly. 100% client-side security with zero-knowledge architecture.</p>
             </div>
@@ -506,13 +534,13 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div>&copy; 2026 Free Online Password Generator. All rights reserved.</div>
+            <div>&copy; 2026 Password Generator. All rights reserved.</div>
             <div>🔐 Client-side password generator | Zero data storage</div>
         </div>
     </footer>
 
     <script>
-        // Disable right-click and developer tools shortcuts
+        // Disable right-click and developer tools shortcuts (Optional)
         document.addEventListener('contextmenu', e => e.preventDefault());
         document.addEventListener('keydown', e => {
             if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
