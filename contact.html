@@ -2,28 +2,29 @@
 <html lang="en" itemscope itemtype="https://schema.org/ContactPage">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <!-- Enhanced viewport for perfect mobile & desktop scaling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, shrink-to-fit=no, viewport-fit=cover">
     <meta name="theme-color" content="#000000">
     
-    <!-- SEO Tags -->
-    <title>Contact Us - Free Online Password Generator Support</title>
-    <meta name="description" content="Contact Free Online Password Generator support team for help with password generation, security questions, bug reports, or feature requests. We typically respond within 24-48 hours.">
-    <meta name="keywords" content="contact free online password generator, password generator support, security tool help, bug report, feature request, customer support">
+    <!-- SEO Tags (Updated to Password Generator) -->
+    <title>Contact Us - Password Generator Support</title>
+    <meta name="description" content="Contact Password Generator support team for help with password generation, security questions, bug reports, or feature requests. We typically respond within 24-48 hours.">
+    <meta name="keywords" content="contact password generator, password generator support, security tool help, bug report, feature request, customer support">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="Free Online Password Generator">
+    <meta name="author" content="Password Generator">
     <link rel="canonical" href="https://password.pandacybercafe.in/contact.html" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://password.pandacybercafe.in/contact.html">
-    <meta property="og:title" content="Contact Free Online Password Generator Support">
-    <meta property="og:description" content="Contact Free Online Password Generator support team for help with password generation and security questions.">
-    <meta property="og:site_name" content="Free Online Password Generator">
+    <meta property="og:title" content="Contact Password Generator Support">
+    <meta property="og:description" content="Contact Password Generator support team for help with password generation and security questions.">
+    <meta property="og:site_name" content="Password Generator">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://password.pandacybercafe.in/contact.html">
-    <meta property="twitter:title" content="Contact Free Online Password Generator Support">
+    <meta property="twitter:title" content="Contact Password Generator Support">
     <meta property="twitter:description" content="Get help with password generation, bug reports, and feature requests.">
 
     <!-- Favicons - Correct URLs -->
@@ -33,17 +34,17 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <!-- Schema Markup -->
+    <!-- Schema Markup (Updated) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ContactPage",
-      "name": "Contact Free Online Password Generator Support",
+      "name": "Contact Password Generator Support",
       "url": "https://password.pandacybercafe.in/contact.html",
-      "description": "Contact Free Online Password Generator support team for help with password generation.",
+      "description": "Contact Password Generator support team for help with password generation.",
       "publisher": {
         "@type": "Organization",
-        "name": "Free Online Password Generator"
+        "name": "Password Generator"
       }
     }
     </script>
@@ -92,6 +93,11 @@
             --error: #ef4444;
         }
 
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background-color: var(--bg-color);
@@ -111,10 +117,11 @@
             padding: 15px 0;
             border-bottom: 1px solid var(--line-color);
             background: white;
+            width: 100%;
         }
 
         .navbar {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
             display: flex;
@@ -154,7 +161,7 @@
 
         /* Main Container */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             width: 100%;
             margin: 30px auto;
             padding: 0 20px;
@@ -162,15 +169,16 @@
         }
 
         h1 {
-            font-size: 38px;
+            font-size: clamp(28px, 5vw, 38px);
             font-weight: 800;
             margin-bottom: 20px;
             line-height: 1.2;
             letter-spacing: -0.5px;
+            word-break: break-word;
         }
 
         h2 {
-            font-size: 26px;
+            font-size: clamp(22px, 4vw, 28px);
             font-weight: 700;
             border-bottom: 2px solid var(--line-color);
             padding-bottom: 10px;
@@ -179,7 +187,7 @@
         }
 
         h3 {
-            font-size: 20px;
+            font-size: clamp(18px, 3vw, 22px);
             font-weight: 700;
             margin-top: 25px;
             margin-bottom: 12px;
@@ -190,7 +198,7 @@
             line-height: 1.7;
             color: var(--text-light);
             margin-bottom: 18px;
-            font-size: 16px;
+            font-size: clamp(15px, 2.5vw, 16px);
         }
 
         ul, ol {
@@ -270,6 +278,7 @@
             color: #000;
             text-decoration: none;
             font-weight: 500;
+            word-break: break-word;
         }
 
         .contact-details a:hover {
@@ -322,10 +331,11 @@
             margin-top: 70px;
             font-size: 14px;
             border-top: 1px solid #1f1f1f;
+            width: 100%;
         }
 
         .footer-grid {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 25px;
             display: grid;
@@ -390,7 +400,7 @@
         }
 
         .footer-bottom {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 40px auto 0;
             padding-top: 20px;
             border-top: 1px solid #1f1f1f;
@@ -401,23 +411,36 @@
             padding-right: 25px;
             color: #6b7280;
             font-size: 12px;
+            flex-wrap: wrap;
         }
 
-        @media (max-width: 768px) {
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
             .footer-grid {
                 grid-template-columns: 1fr;
-                gap: 35px;
+                gap: 25px;
             }
             .footer-bottom {
                 flex-direction: column;
                 gap: 12px;
                 text-align: center;
             }
-            h1 {
-                font-size: 28px;
+            .navbar {
+                flex-wrap: wrap;
+                gap: 10px;
             }
-            h2 {
-                font-size: 22px;
+            .brand-logo {
+                flex-wrap: wrap;
+            }
+            .logo-text {
+                font-size: 18px;
             }
             .contact-item {
                 flex-direction: column;
@@ -427,8 +450,14 @@
             .contact-icon {
                 margin: 0 auto;
             }
-            .logo-text {
-                font-size: 16px;
+            .contact-card {
+                padding: 20px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
             }
         }
     </style>
@@ -450,7 +479,7 @@
                         <path d="M75,75 V85 M65,75 V80" stroke="#000" stroke-width="4" />
                     </svg>
                 </div>
-                <div class="logo-text">Free Online Password Generator</div>
+                <div class="logo-text">Password Generator</div>
             </a>
             <span class="free-badge">Free Tool | Secure</span>
         </div>
@@ -462,7 +491,7 @@
             <i data-lucide="arrow-left" size="18"></i> Back to Password Generator
         </a>
         
-        <h1>Contact Free Online Password Generator Support</h1>
+        <h1>Contact Password Generator Support</h1>
         
         <div class="content-block">
             <p>We value your feedback, suggestions, and security inquiries. Our team is here to help you with any questions about password generation, security best practices, or technical issues.</p>
@@ -476,7 +505,7 @@
                     </div>
                     <div class="contact-details">
                         <h4>Email Support</h4>
-                        <p><a href="mailto:support@freeonlinepasswordgenerator.com">support@freeonlinepasswordgenerator.com</a></p>
+                        <p><a href="mailto:support@passwordgenerator.com">support@passwordgenerator.com</a></p>
                     </div>
                 </div>
                 
@@ -536,7 +565,7 @@
 
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        Can I use Free Online Password Generator offline?
+                        Can I use Password Generator offline?
                         <i data-lucide="chevron-down" class="faq-icon"></i>
                     </div>
                     <div class="faq-answer">
@@ -560,7 +589,7 @@
                         <i data-lucide="chevron-down" class="faq-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        Email us at support@freeonlinepasswordgenerator.com with "FEATURE REQUEST" in the subject line. Popular requests include bulk password generation, password strength API, mobile apps, and password history tracking.
+                        Email us at support@passwordgenerator.com with "FEATURE REQUEST" in the subject line. Popular requests include bulk password generation, password strength API, mobile apps, and password history tracking.
                     </div>
                 </div>
 
@@ -570,16 +599,16 @@
                         <i data-lucide="chevron-down" class="faq-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        Please email us at support@freeonlinepasswordgenerator.com with your browser type and version, operating system, steps to reproduce the issue, and screenshots if applicable.
+                        Please email us at support@passwordgenerator.com with your browser type and version, operating system, steps to reproduce the issue, and screenshots if applicable.
                     </div>
                 </div>
             </div>
 
             <div class="content-block">
                 <h2>Report a Security Vulnerability</h2>
-                <p>If you discover a security issue with Free Online Password Generator, please follow responsible disclosure:</p>
+                <p>If you discover a security issue with Password Generator, please follow responsible disclosure:</p>
                 <ol>
-                    <li>Email us at <strong>security@freeonlinepasswordgenerator.com</strong> with full details</li>
+                    <li>Email us at <strong>security@passwordgenerator.com</strong> with full details</li>
                     <li>Allow us 72 hours to respond and investigate</li>
                     <li>Don't publicly disclose until we've addressed the issue</li>
                     <li>We'll credit you in our security acknowledgments (with permission)</li>
@@ -590,7 +619,7 @@
             <div class="content-block">
                 <h2>Partnership and Business Inquiries</h2>
                 <p>For partnership opportunities, enterprise licensing, or media inquiries, please contact:</p>
-                <p><strong>business@freeonlinepasswordgenerator.com</strong></p>
+                <p><strong>business@passwordgenerator.com</strong></p>
             </div>
         </div>
     </main>
@@ -611,7 +640,7 @@
                             <path d="M75,75 V85 M65,75 V80" stroke="#fff" stroke-width="5" />
                         </svg>
                     </div>
-                    <div class="footer-logo-text">Free Online Password Generator</div>
+                    <div class="footer-logo-text">Password Generator</div>
                 </a>
                 <p>Professional free online password generator. Create secure, random, and private keys instantly. 100% client-side security with zero-knowledge architecture.</p>
             </div>
@@ -649,13 +678,13 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div>&copy; 2026 Free Online Password Generator. All rights reserved.</div>
+            <div>&copy; 2026 Password Generator. All rights reserved.</div>
             <div>🔐 Client-side password generator | Zero data storage</div>
         </div>
     </footer>
 
     <script>
-        // Disable right-click and developer tools shortcuts
+        // Disable right-click and developer tools shortcuts (Optional)
         document.addEventListener('contextmenu', e => e.preventDefault());
         document.addEventListener('keydown', e => {
             if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
