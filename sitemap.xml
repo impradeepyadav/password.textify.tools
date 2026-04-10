@@ -4,7 +4,7 @@
   <!-- Home Page - Main Password Generator Tool -->
   <url>
     <loc>https://password.pandacybercafe.in/</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,7 +12,7 @@
   <!-- Password Generator Tool Page -->
   <url>
     <loc>https://password.pandacybercafe.in/password-generator.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -20,7 +20,7 @@
   <!-- Password Strength Checker Tool Page -->
   <url>
     <loc>https://password.pandacybercafe.in/password-checker.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -28,7 +28,7 @@
   <!-- Entropy Calculator Tool Page -->
   <url>
     <loc>https://password.pandacybercafe.in/entropy-calculator.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -36,7 +36,7 @@
   <!-- About Page -->
   <url>
     <loc>https://password.pandacybercafe.in/about.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -44,7 +44,7 @@
   <!-- Contact Page -->
   <url>
     <loc>https://password.pandacybercafe.in/contact.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -52,7 +52,7 @@
   <!-- Security Guide Page -->
   <url>
     <loc>https://password.pandacybercafe.in/security-guide.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -60,7 +60,7 @@
   <!-- FAQ Page -->
   <url>
     <loc>https://password.pandacybercafe.in/faq.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -68,7 +68,7 @@
   <!-- Privacy Policy Page -->
   <url>
     <loc>https://password.pandacybercafe.in/privacy.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -76,7 +76,7 @@
   <!-- Terms of Use Page -->
   <url>
     <loc>https://password.pandacybercafe.in/terms.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -84,7 +84,7 @@
   <!-- Disclaimer Page -->
   <url>
     <loc>https://password.pandacybercafe.in/disclaimer.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
