@@ -2,29 +2,30 @@
 <html lang="en" itemscope itemtype="https://schema.org/WebApplication">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <!-- Enhanced viewport for perfect mobile & desktop scaling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, shrink-to-fit=no, viewport-fit=cover">
     <meta name="theme-color" content="#000000">
     <meta name="google-site-verification" content="F2ZIvw0Aaosc7RtXKz9PonDZj5f1NQ21Vo1rRSpYhnU" />
     
-    <title>Free Online Password Generator | Create Strong Secure Passwords</title>
-    <meta name="description" content="Free Online Password Generator - Generate cryptographically secure random passwords instantly. Strong password creator with custom length, symbols, numbers. 100% client-side, no data storage.">
+    <title>Password Generator | Create Strong Secure Passwords Online</title>
+    <meta name="description" content="Password Generator - Create cryptographically secure random passwords instantly. Strong password creator with custom length, symbols, numbers. 100% client-side, no data storage.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="author" content="Free Online Password Generator">
-    <meta name="keywords" content="free online password generator, strong password, random password, secure password, password creator">
+    <meta name="author" content="Password Generator">
+    <meta name="keywords" content="password generator, strong password, random password, secure password, password creator, free online password generator">
     <link rel="canonical" href="https://password.pandacybercafe.in/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://password.pandacybercafe.in/">
-    <meta property="og:title" content="Free Online Password Generator | Create Strong Secure Passwords">
-    <meta property="og:description" content="Free Online Password Generator - Generate cryptographically secure passwords instantly. Client-side tool with zero data storage.">
-    <meta property="og:site_name" content="Free Online Password Generator">
+    <meta property="og:title" content="Password Generator | Create Strong Secure Passwords">
+    <meta property="og:description" content="Password Generator - Generate cryptographically secure passwords instantly. Client-side tool with zero data storage.">
+    <meta property="og:site_name" content="Password Generator">
     <meta property="og:image" content="https://password.pandacybercafe.in/og-password.jpg">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Free Online Password Generator">
-    <meta name="twitter:description" content="Free Online Password Generator - Generate strong, random passwords instantly. 100% client-side and private.">
+    <meta name="twitter:title" content="Password Generator">
+    <meta name="twitter:description" content="Password Generator - Generate strong, random passwords instantly. 100% client-side and private.">
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -37,9 +38,9 @@
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      "name": "Free Online Password Generator",
+      "name": "Password Generator",
       "url": "https://password.pandacybercafe.in/",
-      "description": "Free Online Password Generator - Professional-grade tool to generate random passwords entirely on the user's browser.",
+      "description": "Password Generator - Professional-grade tool to generate random passwords entirely on the user's browser.",
       "applicationCategory": "SecurityApplication",
       "operatingSystem": "All",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
@@ -71,6 +72,11 @@
             --warning: #f59e0b;
         }
 
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background-color: var(--bg-color);
@@ -90,10 +96,12 @@
             padding: 15px 0;
             border-bottom: 1px solid var(--line-color);
             background: white;
+            width: 100%;
         }
 
         .navbar {
-            max-width: 1100px;
+            max-width: 1200px;
+            width: 100%;
             margin: 0 auto;
             padding: 0 20px;
             display: flex;
@@ -139,9 +147,9 @@
             border: 1px solid #e5e7eb;
         }
 
-        /* Main Container */
+        /* Main Container - FULL WIDTH OPTIMIZED */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             width: 100%;
             margin: 30px auto;
             padding: 0 20px;
@@ -149,15 +157,16 @@
         }
 
         h1 {
-            font-size: 34px;
+            font-size: clamp(26px, 5vw, 38px);
             font-weight: 800;
             margin-bottom: 12px;
             line-height: 1.2;
             letter-spacing: -0.5px;
+            word-break: break-word;
         }
 
         h2 {
-            font-size: 26px;
+            font-size: clamp(22px, 4vw, 28px);
             font-weight: 700;
             border-bottom: 2px solid var(--line-color);
             padding-bottom: 10px;
@@ -166,14 +175,14 @@
         }
 
         h3 {
-            font-size: 20px;
+            font-size: clamp(18px, 3vw, 22px);
             font-weight: 700;
             margin-top: 25px;
             margin-bottom: 12px;
         }
 
         p.subtitle {
-            font-size: 18px;
+            font-size: clamp(15px, 2.5vw, 18px);
             color: var(--text-light);
             margin-bottom: 35px;
             line-height: 1.6;
@@ -183,22 +192,24 @@
         .password-vault {
             background: #000;
             border-radius: 20px;
-            padding: 45px 25px;
+            padding: 35px 20px;
             text-align: center;
             position: relative;
             overflow: hidden;
             margin-bottom: 35px;
             box-shadow: inset 0 2px 20px rgba(0,0,0,0.3);
+            width: 100%;
         }
 
         #passwordOutput {
             font-family: 'Monaco', 'Consolas', monospace;
-            font-size: 32px;
+            font-size: clamp(22px, 6vw, 36px);
             font-weight: 700;
             color: #fff;
             word-break: break-all;
             letter-spacing: 1px;
             display: block;
+            line-height: 1.4;
         }
 
         .strength-bar {
@@ -228,7 +239,7 @@
             background: #000;
             color: #fff;
             border: none;
-            padding: 16px;
+            padding: 16px 10px;
             border-radius: 12px;
             font-weight: 700;
             cursor: pointer;
@@ -238,13 +249,14 @@
             gap: 8px;
             transition: 0.2s;
             font-size: 16px;
+            white-space: nowrap;
         }
 
         .btn-secondary {
             background: #fff;
             color: #000;
             border: 2px solid #000;
-            padding: 16px;
+            padding: 16px 10px;
             border-radius: 12px;
             font-weight: 700;
             cursor: pointer;
@@ -254,6 +266,7 @@
             gap: 8px;
             transition: 0.2s;
             font-size: 16px;
+            white-space: nowrap;
         }
 
         .btn-primary:hover {
@@ -264,7 +277,7 @@
             background: #f5f5f5;
         }
 
-        /* Configuration */
+        /* Configuration - FULL WIDTH GRID */
         .config-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -312,23 +325,31 @@
             padding: 5px 12px;
             border-radius: 8px;
             font-weight: 800;
+            min-width: 45px;
+            text-align: center;
         }
 
         .options-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
             gap: 10px;
+        }
+
+        @media (max-width: 480px) {
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .option-card {
             display: flex;
             align-items: center;
             gap: 10px;
-            padding: 10px 12px;
+            padding: 12px 12px;
             background: #f9fafb;
             border-radius: 10px;
             cursor: pointer;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 600;
             border: 1px solid #eee;
             transition: 0.2s;
@@ -339,15 +360,16 @@
         }
 
         .option-card input {
-            width: 16px;
-            height: 16px;
+            width: 18px;
+            height: 18px;
             accent-color: #000;
             cursor: pointer;
+            flex-shrink: 0;
         }
 
         .custom-input {
             width: 100%;
-            padding: 12px;
+            padding: 14px;
             border: 1px solid #eee;
             border-radius: 8px;
             font-size: 14px;
@@ -403,6 +425,7 @@
             border: 1px solid var(--line-color);
             border-radius: 12px;
             margin: 25px 0;
+            -webkit-overflow-scrolling: touch;
         }
 
         table {
@@ -430,21 +453,21 @@
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 20px;
             margin: 25px 0;
         }
 
         .stat-card {
             background: #f8fafc;
-            padding: 20px;
+            padding: 20px 10px;
             border-radius: 12px;
             text-align: center;
             border: 1px solid #e5e7eb;
         }
 
         .stat-number {
-            font-size: 32px;
+            font-size: clamp(24px, 5vw, 32px);
             font-weight: 800;
             color: #000;
         }
@@ -510,10 +533,11 @@
             margin-top: 70px;
             font-size: 14px;
             border-top: 1px solid #1f1f1f;
+            width: 100%;
         }
 
         .footer-grid {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 25px;
             display: grid;
@@ -585,7 +609,7 @@
         }
 
         .footer-bottom {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 40px auto 0;
             padding-top: 20px;
             border-top: 1px solid #1f1f1f;
@@ -596,26 +620,56 @@
             padding-right: 25px;
             color: #6b7280;
             font-size: 12px;
+            flex-wrap: wrap;
         }
 
-        @media (max-width: 768px) {
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
             .footer-grid {
                 grid-template-columns: 1fr;
-                gap: 35px;
+                gap: 25px;
             }
             .footer-bottom {
                 flex-direction: column;
                 gap: 12px;
                 text-align: center;
             }
-            h1 {
-                font-size: 28px;
+            .navbar {
+                flex-wrap: wrap;
+                gap: 10px;
             }
-            h2 {
-                font-size: 22px;
+            .brand-logo {
+                flex-wrap: wrap;
             }
             .logo-text {
-                font-size: 16px;
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            .password-vault {
+                padding: 25px 15px;
+            }
+            .action-buttons .btn-primary, 
+            .action-buttons .btn-secondary {
+                padding: 14px 8px;
+                font-size: 15px;
+            }
+            .slider-container {
+                flex-wrap: wrap;
+            }
+            .value-badge {
+                margin-left: auto;
             }
         }
 
@@ -626,12 +680,15 @@
             transform: translateX(-50%);
             background: #16a34a;
             color: #fff;
-            padding: 10px 24px;
+            padding: 12px 28px;
             border-radius: 40px;
             font-weight: 600;
             display: none;
             z-index: 1000;
             font-size: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            max-width: 90vw;
+            text-align: center;
         }
     </style>
 </head>
@@ -654,15 +711,15 @@
                         <path d="M75,75 V85 M65,75 V80" stroke="#000" stroke-width="4" />
                     </svg>
                 </div>
-                <div class="logo-text">Free Online Password Generator</div>
+                <div class="logo-text">Password Generator</div>
             </a>
             <span class="free-badge">Free Tool</span>
         </div>
     </header>
 
     <main class="container">
-        <h1>Free Online Password Generator | Create Strong & Secure Passwords Instantly</h1>
-        <p class="subtitle"><strong>Free Online Password Generator</strong> - Generate cryptographically secure random passwords instantly. Perfect for email, banking, social media, and all online accounts. Client-side only - no data ever leaves your device.</p>
+        <h1>Password Generator | Create Strong & Secure Passwords Instantly</h1>
+        <p class="subtitle"><strong>Password Generator</strong> — Generate cryptographically secure random passwords instantly. Perfect for email, banking, social media, and all online accounts. Client-side only — no data ever leaves your device.</p>
 
         <div class="password-vault">
             <span id="passwordOutput">················</span>
@@ -709,17 +766,17 @@
             </div>
         </div>
 
-        <!-- SEO Content Block (Rich) -->
+        <!-- SEO Content Block -->
         <div class="seo-content">
             <div class="content-block">
-                <h2>Why Choose Free Online Password Generator?</h2>
+                <h2>Why Choose Our Password Generator?</h2>
                 <div class="stats-grid">
                     <div class="stat-card"><div class="stat-number">81%</div><div class="stat-label">Data breaches involve weak passwords</div></div>
                     <div class="stat-card"><div class="stat-number">65%</div><div class="stat-label">People reuse passwords across accounts</div></div>
                     <div class="stat-card"><div class="stat-number">24B+</div><div class="stat-label">Credentials available on dark web</div></div>
                     <div class="stat-card"><div class="stat-number">3 sec</div><div class="stat-label">Time to crack 8-character password</div></div>
                 </div>
-                <p><strong>Free Online Password Generator</strong> helps you create strong, unique passwords that protect your digital identity. Weak passwords remain the primary cause of account compromises worldwide. Our tool ensures maximum security with client-side generation.</p>
+                <p><strong>Password Generator</strong> helps you create strong, unique passwords that protect your digital identity. Weak passwords remain the primary cause of account compromises worldwide. Our tool ensures maximum security with client-side generation — nothing is ever stored or transmitted.</p>
             </div>
 
             <div class="content-block">
@@ -739,7 +796,7 @@
             </div>
 
             <div class="content-block">
-                <h2>How to Create a Strong Password with Free Online Password Generator</h2>
+                <h2>How to Create a Strong Password with Password Generator</h2>
                 <ul>
                     <li><strong>Use sufficient length:</strong> Minimum 16 characters for strong security</li>
                     <li><strong>Mix character types:</strong> Include uppercase, lowercase, numbers, and symbols</li>
@@ -749,7 +806,7 @@
                     <li><strong>Use a password manager:</strong> Store generated passwords securely</li>
                 </ul>
                 <div class="tip-box">
-                    <strong>Security Tip:</strong> A 16-character password with all character types provides 94^16 possible combinations - mathematically impossible to crack with current technology. <strong>Free Online Password Generator</strong> ensures maximum entropy.
+                    <strong>Security Tip:</strong> A 16-character password with all character types provides 94^16 possible combinations — mathematically impossible to crack with current technology. <strong>Password Generator</strong> ensures maximum entropy and unpredictability.
                 </div>
             </div>
 
@@ -763,24 +820,24 @@
                     <li>Check passwords against breached password lists</li>
                     <li>Encourage use of password managers with built-in generators</li>
                 </ul>
-                <p><strong>Free Online Password Generator</strong> exceeds all NIST requirements with support for up to 100 characters and cryptographically secure random generation.</p>
+                <p><strong>Password Generator</strong> exceeds all NIST requirements with support for up to 100 characters and cryptographically secure random generation.</p>
             </div>
 
             <div class="content-block">
-                <h2>Frequently Asked Questions about Free Online Password Generator</h2>
+                <h2>Frequently Asked Questions about Password Generator</h2>
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        Is Free Online Password Generator safe?
+                        Is Password Generator safe to use?
                         <i data-lucide="chevron-down" class="faq-icon"></i>
                     </div>
-                    <div class="faq-answer">Yes. Free Online Password Generator runs entirely in your browser using the Web Crypto API. No passwords are ever sent to any server. All generation happens locally on your device. We don't store, track, or share any data.</div>
+                    <div class="faq-answer">Yes. Password Generator runs entirely in your browser using the Web Crypto API. No passwords are ever sent to any server. All generation happens locally on your device. We don't store, track, or share any data.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
                         What password length should I use?
                         <i data-lucide="chevron-down" class="faq-icon"></i>
                     </div>
-                    <div class="faq-answer">For most accounts, 16-20 characters is recommended. Email and banking accounts should use 20+ characters. Use the maximum length allowed by each service. Free Online Password Generator supports up to 100 characters.</div>
+                    <div class="faq-answer">For most accounts, 16-20 characters is recommended. Email and banking accounts should use 20+ characters. Use the maximum length allowed by each service. Password Generator supports up to 100 characters.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
@@ -794,14 +851,14 @@
                         Can I use this tool offline?
                         <i data-lucide="chevron-down" class="faq-icon"></i>
                     </div>
-                    <div class="faq-answer">Yes. Once the page loads, Free Online Password Generator works completely offline. You can disconnect from the internet and still generate secure passwords.</div>
+                    <div class="faq-answer">Yes. Once the page loads, Password Generator works completely offline. You can disconnect from the internet and still generate secure passwords.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
-                        Is Free Online Password Generator really free?
+                        Is Password Generator really free?
                         <i data-lucide="chevron-down" class="faq-icon"></i>
                     </div>
-                    <div class="faq-answer">Absolutely! Free Online Password Generator is 100% free with no hidden costs, no subscriptions, and no premium tiers. We believe everyone deserves strong password security.</div>
+                    <div class="faq-answer">Absolutely! Password Generator is 100% free with no hidden costs, no subscriptions, and no premium tiers. We believe everyone deserves strong password security.</div>
                 </div>
             </div>
         </div>
@@ -823,7 +880,7 @@
                             <path d="M75,75 V85 M65,75 V80" stroke="#fff" stroke-width="5" />
                         </svg>
                     </div>
-                    <div class="footer-logo-text">Free Online Password Generator</div>
+                    <div class="footer-logo-text">Password Generator</div>
                 </a>
                 <p>The most trusted free online password generator. Create strong, random, and secure passwords instantly. Client-side security, zero data storage, complete privacy.</p>
             </div>
@@ -861,7 +918,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div>&copy; 2026 Free Online Password Generator. All rights reserved.</div>
+            <div>&copy; 2026 Password Generator. All rights reserved.</div>
             <div>🔐 Secure • Free • Private</div>
         </div>
     </footer>
@@ -906,6 +963,7 @@
 
             if (!charset) {
                 document.getElementById('passwordOutput').innerText = "Select at least one option";
+                document.getElementById('strengthBar').style.width = "0%";
                 return;
             }
 
@@ -984,7 +1042,7 @@
             const password = document.getElementById('passwordOutput').innerText;
             if (password && password !== "Select at least one option") {
                 const date = new Date().toLocaleString();
-                const content = `Free Online Password Generator\n\nDate: ${date}\nPassword: ${password}\nLength: ${password.length} characters\n\nStore this password securely. Never share it with anyone.\n\nGenerated by Free Online Password Generator`;
+                const content = `Password Generator\n\nDate: ${date}\nPassword: ${password}\nLength: ${password.length} characters\n\nStore this password securely. Never share it with anyone.\n\nGenerated by Password Generator`;
                 const blob = new Blob([content], { type: 'text/plain' });
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
