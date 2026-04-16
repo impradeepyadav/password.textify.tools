@@ -297,14 +297,14 @@
         .tip-card h4 { font-size: 1.1rem; font-weight: 700; color: #000000; margin-bottom: var(--spacing-sm); }
         .tip-card p { color: #555555; line-height: 1.6; font-size: 0.95rem; margin-bottom: 0; }
 
-        /* Common Mistakes Grid */
-        .mistakes-grid {
-            display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-lg);
+        /* Common Mistakes - STACKED (LINE BY LINE) */
+        .mistakes-stack {
+            display: flex; flex-direction: column; gap: var(--spacing-md);
             margin: var(--spacing-2xl) 0;
         }
         .mistake-card {
             background: #fff5f5; border: 1px solid #fcc; border-radius: 16px;
-            padding: var(--spacing-xl);
+            padding: var(--spacing-xl); width: 100%;
         }
         .mistake-card i { width: 28px; height: 28px; color: #c13b3b; margin-bottom: var(--spacing-md); }
         .mistake-card h4 { font-size: 1.1rem; font-weight: 700; color: #000000; margin-bottom: var(--spacing-sm); }
@@ -404,7 +404,6 @@
             .action-buttons { grid-template-columns: 1fr; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
             .tips-grid { grid-template-columns: 1fr; }
-            .mistakes-grid { grid-template-columns: 1fr; }
             .footer-unified-grid { grid-template-columns: 1fr; gap: var(--footer-gap); }
             .footer-col { text-align: left; }
         }
@@ -597,10 +596,10 @@
         <p>As shown above, password strength increases exponentially with length and character variety. A 16-character password using all character types is mathematically impossible to crack with current technology.</p>
     </div>
 
-    <!-- Common Password Mistakes -->
+    <!-- Common Password Mistakes - STACKED -->
     <div class="seo-section">
         <h2>Common Password Mistakes to Avoid</h2>
-        <div class="mistakes-grid">
+        <div class="mistakes-stack">
             <div class="mistake-card">
                 <i data-lucide="alert-triangle"></i>
                 <h4>Using Personal Information</h4>
