@@ -32,6 +32,8 @@
             --spacing-lg: 16px;
             --spacing-xl: 20px;
             --spacing-2xl: 24px;
+            --spacing-3xl: 32px;
+            --spacing-4xl: 40px;
             --footer-gap: 20px;
         }
         html, body { width: 100%; height: 100%; overflow: hidden; scroll-behavior: smooth; background-color: var(--bg-white); }
@@ -65,9 +67,7 @@
             padding-bottom: var(--spacing-xs);
             transition: color 0.15s;
         }
-        .desktop-tool-links a:hover {
-            color: var(--success);
-        }
+        .desktop-tool-links a:hover { color: var(--success); }
         .drop-menu { position: relative; }
         .menu-icon-btn {
             background: transparent; border: none; padding: var(--spacing-sm); cursor: pointer;
@@ -103,9 +103,7 @@
         .sidebar-brand {
             display: flex; align-items: center; gap: var(--spacing-sm);
         }
-        .sidebar-robot-svg {
-            width: 28px; height: 28px;
-        }
+        .sidebar-robot-svg { width: 28px; height: 28px; }
         .sidebar-title {
             font-size: 1.2rem; font-weight: 800; color: #000000;
             letter-spacing: -0.3px; line-height: 1.1;
@@ -120,9 +118,7 @@
             border-bottom: 1px solid #c8dbd1;
             transition: color 0.15s;
         }
-        .sidebar-tool-item:hover {
-            color: var(--success);
-        }
+        .sidebar-tool-item:hover { color: var(--success); }
         .sidebar-tool-item::before {
             content: "—"; color: var(--success); font-weight: 900;
             font-size: 1.2rem; margin-right: var(--spacing-sm);
@@ -152,8 +148,6 @@
 
         /* PAGE SECTIONS */
         .container { max-width: 1200px; margin: 0 auto var(--spacing-lg); padding: 0 var(--spacing-xl); }
-        .tool-header { margin: var(--spacing-sm) 0; font-size: clamp(1.5rem, 5vw, 2rem); font-weight: 700; color: #000000; }
-
         .password-vault { background: #000000; border-radius: 20px; padding: var(--spacing-2xl) var(--spacing-xl); text-align: center; margin: var(--spacing-lg) 0; }
         #passwordOutput { font-family: monospace; font-size: clamp(20px, 6vw, 36px); font-weight: 700; color: #ffffff; word-break: break-all; }
         .strength-bar { height: 6px; width: 0%; transition: 0.2s; background: var(--success); margin-top: var(--spacing-md); border-radius: 10px; }
@@ -163,34 +157,126 @@
         .config-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-lg); }
         .option-card { background: #f6fbf8; border: 1px solid #000000; display: flex; padding: var(--spacing-md); border-radius: 14px; cursor: pointer; color: #000000; font-size: 0.9rem; }
 
-        /* ========== SEO CONTENT ========== */
-        .seo-content { max-width: 1200px; margin: var(--spacing-xl) auto; padding: 0 var(--spacing-xl); }
-        .seo-section { margin-bottom: var(--spacing-2xl); }
-        .seo-section h2 { font-size: clamp(1.4rem, 4vw, 1.8rem); font-weight: 700; color: #000000; margin-bottom: var(--spacing-sm); border-left: 4px solid var(--success); padding-left: 14px; }
-        .seo-section h3 { font-size: clamp(1.1rem, 3vw, 1.3rem); font-weight: 700; color: #000000; margin: 14px 0 var(--spacing-sm); }
-        .seo-section p { color: #333333; line-height: 1.6; margin-bottom: var(--spacing-sm); font-size: 0.95rem; }
-        .seo-section ul, .seo-section ol { padding-left: var(--spacing-xl); color: #333333; line-height: 1.6; margin-bottom: var(--spacing-sm); font-size: 0.95rem; }
-        .seo-section li { margin-bottom: var(--spacing-xs); }
-        .seo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--spacing-md); margin: var(--spacing-lg) 0; }
-        .seo-card { background: #f8fcf9; padding: var(--spacing-lg); border-radius: 14px; border: 1px solid #000000; text-align: center; }
-        .seo-card .stat-number { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; color: #000000; }
-        .seo-card .stat-label { color: #555555; font-size: 0.8rem; margin-top: var(--spacing-xs); }
-        .tip-box { background: #e8f0ec; border-left: 4px solid var(--success); padding: 14px; border-radius: 10px; margin: var(--spacing-lg) 0; font-size: 0.9rem; }
-        .comparison-table { overflow-x: auto; border: 1px solid #000000; border-radius: 10px; margin: var(--spacing-lg) 0; }
-        .comparison-table table { width: 100%; border-collapse: collapse; min-width: 450px; font-size: 0.85rem; }
-        .comparison-table th, .comparison-table td { padding: var(--spacing-sm) var(--spacing-md); text-align: left; border-bottom: 1px solid #cccccc; }
-        .comparison-table th { background: #000000; color: white; font-weight: 700; }
-        .faq-item { border: 1px solid #000000; border-radius: 10px; margin-bottom: var(--spacing-sm); overflow: hidden; }
-        .faq-question { padding: 14px var(--spacing-lg); background: #f8fcf9; font-weight: 700; color: #000000; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 0.95rem; }
-        .faq-answer { padding: 14px var(--spacing-lg); border-top: 1px solid #cccccc; display: none; color: #333333; line-height: 1.5; font-size: 0.9rem; }
-        .faq-item.active .faq-answer { display: block; }
-        .faq-icon { transition: transform 0.2s; width: 18px; height: 18px; }
-        .faq-item.active .faq-icon { transform: rotate(180deg); }
+        /* ========== SEO CONTENT - ENHANCED ========== */
+        .seo-content { max-width: 1200px; margin: var(--spacing-4xl) auto; padding: 0 var(--spacing-xl); }
+        .seo-section { margin-bottom: var(--spacing-4xl); }
+        .seo-section h2 {
+            font-size: clamp(1.6rem, 5vw, 2rem); font-weight: 700; color: #000000;
+            margin-bottom: var(--spacing-lg); border-left: 5px solid var(--success);
+            padding-left: var(--spacing-lg);
+        }
+        .seo-section h3 {
+            font-size: clamp(1.2rem, 4vw, 1.4rem); font-weight: 700; color: #000000;
+            margin: var(--spacing-xl) 0 var(--spacing-md);
+        }
+        .seo-section p {
+            color: #333333; line-height: 1.8; margin-bottom: var(--spacing-lg);
+            font-size: 1rem;
+        }
+        .seo-section ul, .seo-section ol {
+            padding-left: var(--spacing-2xl); color: #333333; line-height: 1.8;
+            margin-bottom: var(--spacing-lg); font-size: 1rem;
+        }
+        .seo-section li { margin-bottom: var(--spacing-sm); }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacing-lg);
+            margin: var(--spacing-2xl) 0;
+        }
+        .stat-item {
+            background: #f8fcf9; border: 1px solid #e0e8e3; border-radius: 16px;
+            padding: var(--spacing-xl) var(--spacing-lg); text-align: center;
+        }
+        .stat-number { font-size: 2.5rem; font-weight: 800; color: #000000; line-height: 1.2; }
+        .stat-label { color: #555555; font-size: 0.9rem; margin-top: var(--spacing-sm); }
+
+        /* Comparison Table */
+        .comparison-table {
+            overflow-x: auto; border: 1px solid #e0e8e3; border-radius: 16px;
+            margin: var(--spacing-2xl) 0; background: white;
+        }
+        .comparison-table table {
+            width: 100%; border-collapse: collapse; min-width: 600px;
+        }
+        .comparison-table th {
+            background: #000000; color: white; font-weight: 700; padding: var(--spacing-md) var(--spacing-lg);
+            text-align: left; font-size: 0.95rem;
+        }
+        .comparison-table td {
+            padding: var(--spacing-md) var(--spacing-lg); text-align: left;
+            border-bottom: 1px solid #e0e8e3; color: #333333; font-size: 0.95rem;
+        }
+        .comparison-table tr:last-child td { border-bottom: none; }
+
+        /* Tips Grid */
+        .tips-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-lg);
+            margin: var(--spacing-2xl) 0;
+        }
+        .tip-card {
+            background: #f8fcf9; border: 1px solid #e0e8e3; border-radius: 16px;
+            padding: var(--spacing-xl);
+        }
+        .tip-card i { width: 28px; height: 28px; color: var(--success); margin-bottom: var(--spacing-md); }
+        .tip-card h4 { font-size: 1.1rem; font-weight: 700; color: #000000; margin-bottom: var(--spacing-sm); }
+        .tip-card p { color: #555555; line-height: 1.6; font-size: 0.95rem; margin-bottom: 0; }
+
+        /* Common Mistakes Grid */
+        .mistakes-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-lg);
+            margin: var(--spacing-2xl) 0;
+        }
+        .mistake-card {
+            background: #fff5f5; border: 1px solid #fcc; border-radius: 16px;
+            padding: var(--spacing-xl);
+        }
+        .mistake-card i { width: 28px; height: 28px; color: #c13b3b; margin-bottom: var(--spacing-md); }
+        .mistake-card h4 { font-size: 1.1rem; font-weight: 700; color: #000000; margin-bottom: var(--spacing-sm); }
+        .mistake-card p { color: #555555; line-height: 1.6; font-size: 0.95rem; margin-bottom: 0; }
+
+        /* Best Practices List */
+        .practices-list {
+            background: #f0f5f2; border-radius: 16px; padding: var(--spacing-2xl);
+            margin: var(--spacing-2xl) 0;
+        }
+        .practices-list li { margin-bottom: var(--spacing-md); }
+
+        /* FAQ Section */
+        .faq-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-lg);
+            margin: var(--spacing-2xl) 0;
+        }
+        .faq-card {
+            background: #f8fcf9; border: 1px solid #e0e8e3; border-radius: 16px;
+            padding: var(--spacing-xl); cursor: pointer; transition: all 0.15s;
+        }
+        .faq-card:hover { border-color: var(--success); background: white; }
+        .faq-question {
+            display: flex; justify-content: space-between; align-items: center;
+            font-weight: 700; color: #000000; font-size: 1.05rem;
+        }
+        .faq-answer {
+            margin-top: var(--spacing-md); padding-top: var(--spacing-md);
+            border-top: 1px solid #e0e8e3; display: none;
+            color: #555555; line-height: 1.7; font-size: 0.95rem;
+        }
+        .faq-card.active .faq-answer { display: block; }
+        .faq-icon { transition: transform 0.2s; width: 20px; height: 20px; color: var(--success); }
+        .faq-card.active .faq-icon { transform: rotate(180deg); }
+
+        /* NIST Section */
+        .nist-box {
+            background: #f0f5f2; border-left: 5px solid var(--success);
+            padding: var(--spacing-xl) var(--spacing-2xl); border-radius: 12px;
+            margin: var(--spacing-2xl) 0;
+        }
+        .nist-box h4 { font-size: 1.2rem; font-weight: 700; color: #000000; margin-bottom: var(--spacing-md); }
+        .nist-box ul { margin-bottom: 0; }
 
         /* ========== FOOTER - BLACK ========== */
         footer { background: #000000; color: #ffffff; padding: var(--spacing-2xl) 0 var(--spacing-xl); }
         .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-xl); }
-        
         .footer-unified-grid {
             display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--footer-gap);
             margin-bottom: var(--spacing-2xl); padding-bottom: var(--spacing-2xl); border-bottom: 1px solid #333333;
@@ -201,25 +287,29 @@
         .footer-col ul li { margin-bottom: var(--spacing-xs); }
         .footer-col ul li a { color: #cccccc; text-decoration: none; font-size: 0.8rem; transition: color 0.15s; }
         .footer-col ul li a:hover { color: var(--success); }
-        
         .footer-brand-compact { display: flex; flex-direction: column; gap: var(--spacing-xs); }
         .footer-brand-header { display: flex; align-items: center; gap: var(--spacing-xs); }
         .footer-robot-svg { width: 24px; height: 24px; }
         .footer-brand-compact h4 { margin-bottom: 0; font-size: 0.95rem; }
         .footer-brand-compact p { color: #cccccc; font-size: 0.75rem; line-height: 1.4; }
-        
         .footer-share-compact { cursor: pointer; }
         .footer-share-header { display: flex; align-items: center; gap: var(--spacing-xs); margin-bottom: var(--spacing-xs); }
         .footer-share-header i { width: 18px; height: 18px; color: var(--success); }
         .footer-share-title { color: #ffffff; font-size: 0.95rem; font-weight: 700; }
         .footer-share-subtitle { color: #cccccc; font-size: 0.75rem; line-height: 1.3; }
-
         .footer-copyright { text-align: center; padding-top: var(--spacing-xl); color: #cccccc; font-size: 0.8rem; }
 
-        .toast-message { position: fixed; bottom: var(--spacing-xl); left: 50%; transform: translateX(-50%); background: var(--success); color: white; padding: var(--spacing-sm) var(--spacing-2xl); border-radius: 40px; display: none; z-index: 3000; font-weight: 500; box-shadow: 0 4px 12px rgba(0,0,0,0.15); text-align: center; white-space: nowrap; font-size: 0.9rem; }
+        /* Toast Messages */
+        .toast-message {
+            position: fixed; bottom: var(--spacing-xl); left: 50%; transform: translateX(-50%);
+            background: var(--success); color: white; padding: var(--spacing-sm) var(--spacing-2xl);
+            border-radius: 40px; display: none; z-index: 3000; font-weight: 500;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15); text-align: center; white-space: nowrap; font-size: 0.9rem;
+        }
         .toast-success { background: var(--success); }
         .toast-info { background: #000000; }
 
+        /* Responsive */
         @media (min-width: 769px) {
             .desktop-tool-links { display: flex; }
             .menu-icon-btn { display: none; }
@@ -232,6 +322,10 @@
             .hero-section { grid-template-columns: 1fr; gap: var(--spacing-lg); }
             .config-grid { grid-template-columns: 1fr; }
             .action-buttons { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .tips-grid { grid-template-columns: 1fr; }
+            .mistakes-grid { grid-template-columns: 1fr; }
+            .faq-grid { grid-template-columns: 1fr; }
             .footer-unified-grid { grid-template-columns: 1fr; gap: var(--footer-gap); }
             .footer-col { text-align: left; }
         }
@@ -343,39 +437,147 @@
     </div>
 </div>
 
-<!-- SEO CONTENT -->
+<!-- ENHANCED SEO CONTENT -->
 <div class="seo-content">
+    <!-- Why Choose Section with Stats -->
     <div class="seo-section">
         <h2>Why Choose Our Password Generator?</h2>
-        <div class="seo-grid">
-            <div class="seo-card"><div class="stat-number">81%</div><div class="stat-label">Data breaches involve weak passwords</div></div>
-            <div class="seo-card"><div class="stat-number">65%</div><div class="stat-label">People reuse passwords across accounts</div></div>
-            <div class="seo-card"><div class="stat-number">24B+</div><div class="stat-label">Credentials on dark web</div></div>
-            <div class="seo-card"><div class="stat-number">3 sec</div><div class="stat-label">Crack 8-char password</div></div>
+        <div class="stats-grid">
+            <div class="stat-item"><div class="stat-number">81%</div><div class="stat-label">Data breaches involve weak passwords</div></div>
+            <div class="stat-item"><div class="stat-number">65%</div><div class="stat-label">People reuse passwords across accounts</div></div>
+            <div class="stat-item"><div class="stat-number">24B+</div><div class="stat-label">Credentials available on dark web</div></div>
+            <div class="stat-item"><div class="stat-number">3 sec</div><div class="stat-label">Time to crack 8-char password</div></div>
         </div>
-        <p><strong>Password Generator</strong> helps you create strong, unique passwords that protect your digital identity.</p>
+        <p><strong>Password Generator</strong> helps you create strong, unique passwords that protect your digital identity. Weak passwords remain the primary cause of account compromises worldwide. Our tool ensures maximum security with client-side generation — nothing is ever stored or transmitted. All passwords are generated locally in your browser using cryptographically secure random number generation.</p>
     </div>
+
+    <!-- Password Strength Comparison -->
     <div class="seo-section">
         <h2>Password Strength Comparison</h2>
         <div class="comparison-table">
             <table>
                 <thead><tr><th>Length</th><th>Character Set</th><th>Combinations</th><th>Crack Time</th><th>Rating</th></tr></thead>
                 <tbody>
-                    <tr><td>8 chars</td><td>Lowercase only</td><td>2.0e11</td><td>Seconds</td><td style="color:#c13b3b;">Weak</td></tr>
-                    <tr><td>8 chars</td><td>Mixed + numbers</td><td>6.0e14</td><td>Hours</td><td style="color:#c97d0b;">Fair</td></tr>
-                    <tr><td>12 chars</td><td>All sets</td><td>4.7e23</td><td>Centuries</td><td style="color:#2e7d5e;">Strong</td></tr>
-                    <tr><td>16 chars</td><td>All sets</td><td>3.7e31</td><td>Millions of years</td><td style="color:#2e7d5e;">Very Strong</td></tr>
-                    <tr><td>20+ chars</td><td>Full ASCII</td><td>9.5e39</td><td>Age of universe</td><td style="color:#2e7d5e;">Unbreakable</td></tr>
+                    <tr><td>8 chars</td><td>Lowercase only</td><td>2.0 × 10¹¹</td><td>Seconds</td><td style="color:#c13b3b; font-weight:600;">Weak</td></tr>
+                    <tr><td>8 chars</td><td>Mixed + numbers</td><td>6.0 × 10¹⁴</td><td>Hours</td><td style="color:#c97d0b; font-weight:600;">Fair</td></tr>
+                    <tr><td>12 chars</td><td>All sets</td><td>4.7 × 10²³</td><td>Centuries</td><td style="color:#2e7d5e; font-weight:600;">Strong</td></tr>
+                    <tr><td>16 chars</td><td>All sets</td><td>3.7 × 10³¹</td><td>Millions of years</td><td style="color:#2e7d5e; font-weight:600;">Very Strong</td></tr>
+                    <tr><td>20+ chars</td><td>Full ASCII</td><td>9.5 × 10³⁹</td><td>Age of universe</td><td style="color:#15803d; font-weight:600;">Unbreakable</td></tr>
                 </tbody>
             </table>
         </div>
+        <p>As shown above, password strength increases exponentially with length and character variety. A 16-character password using all character types is mathematically impossible to crack with current technology.</p>
     </div>
+
+    <!-- Common Password Mistakes -->
+    <div class="seo-section">
+        <h2>Common Password Mistakes to Avoid</h2>
+        <div class="mistakes-grid">
+            <div class="mistake-card">
+                <i data-lucide="alert-triangle"></i>
+                <h4>Using Personal Information</h4>
+                <p>Never use names, birthdays, addresses, or pet names. This information is often publicly available or easy to guess.</p>
+            </div>
+            <div class="mistake-card">
+                <i data-lucide="repeat"></i>
+                <h4>Reusing Passwords</h4>
+                <p>Using the same password across multiple sites is extremely dangerous. One breach compromises all your accounts.</p>
+            </div>
+            <div class="mistake-card">
+                <i data-lucide="keyboard"></i>
+                <h4>Keyboard Patterns</h4>
+                <p>Avoid sequences like "qwerty", "123456", or "asdfgh". These are among the first guesses in any attack.</p>
+            </div>
+            <div class="mistake-card">
+                <i data-lucide="book-open"></i>
+                <h4>Dictionary Words</h4>
+                <p>Common words, even with substitutions (e.g., "p@ssw0rd"), are vulnerable to dictionary attacks.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Password Best Practices -->
+    <div class="seo-section">
+        <h2>Password Security Best Practices</h2>
+        <div class="practices-list">
+            <ul>
+                <li><strong>Use a password manager</strong> — It generates, stores, and autofills strong unique passwords for every site.</li>
+                <li><strong>Enable two-factor authentication (2FA)</strong> — Adds an extra layer of security even if your password is compromised.</li>
+                <li><strong>Change passwords after a breach</strong> — If a service you use announces a breach, change your password immediately.</li>
+                <li><strong>Use at least 16 characters</strong> — Longer passwords are exponentially harder to crack.</li>
+                <li><strong>Never share passwords</strong> — Keep your credentials private; legitimate services will never ask for your password.</li>
+                <li><strong>Check password strength regularly</strong> — Use our Password Strength Checker to verify your passwords are robust.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Security Tips -->
+    <div class="seo-section">
+        <h2>Essential Password Security Tips</h2>
+        <div class="tips-grid">
+            <div class="tip-card">
+                <i data-lucide="ruler"></i>
+                <h4>Use Sufficient Length</h4>
+                <p>Minimum 16 characters for strong security. Each additional character makes your password exponentially harder to crack.</p>
+            </div>
+            <div class="tip-card">
+                <i data-lucide="shuffle"></i>
+                <h4>Mix Character Types</h4>
+                <p>Include uppercase, lowercase, numbers, and symbols. Avoid dictionary words and personal information.</p>
+            </div>
+            <div class="tip-card">
+                <i data-lucide="key"></i>
+                <h4>Never Reuse Passwords</h4>
+                <p>Each account needs a unique password. Use a password manager to store generated passwords securely.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- NIST Guidelines -->
+    <div class="seo-section">
+        <h2>NIST Password Guidelines</h2>
+        <div class="nist-box">
+            <h4>National Institute of Standards and Technology Recommendations</h4>
+            <ul>
+                <li>Minimum 8 characters, but 15+ is strongly recommended</li>
+                <li>Support up to 64 characters or more</li>
+                <li>Allow all printable ASCII characters including spaces</li>
+                <li>Check passwords against breached password lists</li>
+                <li>Encourage use of password managers with built-in generators</li>
+            </ul>
+            <p style="margin-top:var(--spacing-md); margin-bottom:0;"><strong>Password Generator</strong> exceeds all NIST requirements with support for up to 100 characters and cryptographically secure random generation.</p>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
     <div class="seo-section">
         <h2>Frequently Asked Questions</h2>
-        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Is Password Generator safe? <i data-lucide="chevron-down" class="faq-icon"></i></div><div class="faq-answer">Yes. Runs entirely in your browser using Web Crypto API. No data sent to any server.</div></div>
-        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">What length should I use? <i data-lucide="chevron-down" class="faq-icon"></i></div><div class="faq-answer">16-20 characters recommended. Email/banking use 20+. Supports up to 100 characters.</div></div>
-        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">What is strict distribution? <i data-lucide="chevron-down" class="faq-icon"></i></div><div class="faq-answer">Ensures at least one character from each selected set. Meets strict password policies.</div></div>
-        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Can I use this offline? <i data-lucide="chevron-down" class="faq-icon"></i></div><div class="faq-answer">Yes. Once loaded, works completely offline.</div></div>
+        <div class="faq-grid">
+            <div class="faq-card" onclick="toggleFaqCard(this)">
+                <div class="faq-question">Is Password Generator safe to use? <i data-lucide="chevron-down" class="faq-icon"></i></div>
+                <div class="faq-answer">Yes. Password Generator runs entirely in your browser using the Web Crypto API. No passwords are ever sent to any server. All generation happens locally on your device. We don't store, track, or share any data.</div>
+            </div>
+            <div class="faq-card" onclick="toggleFaqCard(this)">
+                <div class="faq-question">What password length should I use? <i data-lucide="chevron-down" class="faq-icon"></i></div>
+                <div class="faq-answer">For most accounts, 16-20 characters is recommended. Email and banking accounts should use 20+ characters. Use the maximum length allowed by each service. Password Generator supports up to 100 characters.</div>
+            </div>
+            <div class="faq-card" onclick="toggleFaqCard(this)">
+                <div class="faq-question">What is strict distribution? <i data-lucide="chevron-down" class="faq-icon"></i></div>
+                <div class="faq-answer">Strict distribution ensures the password contains at least one character from each selected character set. This meets strict password policies that require mixed character types.</div>
+            </div>
+            <div class="faq-card" onclick="toggleFaqCard(this)">
+                <div class="faq-question">Can I use this tool offline? <i data-lucide="chevron-down" class="faq-icon"></i></div>
+                <div class="faq-answer">Yes. Once the page loads, Password Generator works completely offline. You can disconnect from the internet and still generate secure passwords.</div>
+            </div>
+            <div class="faq-card" onclick="toggleFaqCard(this)">
+                <div class="faq-question">How does the entropy calculation work? <i data-lucide="chevron-down" class="faq-icon"></i></div>
+                <div class="faq-answer">Entropy measures password randomness in bits. Higher entropy means stronger passwords. Our generator uses cryptographically secure random values to maximize entropy.</div>
+            </div>
+            <div class="faq-card" onclick="toggleFaqCard(this)">
+                <div class="faq-question">Is this tool really free? <i data-lucide="chevron-down" class="faq-icon"></i></div>
+                <div class="faq-answer">Absolutely! Password Generator is 100% free with no hidden costs, no subscriptions, and no premium tiers. We believe everyone deserves strong password security.</div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -405,40 +607,22 @@
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                    <li><a href="/support">Support</a></li>
-                </ul>
+                <ul><li><a href="/">Home</a></li><li><a href="/about">About Us</a></li><li><a href="/contact">Contact</a></li><li><a href="/support">Support</a></li></ul>
             </div>
             <div class="footer-col">
                 <h4>Tools</h4>
-                <ul>
-                    <li><a href="password-generator.html">Password Generator</a></li>
-                    <li><a href="password-checker.html">Strength Checker</a></li>
-                    <li><a href="entropy-calculator.html">Entropy Calculator</a></li>
-                </ul>
+                <ul><li><a href="password-generator.html">Password Generator</a></li><li><a href="password-checker.html">Strength Checker</a></li><li><a href="entropy-calculator.html">Entropy Calculator</a></li></ul>
             </div>
             <div class="footer-col">
                 <h4>Resources</h4>
-                <ul>
-                    <li><a href="/blog">Blog</a></li>
-                </ul>
+                <ul><li><a href="/blog">Blog</a></li></ul>
             </div>
             <div class="footer-col">
                 <h4>Legal</h4>
-                <ul>
-                    <li><a href="/disclaimer">Disclaimer</a></li>
-                    <li><a href="/privacy-policy">Privacy Policy</a></li>
-                    <li><a href="/terms-of-use">Terms of Use</a></li>
-                </ul>
+                <ul><li><a href="/disclaimer">Disclaimer</a></li><li><a href="/privacy-policy">Privacy Policy</a></li><li><a href="/terms-of-use">Terms of Use</a></li></ul>
             </div>
             <div class="footer-col footer-share-compact" onclick="shareWebsite()">
-                <div class="footer-share-header">
-                    <i data-lucide="share-2"></i>
-                    <span class="footer-share-title">Share Us On</span>
-                </div>
+                <div class="footer-share-header"><i data-lucide="share-2"></i><span class="footer-share-title">Share Us On</span></div>
                 <div class="footer-share-subtitle">Follow Us On Social Media<br>Get Latest Update</div>
             </div>
         </div>
@@ -476,7 +660,7 @@
             menuBtn.addEventListener('click', openMenu); closeBtn.addEventListener('click', closeMenu); sidebar.addEventListener('click', (e) => { if(e.target === sidebar) closeMenu(); });
         }
 
-        window.toggleFaq = function(element) { element.parentElement.classList.toggle('active'); refreshIcons(); };
+        window.toggleFaqCard = function(element) { element.classList.toggle('active'); refreshIcons(); };
 
         const heroChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
         function updateHero() { let p=""; const arr=new Uint32Array(16); crypto.getRandomValues(arr); for(let i=0;i<16;i++) p+=heroChars[arr[i]%heroChars.length]; document.getElementById('heroPreviewPassword').innerText=p; }
