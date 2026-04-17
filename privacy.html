@@ -2,11 +2,9 @@
 <html lang="en" itemscope itemtype="https://schema.org/WebPage">
 <head>
     <meta charset="UTF-8">
-    <!-- Enhanced viewport for perfect mobile & desktop scaling -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, shrink-to-fit=no, viewport-fit=cover">
     <meta name="theme-color" content="#000000">
     
-    <!-- SEO Tags (Updated to Password Generator) -->
     <title>Privacy Policy - Password Generator</title>
     <meta name="description" content="Read Password Generator's privacy policy. Zero-knowledge architecture, 100% client-side password generation. Your data never leaves your device. GDPR, CCPA, and Google AdSense compliant.">
     <meta name="keywords" content="privacy policy, password generator privacy, secure password generator privacy, zero-knowledge architecture, GDPR, CCPA, data protection, Google AdSense">
@@ -14,27 +12,23 @@
     <meta name="author" content="Password Generator">
     <link rel="canonical" href="https://password.pandacybercafe.in/privacy.html" />
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://password.pandacybercafe.in/privacy.html">
     <meta property="og:title" content="Privacy Policy - Password Generator">
     <meta property="og:description" content="Read Password Generator's privacy policy. Zero-knowledge architecture, 100% client-side.">
     <meta property="og:site_name" content="Password Generator">
 
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://password.pandacybercafe.in/privacy.html">
     <meta property="twitter:title" content="Privacy Policy - Password Generator">
     <meta property="twitter:description" content="Zero-knowledge architecture, 100% client-side.">
 
-    <!-- Favicons - Correct URLs -->
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <!-- Schema Markup (Updated) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -42,10 +36,7 @@
       "name": "Privacy Policy",
       "url": "https://password.pandacybercafe.in/privacy.html",
       "description": "Password Generator privacy policy - 100% client-side password generation.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Password Generator"
-      }
+      "publisher": { "@type": "Organization", "name": "Password Generator" }
     }
     </script>
     
@@ -54,18 +45,8 @@
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://password.pandacybercafe.in/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Privacy Policy",
-          "item": "https://password.pandacybercafe.in/privacy.html"
-        }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://password.pandacybercafe.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://password.pandacybercafe.in/privacy.html" }
       ]
     }
     </script>
@@ -73,319 +54,227 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         :root {
-            --primary: #000000;
-            --primary-dark: #1a1a1a;
-            --text-main: #0a0a0a;
-            --text-light: #525252;
-            --bg-color: #ffffff;
-            --line-color: #e5e7eb;
-            --footer-bg: #000000;
-            --footer-text: #9ca3af;
-            --success: #16a34a;
+            --eco-primary: #0b3b2c;
+            --bg-white: #ffffff;
+            --success: #2e7d5e;
             --error: #ef4444;
+            --warning: #f59e0b;
+            --spacing-xs: 4px;
+            --spacing-sm: 8px;
+            --spacing-md: 12px;
+            --spacing-lg: 16px;
+            --spacing-xl: 20px;
+            --spacing-2xl: 24px;
+            --spacing-3xl: 32px;
+            --spacing-4xl: 40px;
+            --footer-gap: 16px;
         }
-
-        html, body {
-            width: 100%;
-            overflow-x: hidden;
-        }
-
+        html, body { width: 100%; overflow-x: hidden; background-color: var(--bg-white); }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            color: #1e2a24; display: flex; flex-direction: column; min-height: 100vh;
             -webkit-font-smoothing: antialiased;
         }
 
-        input, textarea, select, button {
-            font-family: inherit;
-        }
-
-        /* Header */
+        /* ========== HEADER ========== */
         header {
-            padding: 15px 0;
-            border-bottom: 1px solid var(--line-color);
-            background: white;
-            width: 100%;
+            background: white; border-bottom: 2px solid #e0e0e0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02); width: 100%; z-index: 1500;
         }
-
-        .navbar {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .brand-logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: black;
-        }
-
-        .robot-svg-icon {
-            width: 45px;
-            height: 45px;
-        }
-
-        .logo-text {
-            font-size: 20px;
-            font-weight: 800;
-            color: var(--text-main);
-            letter-spacing: -0.5px;
-        }
-
-        .free-badge {
-            font-size: 12px;
-            color: var(--text-light);
-            font-weight: 600;
-            background: #f3f4f6;
-            padding: 6px 12px;
-            border-radius: 6px;
-            border: 1px solid #e5e7eb;
-        }
-
-        /* Main Container */
-        .container {
-            max-width: 1200px;
-            width: 100%;
-            margin: 30px auto;
-            padding: 0 20px;
-            flex: 1;
-        }
-
-        h1 {
-            font-size: clamp(28px, 5vw, 38px);
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.2;
-            letter-spacing: -0.5px;
-            word-break: break-word;
-        }
-
-        h2 {
-            font-size: clamp(22px, 4vw, 28px);
-            font-weight: 700;
-            border-bottom: 2px solid var(--line-color);
-            padding-bottom: 10px;
-            margin-top: 40px;
-            margin-bottom: 20px;
-        }
-
-        h3 {
-            font-size: clamp(18px, 3vw, 22px);
-            font-weight: 700;
-            margin-top: 25px;
-            margin-bottom: 12px;
-            color: #000;
-        }
-
-        p {
-            line-height: 1.7;
-            color: var(--text-light);
-            margin-bottom: 18px;
-            font-size: clamp(15px, 2.5vw, 16px);
-        }
-
-        ul, ol {
-            padding-left: 22px;
-            color: var(--text-light);
-            margin-bottom: 20px;
-        }
-
-        li {
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #000;
-            font-weight: 600;
-            text-decoration: none;
-            margin-bottom: 30px;
-            padding: 8px 0;
-            transition: 0.2s;
-        }
-
-        .back-link:hover {
-            color: #333;
-            gap: 10px;
-        }
-
-        .content-block {
-            margin-bottom: 45px;
-        }
-
-        .privacy-note {
-            background: #f0fdf4;
-            border-left: 5px solid var(--success);
-            padding: 20px 25px;
-            border-radius: 12px;
-            margin: 30px 0;
-        }
-
-        .adsense-note {
-            background: #fef9e3;
-            border-left: 5px solid #f59e0b;
-            padding: 20px 25px;
-            border-radius: 12px;
-            margin: 30px 0;
-        }
-
-        /* Footer - BLACK THEME */
-        footer {
-            background-color: #000000;
-            color: #9ca3af;
-            padding: 60px 0 25px;
-            margin-top: 70px;
-            font-size: 14px;
-            border-top: 1px solid #1f1f1f;
-            width: 100%;
-        }
-
-        .footer-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 25px;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-            gap: 30px;
-        }
-
-        .footer-col h5 {
-            color: #ffffff;
-            font-size: 15px;
-            font-weight: 700;
-            margin-bottom: 18px;
-        }
-
-        .footer-brand p {
-            font-size: 13px;
-            color: #9ca3af;
-            line-height: 1.6;
-            margin-top: 12px;
-            max-width: 300px;
-        }
-
-        .footer-logo {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-        }
-
-        .footer-robot-svg {
-            width: 38px;
-            height: 38px;
-        }
-
-        .footer-logo-text {
-            font-size: 18px;
-            font-weight: 800;
-            color: white;
-            letter-spacing: -0.5px;
-        }
-
-        .footer-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: #9ca3af;
-            text-decoration: none;
-            transition: 0.2s;
-            display: inline-block;
-        }
-
-        .footer-links a:hover {
-            color: #ffffff;
-            padding-left: 3px;
-        }
-
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 40px auto 0;
-            padding-top: 20px;
-            border-top: 1px solid #1f1f1f;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-left: 25px;
-            padding-right: 25px;
-            color: #6b7280;
-            font-size: 12px;
+        .header-top {
+            max-width: 1280px; margin: 0 auto; padding: var(--spacing-sm) var(--spacing-xl);
+            display: flex; align-items: center; justify-content: space-between;
             flex-wrap: wrap;
         }
+        .brand-wrapper {
+            display: flex; align-items: center; gap: var(--spacing-sm);
+        }
+        .robot-svg-icon {
+            width: 36px; height: 36px;
+        }
+        .eco-brand-main { font-size: clamp(1.5rem, 5vw, 2.3rem); font-weight: 800; letter-spacing: -0.5px; color: #000000; }
+        .header-meta { display: flex; align-items: center; gap: var(--spacing-lg); }
+        .desktop-tool-links { display: flex; gap: var(--spacing-xl); }
+        .desktop-tool-links a {
+            color: #000000; text-decoration: none; font-weight: 600; font-size: 0.95rem;
+            padding-bottom: var(--spacing-xs);
+            transition: color 0.15s;
+        }
+        .desktop-tool-links a:hover { color: var(--success); }
+        .drop-menu { position: relative; }
+        .menu-icon-btn {
+            background: transparent; border: none; padding: var(--spacing-sm); cursor: pointer;
+            display: none; align-items: center; border-radius: 40px; transition: 0.15s;
+        }
+        .menu-icon-btn i { width: 28px; height: 28px; stroke-width: 2.2; color: #000000; }
+        .menu-icon-btn:hover { background: #f0f0f0; }
 
-        /* Responsive adjustments */
-        @media (max-width: 900px) {
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 30px 20px;
-            }
+        /* ===== SIDEBAR MENU (mobile only) ===== */
+        .sidebar-menu-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5);
+            z-index:2000; display: none; align-items: flex-start; justify-content: flex-start;
+            backdrop-filter: blur(4px);
+        }
+        .sidebar-menu-overlay.active { display: flex; }
+        .sidebar-panel {
+            background: #ffffff; width: 85%; max-width: 320px; height: 100vh;
+            border-radius: 0; box-shadow: 5px 0 30px rgba(0,0,0,0.15);
+            padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-2xl); border-right: 3px solid #000000;
+            overflow-y: auto; position: fixed; top: 0; left: 0;
+            animation: slideIn 0.25s ease;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+        .sidebar-header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding-bottom: var(--spacing-lg); margin-bottom: var(--spacing-lg);
+        }
+        .sidebar-close-btn { background: none; border: none; cursor: pointer; padding: var(--spacing-sm); }
+        .sidebar-close-btn i { width: 28px; height: 28px; color: #000000; stroke-width: 2.5; }
+        .sidebar-brand {
+            display: flex; align-items: center; gap: var(--spacing-sm);
+        }
+        .sidebar-robot-svg { width: 28px; height: 28px; }
+        .sidebar-title {
+            font-size: 1.2rem; font-weight: 800; color: #000000;
+            letter-spacing: -0.3px; line-height: 1.1;
+        }
+        .sidebar-tool-list {
+            display: flex; flex-direction: column; gap: 2px;
+        }
+        .sidebar-tool-item {
+            font-size: 1rem; font-weight: 700; color: #000000;
+            text-decoration: none; padding: var(--spacing-sm) 0;
+            display: flex; align-items: center;
+            border-bottom: 1px solid #c8dbd1;
+            transition: color 0.15s;
+        }
+        .sidebar-tool-item:hover { color: var(--success); }
+        .sidebar-tool-item::before {
+            content: "—"; color: var(--success); font-weight: 900;
+            font-size: 1.2rem; margin-right: var(--spacing-sm);
         }
 
-        @media (max-width: 600px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-            .footer-bottom {
-                flex-direction: column;
-                gap: 12px;
-                text-align: center;
-            }
-            .navbar {
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-            .brand-logo {
-                flex-wrap: wrap;
-            }
-            .logo-text {
-                font-size: 18px;
-            }
-            .privacy-note, .adsense-note {
-                padding: 16px 18px;
-            }
+        /* ========== MAIN CONTENT ========== */
+        .container {
+            max-width: 1200px; width: 100%; margin: 30px auto; padding: 0 var(--spacing-xl); flex: 1;
+        }
+        h1 {
+            font-size: clamp(28px, 5vw, 38px); font-weight: 800; margin-bottom: 20px;
+            line-height: 1.2; letter-spacing: -0.5px; word-break: break-word;
+        }
+        h2 {
+            font-size: clamp(22px, 4vw, 28px); font-weight: 700;
+            border-bottom: 2px solid #e5e7eb; padding-bottom: 10px;
+            margin-top: 40px; margin-bottom: 20px;
+        }
+        h3 {
+            font-size: clamp(18px, 3vw, 22px); font-weight: 700;
+            margin-top: 25px; margin-bottom: 12px; color: #000;
+        }
+        p {
+            line-height: 1.7; color: #525252; margin-bottom: 18px;
+            font-size: clamp(15px, 2.5vw, 16px);
+        }
+        ul, ol { padding-left: 22px; color: #525252; margin-bottom: 20px; }
+        li { margin-bottom: 10px; line-height: 1.6; }
+        .back-link {
+            display: inline-flex; align-items: center; gap: 8px;
+            color: #000; font-weight: 600; text-decoration: none;
+            margin-bottom: 30px; padding: 8px 0; transition: 0.2s;
+        }
+        .back-link:hover { color: #333; gap: 10px; }
+        .content-block { margin-bottom: 45px; }
+
+        .privacy-note {
+            background: #f0fdf4; border-left: 5px solid var(--success);
+            padding: 20px 25px; border-radius: 12px; margin: 30px 0;
+        }
+        .adsense-note {
+            background: #fef9e3; border-left: 5px solid #f59e0b;
+            padding: 20px 25px; border-radius: 12px; margin: 30px 0;
         }
 
+        /* ========== FOOTER - BLACK (AUTO-FIT GRID) ========== */
+        footer { background: #000000; color: #ffffff; padding: var(--spacing-2xl) 0 var(--spacing-xl); margin-top: 70px; }
+        .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-xl); }
+        
+        .footer-unified-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: var(--footer-gap);
+            margin-bottom: var(--spacing-2xl);
+            padding-bottom: var(--spacing-2xl);
+            border-bottom: 1px solid #333333;
+        }
+        .footer-col { min-width: 0; margin: 0; padding: 0; }
+        .footer-col h4 {
+            color: #ffffff; font-size: 0.95rem; font-weight: 700;
+            margin-bottom: var(--spacing-md);
+        }
+        .footer-col ul { list-style: none; margin: 0; padding: 0; }
+        .footer-col ul li { margin-bottom: var(--spacing-xs); }
+        .footer-col ul li a {
+            color: #cccccc; text-decoration: none; font-size: 0.8rem;
+            transition: color 0.15s;
+        }
+        .footer-col ul li a:hover { color: var(--success); }
+        
+        .footer-brand-compact { display: flex; flex-direction: column; gap: var(--spacing-xs); }
+        .footer-brand-header { display: flex; align-items: center; gap: var(--spacing-xs); }
+        .footer-robot-svg { width: 24px; height: 24px; }
+        .footer-brand-compact h4 { margin-bottom: 0; font-size: 0.95rem; }
+        .footer-brand-compact p { color: #cccccc; font-size: 0.75rem; line-height: 1.4; }
+        
+        .footer-share-compact { cursor: pointer; }
+        .footer-share-header { display: flex; align-items: center; gap: var(--spacing-xs); margin-bottom: var(--spacing-xs); }
+        .footer-share-header i { width: 18px; height: 18px; color: var(--success); }
+        .footer-share-title { color: #ffffff; font-size: 0.95rem; font-weight: 700; }
+        .footer-share-subtitle { color: #cccccc; font-size: 0.8rem; line-height: 1.4; }
+        
+        .footer-copyright { text-align: center; padding-top: var(--spacing-xl); color: #cccccc; font-size: 0.8rem; }
+
+        .toast-message {
+            position: fixed; bottom: var(--spacing-xl); left: 50%; transform: translateX(-50%);
+            background: var(--success); color: white; padding: var(--spacing-sm) var(--spacing-2xl);
+            border-radius: 40px; display: none; z-index: 3000; font-weight: 500;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15); text-align: center; white-space: nowrap; font-size: 0.9rem;
+        }
+        .toast-success { background: var(--success); }
+        .toast-info { background: #000000; }
+
+        /* Responsive */
+        @media (min-width: 769px) {
+            .desktop-tool-links { display: flex; }
+            .menu-icon-btn { display: none; }
+            .sidebar-menu-overlay { display: none !important; }
+        }
+        @media (max-width: 768px) {
+            .desktop-tool-links { display: none; }
+            .menu-icon-btn { display: flex; }
+            .header-top { padding: var(--spacing-sm) var(--spacing-lg); }
+            .privacy-note, .adsense-note { padding: 16px 18px; }
+        }
         @media (max-width: 480px) {
-            .container {
-                padding: 0 15px;
-            }
+            .container { padding: 0 15px; }
         }
+        body.menu-open { overflow: hidden; }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="navbar">
-            <a href="/" class="brand-logo">
-                <div class="robot-svg-icon">
+<div id="toast" class="toast-message"></div>
+
+<!-- SIDEBAR MENU (mobile only) -->
+<div class="sidebar-menu-overlay" id="sidebarMenu">
+    <div class="sidebar-panel">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <div class="sidebar-robot-svg">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                         <rect x="25" y="25" width="50" height="40" rx="8" fill="#fff" stroke="#000" stroke-width="5" />
                         <circle cx="42" cy="42" r="5" fill="#000" />
@@ -397,220 +286,163 @@
                         <path d="M75,75 V85 M65,75 V80" stroke="#000" stroke-width="4" />
                     </svg>
                 </div>
-                <div class="logo-text">Password Generator</div>
-            </a>
-            <span class="free-badge">Free Tool | Secure</span>
-        </div>
-    </header>
-
-    <main class="container">
-        
-        <a href="/" class="back-link">
-            <i data-lucide="arrow-left" size="18"></i> Back to Password Generator
-        </a>
-        
-        <h1>Privacy Policy</h1>
-        
-        <div class="content-block">
-            <p><strong>Effective Date: March 2026</strong> | <strong>Last Updated: March 2026</strong></p>
-            
-            <div class="privacy-note">
-                <strong>🔐 Zero-Knowledge Architecture:</strong> At Password Generator, we take a radical approach to privacy. If we don't collect it, we can't lose it.
+                <span class="sidebar-title">Password Generator</span>
             </div>
-
-            <div class="adsense-note">
-                <strong>📢 Google AdSense Compliance:</strong> This website may display advertisements through Google AdSense. Google uses cookies to serve ads based on your prior visits to our website or other websites. You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="nofollow">Google Ad Settings</a>. We do not share any personally identifiable information with advertisers.
-            </div>
-            
-            <h2>1. No Data Collection</h2>
-            <p>The passwords generated by this tool are created using the <code>window.crypto.getRandomValues()</code> API. This process happens entirely within your device's local memory. We do not store, log, or transmit any generated passwords.</p>
-            
-            <h2>2. Client-Side Processing</h2>
-            <p>All password generation occurs in your browser. Your data never leaves your device. This means:</p>
-            <ul>
-                <li>No servers involved in password creation</li>
-                <li>No database of user information</li>
-                <li>No tracking of generated passwords</li>
-                <li>No third-party access to your keys</li>
-                <li>No way for us to see what you generate</li>
-            </ul>
-            
-            <h2>3. Information We Do Not Collect</h2>
-            <p>We do not collect:</p>
-            <ul>
-                <li>Your name, email address, or phone number</li>
-                <li>Your IP address</li>
-                <li>Generated passwords</li>
-                <li>Browser history or personal data</li>
-                <li>Login credentials or account information</li>
-            </ul>
-            
-            <h2>4. Cookies and Analytics</h2>
-            <p>We use minimal, industry-standard cookies to understand site traffic and improve user experience. These cookies do not contain any personally identifiable information and cannot be linked to passwords you generate.</p>
-            <p>Cookies may be used for:</p>
-            <ul>
-                <li>Anonymous traffic analysis</li>
-                <li>Basic site functionality</li>
-                <li>Remembering user preferences</li>
-                <li>Advertising personalization (if enabled)</li>
-            </ul>
-            <p>You can disable cookies in your browser settings, but this may affect some non-essential features. For more information about how Google uses data from sites that use its services, visit <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="nofollow">Google's Partner Site Policy</a>.</p>
-            
-            <h2>5. Third-Party Services & Advertising</h2>
-            <p>We use the following third-party services:</p>
-            <ul>
-                <li><strong>Lucide Icons:</strong> For icon display (no data collected)</li>
-                <li><strong>GitHub Pages:</strong> For hosting (static content only)</li>
-                <li><strong>Cloudflare:</strong> CDN and DNS services</li>
-                <li><strong>Google AdSense:</strong> For advertising (may use cookies for personalized ads)</li>
-            </ul>
-            <p>These services have their own privacy policies and may use cookies. We do not share any user data with them. Google AdSense may use information about your visits to this and other websites to show advertisements about goods and services of interest to you.</p>
-            
-            <h2>6. Data Security</h2>
-            <p>Since we operate on a zero-knowledge architecture, there is no database of users or passwords for hackers to target. Your security is built into our design. All connections to our site use HTTPS encryption.</p>
-            
-            <h2>7. Zero-Knowledge Architecture Explained</h2>
-            <p>Our zero-knowledge architecture means that we literally cannot see your passwords even if we wanted to. Here's how it works:</p>
-            <ol>
-                <li>You visit Password Generator in your browser</li>
-                <li>The JavaScript code downloads to your device</li>
-                <li>Your browser generates random numbers using the Web Crypto API</li>
-                <li>The password is created using these random numbers</li>
-                <li>The result appears only on your screen</li>
-                <li>We never see, store, or transmit anything</li>
-            </ol>
-
-            <h2>8. Why This Matters</h2>
-            <ul>
-                <li>No data breaches possible on our servers</li>
-                <li>No government subpoenas can access your passwords</li>
-                <li>No insider threats from employees</li>
-                <li>No tracking of what you generate</li>
-                <li>Complete anonymity</li>
-            </ul>
-            
-            <h2>9. Google AdSense & Advertising</h2>
-            <p>This website uses Google AdSense to serve advertisements. Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to our site and/or other sites on the Internet.</p>
-            <ul>
-                <li><strong>Personalized Ads:</strong> You may see ads based on your interests and browsing history</li>
-                <li><strong>Non-Personalized Ads:</strong> If you opt out, you'll still see ads but they won't be based on your interests</li>
-                <li><strong>Opt-Out:</strong> You can opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="nofollow">Google Ad Settings</a></li>
-                <li><strong>Third-Party Vendors:</strong> Google and its partners may use cookies to serve ads based on your visits</li>
-            </ul>
-            <p>For more information about how Google collects and processes data, please visit <a href="https://policies.google.com/technologies/ads" target="_blank" rel="nofollow">Google's Advertising Policy</a>.</p>
-
-            <h2>10. Your Rights Under GDPR and CCPA</h2>
-            <p>Since we don't collect personal data, compliance is built-in:</p>
-            
-            <h3>Your Rights Under GDPR (European Union)</h3>
-            <ul>
-                <li><strong>Right to Access:</strong> We have no data to provide</li>
-                <li><strong>Right to Rectification:</strong> Nothing to correct</li>
-                <li><strong>Right to Erasure:</strong> Nothing to delete</li>
-                <li><strong>Right to Restrict Processing:</strong> We don't process personal data</li>
-                <li><strong>Right to Data Portability:</strong> No data to transfer</li>
-                <li><strong>Right to Object:</strong> Use an ad-blocker or opt out of personalized ads</li>
-            </ul>
-
-            <h3>Your Rights Under CCPA (California)</h3>
-            <ul>
-                <li><strong>Right to Know:</strong> We collect no personal information</li>
-                <li><strong>Right to Delete:</strong> Nothing to delete</li>
-                <li><strong>Right to Opt-Out:</strong> No sale of personal information</li>
-                <li><strong>Right to Non-Discrimination:</strong> All users treated equally</li>
-            </ul>
-            
-            <h2>11. Children's Privacy</h2>
-            <p>Password Generator does not knowingly collect any information from children under 13. If you believe a child has provided personal information, please contact us immediately and we will take appropriate action.</p>
-            
-            <h2>12. Changes to This Policy</h2>
-            <p>We may update this privacy policy occasionally to reflect changes in our practices or legal requirements. The updated version will be posted here with a revised date. Your continued use of Password Generator after changes constitutes acceptance of the updated policy.</p>
-            
-            <h2>13. Contact Us</h2>
-            <p>If you have questions about this privacy policy, our data practices, or Google AdSense, please contact us:</p>
-            <ul>
-                <li>Email: <strong>privacy@passwordgenerator.com</strong></li>
-                <li>Response time: 24-48 hours</li>
-            </ul>
-            
-            <p><em>By using Password Generator, you acknowledge that you have read and understood this privacy policy.</em></p>
+            <button class="sidebar-close-btn" id="closeSidebarBtn"><i data-lucide="x"></i></button>
         </div>
-    </main>
+        <div class="sidebar-tool-list">
+            <a href="password-generator.html" class="sidebar-tool-item">Password Generator</a>
+            <a href="password-checker.html" class="sidebar-tool-item">Password Strength Checker</a>
+            <a href="entropy-calculator.html" class="sidebar-tool-item">Entropy Calculator</a>
+        </div>
+    </div>
+</div>
 
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col footer-brand">
-                <a href="/" class="footer-logo">
-                    <div class="footer-robot-svg">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="25" y="25" width="50" height="40" rx="8" fill="none" stroke="#fff" stroke-width="6" />
-                            <circle cx="42" cy="42" r="5" fill="#fff" />
-                            <circle cx="58" cy="42" r="5" fill="#fff" />
-                            <path d="M50,25 V15 M50,15 A2,2 0 1,1 50.1,15" stroke="#fff" stroke-width="4" fill="none" />
-                            <circle cx="20" cy="45" r="6" fill="#fff" />
-                            <circle cx="80" cy="45" r="6" fill="#fff" />
-                            <path d="M15,75 L85,75" stroke="#fff" stroke-width="9" stroke-linecap="round" />
-                            <path d="M75,75 V85 M65,75 V80" stroke="#fff" stroke-width="5" />
-                        </svg>
+<header>
+    <div class="header-top">
+        <div class="brand-wrapper">
+            <div class="robot-svg-icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="25" y="25" width="50" height="40" rx="8" fill="#fff" stroke="#000" stroke-width="5" />
+                    <circle cx="42" cy="42" r="5" fill="#000" />
+                    <circle cx="58" cy="42" r="5" fill="#000" />
+                    <path d="M50,25 V15 M50,15 A2,2 0 1,1 50.1,15" stroke="#000" stroke-width="3" fill="none" />
+                    <circle cx="20" cy="45" r="6" fill="#000" />
+                    <circle cx="80" cy="45" r="6" fill="#000" />
+                    <path d="M15,75 L85,75" stroke="#000" stroke-width="8" stroke-linecap="round" />
+                    <path d="M75,75 V85 M65,75 V80" stroke="#000" stroke-width="4" />
+                </svg>
+            </div>
+            <span class="eco-brand-main">Password Generator</span>
+        </div>
+        <div class="header-meta">
+            <div class="desktop-tool-links">
+                <a href="password-generator.html">Password Generator</a>
+                <a href="password-checker.html">Strength Checker</a>
+                <a href="entropy-calculator.html">Entropy Calculator</a>
+            </div>
+            <div class="drop-menu">
+                <button class="menu-icon-btn" id="menuToggleBtn"><i data-lucide="menu"></i></button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <a href="/" class="back-link">
+        <i data-lucide="arrow-left" size="18"></i> Back to Password Generator
+    </a>
+    
+    <h1>Privacy Policy</h1>
+    
+    <div class="content-block">
+        <p><strong>Effective Date: March 2026</strong> | <strong>Last Updated: March 2026</strong></p>
+        
+        <div class="privacy-note">
+            <strong>🔐 Zero-Knowledge Architecture:</strong> At Password Generator, we take a radical approach to privacy. If we don't collect it, we can't lose it.
+        </div>
+
+        <div class="adsense-note">
+            <strong>📢 Google AdSense Compliance:</strong> This website may display advertisements through Google AdSense. Google uses cookies to serve ads based on your prior visits to our website or other websites. You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="nofollow">Google Ad Settings</a>. We do not share any personally identifiable information with advertisers.
+        </div>
+        
+        <h2>1. No Data Collection</h2>
+        <p>The passwords generated by this tool are created using the <code>window.crypto.getRandomValues()</code> API. This process happens entirely within your device's local memory. We do not store, log, or transmit any generated passwords.</p>
+        
+        <h2>2. Client-Side Processing</h2>
+        <p>All password generation occurs in your browser. Your data never leaves your device. This means:</p>
+        <ul>
+            <li>No servers involved in password creation</li>
+            <li>No database of user information</li>
+            <li>No tracking of generated passwords</li>
+            <li>No third-party access to your keys</li>
+            <li>No way for us to see what you generate</li>
+        </ul>
+        
+        <h2>3. Cookies and Analytics</h2>
+        <p>We use minimal, industry-standard cookies to understand site traffic and improve user experience. These cookies do not contain any personally identifiable information and cannot be linked to passwords you generate.</p>
+        
+        <h2>4. Your Rights Under GDPR and CCPA</h2>
+        <p>Since we don't collect personal data, compliance is built-in. You have the right to access, rectify, and erase data — but we have none to provide.</p>
+        
+        <h2>5. Contact Us</h2>
+        <p>If you have questions about this privacy policy, please contact us at <strong>privacy@passwordgenerator.com</strong>.</p>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-unified-grid">
+            <div class="footer-col">
+                <div class="footer-brand-compact">
+                    <div class="footer-brand-header">
+                        <div class="footer-robot-svg">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="25" y="25" width="50" height="40" rx="8" fill="none" stroke="#fff" stroke-width="6" />
+                                <circle cx="42" cy="42" r="5" fill="#fff" />
+                                <circle cx="58" cy="42" r="5" fill="#fff" />
+                                <path d="M50,25 V15 M50,15 A2,2 0 1,1 50.1,15" stroke="#fff" stroke-width="4" fill="none" />
+                                <circle cx="20" cy="45" r="6" fill="#fff" />
+                                <circle cx="80" cy="45" r="6" fill="#fff" />
+                                <path d="M15,75 L85,75" stroke="#fff" stroke-width="9" stroke-linecap="round" />
+                                <path d="M75,75 V85 M65,75 V80" stroke="#fff" stroke-width="5" />
+                            </svg>
+                        </div>
+                        <h4>Password Generator</h4>
                     </div>
-                    <div class="footer-logo-text">Password Generator</div>
-                </a>
-                <p>Professional free online password generator. Create secure, random, and private keys instantly. 100% client-side security with zero-knowledge architecture.</p>
+                    <p>Professional free online password generator. Create secure, random, and private keys instantly. 100% client-side security.</p>
+                </div>
             </div>
             <div class="footer-col">
-                <h5>Quick Links</h5>
-                <ul class="footer-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Support</a></li>
-                </ul>
+                <h4>Quick Links</h4>
+                <ul><li><a href="/">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/support.html">Support</a></li></ul>
             </div>
             <div class="footer-col">
-                <h5>Tools</h5>
-                <ul class="footer-links">
-                    <li><a href="password-generator.html">Password Generator</a></li>
-                    <li><a href="password-checker.html">Password Strength Checker</a></li>
-                    <li><a href="entropy-calculator.html">Entropy Calculator</a></li>
-                </ul>
+                <h4>Tools</h4>
+                <ul><li><a href="password-generator.html">Password Generator</a></li><li><a href="password-checker.html">Strength Checker</a></li><li><a href="entropy-calculator.html">Entropy Calculator</a></li></ul>
             </div>
             <div class="footer-col">
-                <h5>Resources</h5>
-                <ul class="footer-links">
-                    <li><a href="security-guide.html">Security Guide</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
+                <h4>Resources</h4>
+                <ul><li><a href="/blog.html">Blog</a></li></ul>
             </div>
             <div class="footer-col">
-                <h5>Legal</h5>
-                <ul class="footer-links">
-                    <li><a href="disclaimer.html">Disclaimer</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Use</a></li>
-                </ul>
+                <h4>Legal</h4>
+                <ul><li><a href="/disclaimer.html">Disclaimer</a></li><li><a href="/privacy-policy.html">Privacy Policy</a></li><li><a href="/terms-of-use.html">Terms of Use</a></li></ul>
+            </div>
+            <div class="footer-col footer-share-compact" onclick="shareWebsite()">
+                <div class="footer-share-header"><i data-lucide="share-2"></i><span class="footer-share-title">Share Us On</span></div>
+                <div class="footer-share-subtitle">Share with friends and family — help them stay secure online with strong passwords.</div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div>&copy; 2026 Password Generator. All rights reserved.</div>
-            <div>🔐 Client-side password generator | Zero data storage</div>
-        </div>
-    </footer>
+        <div class="footer-copyright">© password.pandacybercafe.in • All rights reserved</div>
+    </div>
+</footer>
 
-    <script>
-        // Disable right-click and developer tools shortcuts (Optional)
-        document.addEventListener('contextmenu', e => e.preventDefault());
-        document.addEventListener('keydown', e => {
-            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
-                e.preventDefault();
-            }
+<script>
+    (function(){
+        const sidebar = document.getElementById('sidebarMenu');
+        const menuBtn = document.getElementById('menuToggleBtn');
+        const closeBtn = document.getElementById('closeSidebarBtn');
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => { sidebar.classList.add('active'); document.body.classList.add('menu-open'); });
+            closeBtn.addEventListener('click', () => { sidebar.classList.remove('active'); document.body.classList.remove('menu-open'); });
+            sidebar.addEventListener('click', (e) => { if(e.target === sidebar) { sidebar.classList.remove('active'); document.body.classList.remove('menu-open'); }});
+        }
+    })();
+
+    function shareWebsite() {
+        const url = window.location.href;
+        navigator.clipboard?.writeText(url).then(() => {
+            const toast = document.getElementById('toast');
+            toast.textContent = '✓ Website link copied!';
+            toast.className = 'toast-message toast-success';
+            toast.style.display = 'block';
+            setTimeout(() => toast.style.display = 'none', 2000);
         });
-        
-        // Initialize Lucide icons
-        window.onload = () => {
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
-        };
-    </script>
+    }
+
+    window.onload = () => { if (typeof lucide !== 'undefined') lucide.createIcons(); };
+    document.addEventListener('contextmenu', e => e.preventDefault());
+</script>
 </body>
 </html>
