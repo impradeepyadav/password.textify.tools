@@ -355,15 +355,28 @@
 </header>
 
 <main class="container">
+    <!-- Updated "Back to Home" link -->
     <a href="/" class="back-link">
-        <i data-lucide="arrow-left" size="18"></i> Back to Password Generator
+        <i data-lucide="arrow-left" size="18"></i> Back to Home
     </a>
     
     <h1>Contact Password Generator Support</h1>
     
     <div class="content-block">
-        <p>We value your feedback, suggestions, and security inquiries. Our team is here to help you with any questions about password generation, security best practices, or technical issues.</p>
+        <p>We value your feedback, suggestions, and security inquiries. Our team is here to help you with any questions about password generation, security best practices, or technical issues. Whether you're facing a technical bug, have a feature in mind, or just want to share a security concern, you've come to the right place.</p>
         
+        <!-- Added More Content Block: Why Contact Us -->
+        <div style="margin: 30px 0;">
+            <h3>Why Contact Us?</h3>
+            <p>Unlike automated support systems or large faceless corporations, Password Generator is maintained by a dedicated team of privacy advocates and developers. We read every single email that comes through. Here are some of the common reasons users reach out:</p>
+            <ul>
+                <li><strong>Bug Reports:</strong> Found a glitch in the generator or the entropy calculator? Let us know so we can patch it immediately.</li>
+                <li><strong>Security Vulnerability Disclosure:</strong> If you are a security researcher and have identified a potential weakness, we follow responsible disclosure practices and will work with you to resolve it quickly.</li>
+                <li><strong>Educational Use:</strong> Teachers and professors often contact us for permission to use our tool in cybersecurity curriculums or classroom demonstrations. (Permission is granted automatically!)</li>
+                <li><strong>Press & Media:</strong> Looking for a quote on password security trends or the state of online privacy? We're happy to provide insights based on our zero-knowledge architecture.</li>
+            </ul>
+        </div>
+
         <div class="contact-card">
             <h2 style="margin-top: 0; border-bottom: none; font-size: 24px;">Get in Touch</h2>
             
@@ -372,6 +385,7 @@
                 <div class="contact-details">
                     <h4>Email Support</h4>
                     <p><a href="mailto:support@passwordgenerator.com">support@passwordgenerator.com</a></p>
+                    <p style="margin-top: 5px; font-size: 14px; color: #666;">This is the primary and fastest way to reach our team.</p>
                 </div>
             </div>
             
@@ -380,6 +394,7 @@
                 <div class="contact-details">
                     <h4>Response Time</h4>
                     <p>We typically respond within <strong>24 to 48 business hours</strong>.</p>
+                    <p style="margin-top: 5px; font-size: 14px; color: #666;">Please note: We do not offer phone support as our team is distributed globally. Email ensures your request is tracked and answered by the right expert.</p>
                 </div>
             </div>
             
@@ -388,6 +403,7 @@
                 <div class="contact-details">
                     <h4>Security Reports</h4>
                     <p>For security vulnerabilities, please email us with <strong>"SECURITY"</strong> in the subject line.</p>
+                    <p style="margin-top: 5px; font-size: 14px; color: #666;">We adhere to a 90-day disclosure timeline and appreciate coordinated disclosure.</p>
                 </div>
             </div>
             
@@ -396,8 +412,20 @@
                 <div class="contact-details">
                     <h4>Feature Requests</h4>
                     <p>Have an idea? We'd love to hear it!</p>
+                    <p style="margin-top: 5px; font-size: 14px; color: #666;">Many of our best features (like the entropy calculator) came directly from user suggestions.</p>
                 </div>
             </div>
+        </div>
+
+        <!-- Added More Content Block: Before You Email -->
+        <div style="margin: 30px 0; background: #f3f4f6; padding: 20px; border-radius: 12px;">
+            <h3 style="margin-top: 0;">Before You Email: Quick Answers</h3>
+            <p>We love helping users, but to save you time, please check these common topics first:</p>
+            <ul>
+                <li><strong>Can you recover a password I lost?</strong> No. As stated on the homepage, we do not store or transmit any passwords. We have no database to recover from. Please use a password manager.</li>
+                <li><strong>Is this website safe?</strong> Yes. You can verify this by disconnecting your internet after the page loads—it will still generate passwords. That's proof it runs entirely on your device.</li>
+                <li><strong>Do you have an API?</strong> No. We do not offer an API because sending passwords over the internet defeats the purpose of client-side, zero-knowledge security.</li>
+            </ul>
         </div>
 
         <div class="content-block">
@@ -405,19 +433,23 @@
             
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">The generator isn't working in my browser. What should I do? <i data-lucide="chevron-down" class="faq-icon"></i></div>
-                <div class="faq-answer">Try updating your browser to the latest version. We officially support Chrome, Firefox, Safari, and Edge. If the problem persists, clear your browser cache or try incognito mode.</div>
+                <div class="faq-answer">Try updating your browser to the latest version. We officially support Chrome, Firefox, Safari, and Edge. If the problem persists, clear your browser cache or try incognito mode. If you're using an older browser like Internet Explorer, the Web Crypto API may not be supported.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">Are the passwords really random and secure? <i data-lucide="chevron-down" class="faq-icon"></i></div>
-                <div class="faq-answer">Yes. We use the Web Crypto API, which provides cryptographically secure random numbers. This is the same standard used by banks and governments for secure encryption.</div>
+                <div class="faq-answer">Yes. We use the Web Crypto API, which provides cryptographically secure random numbers. This is the same standard used by banks and governments for secure encryption. You can view the page source or run a network monitor to confirm no data leaves your browser.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">Can I use Password Generator offline? <i data-lucide="chevron-down" class="faq-icon"></i></div>
-                <div class="faq-answer">Absolutely. Once the page loads, you can disconnect from the internet and it still works perfectly. All generation happens locally in your browser.</div>
+                <div class="faq-answer">Absolutely. Once the page loads, you can disconnect from the internet and it still works perfectly. All generation happens locally in your browser's memory.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">I lost a password I generated. Can you recover it? <i data-lucide="chevron-down" class="faq-icon"></i></div>
                 <div class="faq-answer">No, we cannot recover any passwords. Since we operate on a zero-knowledge architecture and don't store anything, we have no way to retrieve passwords. Please save your passwords in a password manager immediately after generation.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">How can I support the project? <i data-lucide="chevron-down" class="faq-icon"></i></div>
+                <div class="faq-answer">Thank you for asking! The best way to support us is to share the website with friends, family, or on social media. Spreading awareness about secure, client-side password generation helps make the internet a safer place for everyone. We do not accept donations at this time.</div>
             </div>
         </div>
     </div>
@@ -448,16 +480,14 @@
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
-                <ul><li><a href="/">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/support.html">Support</a></li></ul>
+                <!-- Support link removed -->
+                <ul><li><a href="/">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/contact.html">Contact</a></li></ul>
             </div>
             <div class="footer-col">
                 <h4>Tools</h4>
                 <ul><li><a href="password-generator.html">Password Generator</a></li><li><a href="password-checker.html">Strength Checker</a></li><li><a href="entropy-calculator.html">Entropy Calculator</a></li></ul>
             </div>
-            <div class="footer-col">
-                <h4>Resources</h4>
-                <ul><li><a href="/blog.html">Blog</a></li></ul>
-            </div>
+            <!-- "Resources" and "Blog" sections removed from footer -->
             <div class="footer-col">
                 <h4>Legal</h4>
                 <ul><li><a href="/disclaimer.html">Disclaimer</a></li><li><a href="/privacy-policy.html">Privacy Policy</a></li><li><a href="/terms-of-use.html">Terms of Use</a></li></ul>
