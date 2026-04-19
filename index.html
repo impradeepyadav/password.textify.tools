@@ -2,9 +2,10 @@
 <html lang="en" itemscope itemtype="https://schema.org/WebApplication">
 <head>
     <meta charset="UTF-8">
+    <!-- महत्वपूर्ण: मोबाइल पर फुल पेज और ज़ूम कंट्रोल के लिए व्यूपोर्ट सेटिंग -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, shrink-to-fit=no, viewport-fit=cover">
     <meta name="theme-color" content="#000000">
-    <title>Password Generator</title>
+    <title>Password Generator | Create Strong Secure Passwords</title>
     <meta name="description" content="Generate strong, cryptographically secure random passwords instantly. Free online password generator with custom length, symbols, numbers. 100% client-side, no data storage.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="Password Generator">
@@ -21,6 +22,7 @@
     <meta name="twitter:description" content="Generate strong, random passwords instantly. 100% client-side and private.">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
+        /* ग्लोबल रीसेट और फुल हाइट सुनिश्चित करना */
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         :root {
             --eco-primary: #0b3b2c;
@@ -36,17 +38,33 @@
             --spacing-4xl: 40px;
             --footer-gap: 16px;
         }
-        html, body { width: 100%; height: 100%; overflow: hidden; scroll-behavior: smooth; background-color: var(--bg-white); }
+        /* सुनिश्चित करें कि बॉडी पूरी स्क्रीन ले और स्क्रॉल सही हो */
+        html, body { 
+            width: 100%; 
+            height: 100%; 
+            overflow: hidden; 
+            scroll-behavior: smooth; 
+            background-color: var(--bg-white); 
+        }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            color: #1e2a24; display: flex; flex-direction: column; min-height: 100vh;
+            color: #1e2a24; 
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh;
             -webkit-font-smoothing: antialiased;
+            position: fixed; /* मोबाइल पर एड्रेस बार के कारण होने वाली रीसाइज़ समस्या को रोकता है */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
         }
 
         /* ========== HEADER ========== */
         header {
             background: white; border-bottom: 2px solid #e0e0e0;
             box-shadow: 0 2px 8px rgba(0,0,0,0.02); width: 100%; z-index: 1500;
+            flex-shrink: 0; /* हेडर सिकुड़ेगा नहीं */
         }
         .header-top {
             max-width: 1280px; margin: 0 auto; padding: var(--spacing-sm) var(--spacing-xl);
@@ -126,8 +144,11 @@
 
         /* ========== MAIN SCROLL CONTAINER ========== */
         .main-scroll-container {
-            flex: 1; overflow-y: auto; height: 100vh;
-            -webkit-overflow-scrolling: touch; background: #ffffff;
+            flex: 1; 
+            overflow-y: auto; 
+            height: 100%; /* फ्लेक्स आइटम के रूप में पूरी बची हुई जगह लेता है */
+            -webkit-overflow-scrolling: touch; 
+            background: #ffffff;
         }
 
         /* ========== HERO SECTION - REDESIGNED ========== */
@@ -426,8 +447,11 @@
         .entropy-value { font-size: 1.8rem; font-weight: 800; color: #000000; }
         .entropy-label { font-size: 0.8rem; color: #666666; margin-top: var(--spacing-xs); text-transform: uppercase; letter-spacing: 0.5px; }
 
-        /* ========== FOOTER - BLACK (5 equal columns, Resources removed) ========== */
-        footer { background: #000000; color: #ffffff; padding: var(--spacing-2xl) 0 var(--spacing-xl); }
+        /* ========== FOOTER - BLACK ========== */
+        footer { 
+            background: #000000; color: #ffffff; padding: var(--spacing-2xl) 0 var(--spacing-xl); 
+            flex-shrink: 0; /* फुटर सिकुड़ेगा नहीं */
+        }
         .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-xl); }
         .footer-unified-grid {
             display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--footer-gap);
@@ -461,7 +485,7 @@
         .toast-success { background: var(--success); }
         .toast-info { background: #000000; }
 
-        /* Responsive */
+        /* Responsive Fixes */
         @media (min-width: 769px) {
             .desktop-tool-links { display: flex; }
             .menu-icon-btn { display: none; }
@@ -471,9 +495,9 @@
             .header-top { padding: var(--spacing-sm) var(--spacing-lg); }
             .desktop-tool-links { display: none; }
             .menu-icon-btn { display: flex; }
-            .hero-section { grid-template-columns: 1fr; gap: var(--spacing-xl); }
+            .hero-section { grid-template-columns: 1fr; gap: var(--spacing-xl); text-align: center; }
             .hero-content { text-align: center; }
-            .hero-description { max-width: 100%; }
+            .hero-description { max-width: 100%; margin-left: auto; margin-right: auto; }
             .hero-features { justify-content: center; }
             .hero-actions { justify-content: center; }
             .config-grid { grid-template-columns: 1fr; }
@@ -484,6 +508,12 @@
             .entropy-preview { grid-template-columns: repeat(2, 1fr); }
             .footer-unified-grid { grid-template-columns: 1fr; gap: var(--footer-gap); }
             .footer-col { text-align: left; }
+            
+            /* मोबाइल पर बटनों को पूरी चौड़ाई देता है ताकि अच्छे दिखें */
+            .btn-primary-large, .btn-secondary-large {
+                width: 100%;
+                justify-content: center;
+            }
         }
         body.menu-open { overflow: hidden; }
     </style>
